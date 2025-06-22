@@ -67,7 +67,7 @@ body {
   font-weight: bold;
   font-size: 4.2rem;
   margin-top: 3rem;
-  margin-bottom: 3.5rem;
+  margin-bottom: 5rem;
   text-align: center;
 }
 
@@ -110,4 +110,60 @@ body {
 
 .img-aboutUs {
   border-radius: 1rem;
+}
+
+.aboutUs-team {
+  color: #133936;
+  font-family: "Avigea";
+  font-size: 4.2rem;
+  text-align: center;
+  margin-top: 5rem;
+  margin-bottom: 5rem;
+}
+
+.names-team {
+  color: #133936;
+  font-family: "Poppins";
+  font-weight: bold;
+  font-size: 3rem;
+}
+
+.description-team {
+  font-size: 1.4rem;
+  font-family: "Poppins";
+  margin-top: 2.5rem;
+}
+
+.image-container-aspect {
+  width: 100%;
+  padding-top: 66.66%;
+  position: relative;
+  overflow: hidden;
+  border-radius: 1rem;
+  margin-bottom: 2rem;
+
+}
+
+.image-container-aspect img {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+
+.image-container-team {
+  width: 30rem;
+  height: 30rem;
+  border-radius: 50%;
+  overflow: hidden;
+  margin: 0 auto;
+}
+
+.image-container-team img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
 }
