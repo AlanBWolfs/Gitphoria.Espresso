@@ -1,0 +1,113 @@
+html {
+  font-size: 62.5%;
+}
+
+body {
+  background-color: #FFFFFF;
+}
+
+.logo-navbar {
+  width: 5rem;
+  height: 5rem;
+  margin-left: 2rem;
+}
+
+.navbar-header {
+  background-color: #133936;
+  padding: 1rem;
+}
+
+.btn-login {
+  background-color: #998F76;
+  color: #FFFFFF;
+  border: #998F76;
+  border-radius: 1rem;
+  width: 12rem;
+  height: 4.5rem;
+  font-family: "Poppins";
+  font-weight: bold;
+}
+
+.btn-login:hover {
+  background-color: #b3a67f;
+  transform: scale(1.05);
+  cursor: pointer;
+  box-shadow: 0 0 15px rgba(255, 255, 255, 0.3);
+  animation: pulse 1s infinite;
+}
+
+.nav-link {
+  font-size: 1.4rem;
+  font-family: "Poppins";
+  color: #FFFFFF;
+  margin: 0 1.5rem 0 1.5rem;
+  font-weight: bold;
+}
+
+.cart-icon {
+  color: #998F76;
+  width: 2.5rem;
+  height: auto;
+  transition: all 0.3s ease;
+  transform: scale(1);
+  background-color: transparent !important;
+  box-shadow: none;
+}
+
+.cart-icon:hover {
+  color: #b3a67f;
+  transform: scale(1.1);
+  cursor: pointer;
+}
+
+/* h1 Sobre Nosotros*/
+.aboutUs-title {
+  font-family: "Avigea";
+  color: #133936;
+  font-weight: bold;
+  font-size: 4.2rem;
+  margin-top: 3rem;
+  margin-bottom: 3.5rem;
+  text-align: center;
+}
+
+.our {
+  font-family: "Popins";
+  font-weight: bold;
+  font-size: 4rem;
+  color: #998F76;
+}
+
+.our-sub {
+  font-family: "Poppins";
+  font-weight: bold;
+  font-size: 4.2rem;
+  color: #133936;
+}
+
+.about-p {
+  font-size: 1.6rem;
+  font-family: "Poppins";
+  margin-top: 2.5rem;
+}
+
+.img-aboutUs {
+  border-radius: 1rem;
+}
+
+.image-container {
+  width: 350px;
+  height: 200px;
+  overflow: hidden;
+  margin: 0 auto;
+}
+
+.image-container img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.img-aboutUs {
+  border-radius: 1rem;
+}
