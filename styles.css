@@ -1,0 +1,246 @@
+html {
+  font-size: 62.5%;
+}
+
+body {
+  background-color: #FFFFFF;
+}
+
+.logo-navbar {
+  width: 5rem;
+  height: 5rem;
+  margin-left: 2rem;
+}
+
+.navbar-header {
+  background-color: #133936;
+  padding: 1rem;
+}
+
+
+.navbar .nav-link {
+  color: #FFFFFF !important;
+  font-size: 1.4rem;
+  font-weight: bold;
+  text-decoration: none;
+  transition: color 0.3s ease;
+}
+
+.navbar .nav-link:hover {
+  color: #998F76 !important;
+  text-decoration: underline;
+}
+
+.btn-login {
+  background-color: #998F76;
+  color: #FFFFFF;
+  border: #998F76;
+  border-radius: 1rem;
+  width: 12rem;
+  height: 4.5rem;
+  font-family: "Poppins";
+  font-weight: bold;
+}
+
+.btn-login:hover {
+  background-color: #b3a67f;
+  transform: scale(1.05);
+  cursor: pointer;
+  box-shadow: 0 0 15px rgba(255, 255, 255, 0.3);
+  animation: pulse 1s infinite;
+}
+
+.nav-link {
+  font-size: 1.4rem;
+  font-family: "Poppins";
+  color: #FFFFFF;
+  margin: 0 1.5rem 0 1.5rem;
+  font-weight: bold;
+}
+
+.cart-icon {
+  color: #998F76;
+  width: 2.5rem;
+  height: auto;
+  transition: all 0.3s ease;
+  transform: scale(1);
+  background-color: transparent !important;
+  box-shadow: none;
+}
+
+.cart-icon:hover {
+  color: #b3a67f;
+  transform: scale(1.1);
+  cursor: pointer;
+}
+
+/* h1 Sobre Nosotros*/
+.aboutUs-title {
+  font-family: "Avigea";
+  color: #133936;
+  font-weight: bold;
+  font-size: 4.6rem;
+  margin-top: 3rem;
+  margin-bottom: 5rem;
+  text-align: center;
+  letter-spacing: 0.3rem;
+}
+
+.our {
+  font-family: "Avigea";
+  font-weight: bold;
+  font-size: 4rem;
+  letter-spacing: 0.2rem;
+  color: #998F76;
+}
+
+.our-sub {
+  font-family: "Avigea";
+  font-weight: bold;
+  font-size: 4.2rem;
+  letter-spacing: 0.2rem;
+  color: #133936;
+}
+
+.about-p {
+  font-size: 1.6rem;
+  font-family: "Poppins";
+  margin-top: 2.5rem;
+}
+
+.img-aboutUs {
+  border-radius: 1rem;
+}
+
+.image-container {
+  width: 350px;
+  height: 200px;
+  overflow: hidden;
+  margin: 0 auto;
+}
+
+.image-container img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.img-aboutUs {
+  border-radius: 1rem;
+}
+
+.aboutUs-team {
+  color: #133936;
+  font-family: "Avigea";
+  font-size: 4.6rem;
+  letter-spacing: 0.3rem;
+  text-align: center;
+  margin-top: 5rem;
+  margin-bottom: 5rem;
+}
+
+.names-team {
+  color: #133936;
+  font-family: "Poppins";
+  font-weight: bold;
+  font-size: 3rem;
+}
+
+.description-team {
+  font-size: 1.4rem;
+  font-family: "Poppins";
+  margin-top: 2rem;
+}
+
+.image-container-aspect {
+  width: 100%;
+  padding-top: 66.66%;
+  position: relative;
+  overflow: hidden;
+  border-radius: 1rem;
+  margin-bottom: 2rem;
+
+}
+
+.image-container-aspect img {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+
+.image-container-team {
+  width: 30rem;
+  height: 30rem;
+  border-radius: 50%;
+  overflow: hidden;
+  margin: 0 auto;
+}
+
+.image-container-team img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.aboutUs-footer {
+  background-color: #133936;
+  font-family: "Poppins";
+  color: #FFFFFF;
+  padding: 1rem 0;
+  text-align: center;
+}
+
+.social-media-icons {
+  list-style-type: none;
+  display: flex;
+  justify-content: center;
+  gap: 1rem;
+}
+
+a {
+  text-decoration: none;
+}
+
+i {
+  color: #FFFFFF;
+  font-size: 2.5rem;
+  margin: 1rem;
+}
+
+i:hover {
+  color: #a5a29F;
+  transform: scale(1.1);
+  cursor: pointer;
+}
+
+.logo-footer {
+  width: 10rem;
+  height: 10rem;
+  object-fit: contain;
+  margin: 1rem auto;
+  display: block;
+}
+
+
+.footer-menu {
+  list-style: none;
+  display: flex;
+  justify-content: center;
+  gap: 2rem;
+  padding-left: 0;
+}
+
+.footer-menu a {
+  color: #FFFFFF;
+  font-size: 1.4rem;
+  font-weight: bold;
+}
+
+.footer-menu a:hover {
+  color: #998F76;
+  text-decoration: underline;
+}
