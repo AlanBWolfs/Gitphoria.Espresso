@@ -244,3 +244,10 @@ i:hover {
   color: #998F76;
   text-decoration: underline;
 }
+.image-container-team img[alt="Betzabet"] {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    object-position: center top; 
+    position: relative;
+}
