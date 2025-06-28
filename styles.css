@@ -74,8 +74,7 @@ img {
 }
 
 /* Títulos y textos */
-.aboutUs-title,
-.aboutUs-team {
+.main-title {
   font-family: "Avigea";
   color: #133936;
   font-weight: bold;
@@ -85,7 +84,7 @@ img {
   margin: 3rem 0 5rem;
 }
 
-.our {
+.golden-sub {
   font-family: "Avigea";
   font-weight: bold;
   font-size: 4rem;
@@ -93,7 +92,7 @@ img {
   color: #998F76;
 }
 
-.our-sub {
+.green-sub {
   font-family: "Avigea";
   font-weight: bold;
   font-size: 4.2rem;
@@ -101,7 +100,7 @@ img {
   color: #133936;
 }
 
-.about-p,
+.standard-p,
 .description-team {
   font-size: 1.6rem;
   font-family: "Poppins";
@@ -153,17 +152,21 @@ img {
 }
 
 .image-container-team {
-  width: 30rem;
-  height: 30rem;
+  width: 25rem;
+  height: 25rem;
   border-radius: 50%;
   overflow: hidden;
   margin: 0 auto;
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
 
 .image-container-team img {
   width: 100%;
   height: 100%;
   object-fit: cover;
+  object-position: center;
 }
 
 .image-container-team img[alt="Betzabet"] {
@@ -193,7 +196,7 @@ a {
 }
 
 /* Footer */
-.aboutUs-footer {
+.general-footer {
   background-color: #133936;
   font-family: "Poppins";
   color: #FFFFFF;
@@ -240,19 +243,18 @@ a {
 /* Media Queries para móviles */
 @media (max-width: 768px) {
 
-  .aboutUs-title,
-  .aboutUs-team {
+  .main-title {
     font-size: 3rem;
     text-align: center;
   }
 
-  .our,
-  .our-sub {
+  .golden-sub,
+  .green-sub {
     font-size: 2.8rem;
     text-align: center;
   }
 
-  .about-p,
+  .standard-p,
   .description-team {
     font-size: 1.4rem;
     text-align: justify;
@@ -264,11 +266,15 @@ a {
     text-align: center;
   }
 
-  .image-container,
-  .image-container-team {
+  .image-container {
     width: 100%;
     height: auto;
     max-width: 300px;
+  }
+
+  .image-container-team {
+    width: 18rem;
+    height: 18rem;
   }
 
   .logo-navbar {
@@ -306,5 +312,13 @@ a {
     flex-direction: row;
     flex-wrap: wrap;
     gap: 0.5rem;
+  }
+}
+
+@media (max-width: 768px) {
+
+  section,
+  .container {
+    margin-bottom: 4rem;
   }
 }
