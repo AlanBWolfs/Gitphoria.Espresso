@@ -6,6 +6,13 @@ body {
   background-color: #FFFFFF;
 }
 
+img {
+  max-width: 100%;
+  height: auto;
+  display: block;
+}
+
+/* Navbar */
 .logo-navbar {
   width: 5rem;
   height: 5rem;
@@ -14,15 +21,18 @@ body {
 
 .navbar-header {
   background-color: #133936;
-  padding: 1rem;
+  width: 100%;
+  margin: 0;
+  padding-left: 0;
+  padding-right: 0;
 }
-
 
 .navbar .nav-link {
   color: #FFFFFF !important;
   font-size: 1.4rem;
   font-weight: bold;
-  text-decoration: none;
+  font-family: "Poppins";
+  margin: 0 1.5rem;
   transition: color 0.3s ease;
 }
 
@@ -31,10 +41,23 @@ body {
   text-decoration: underline;
 }
 
+.cart-icon {
+  color: #998F76;
+  width: 2.5rem;
+  transition: all 0.3s ease;
+  background-color: transparent;
+}
+
+.cart-icon:hover {
+  color: #b3a67f;
+  transform: scale(1.1);
+  cursor: pointer;
+}
+
 .btn-login {
   background-color: #998F76;
   color: #FFFFFF;
-  border: #998F76;
+  border: none;
   border-radius: 1rem;
   width: 12rem;
   height: 4.5rem;
@@ -50,40 +73,16 @@ body {
   animation: pulse 1s infinite;
 }
 
-.nav-link {
-  font-size: 1.4rem;
-  font-family: "Poppins";
-  color: #FFFFFF;
-  margin: 0 1.5rem 0 1.5rem;
-  font-weight: bold;
-}
-
-.cart-icon {
-  color: #998F76;
-  width: 2.5rem;
-  height: auto;
-  transition: all 0.3s ease;
-  transform: scale(1);
-  background-color: transparent !important;
-  box-shadow: none;
-}
-
-.cart-icon:hover {
-  color: #b3a67f;
-  transform: scale(1.1);
-  cursor: pointer;
-}
-
-/* h1 Sobre Nosotros*/
-.aboutUs-title {
+/* Títulos y textos */
+.aboutUs-title,
+.aboutUs-team {
   font-family: "Avigea";
   color: #133936;
   font-weight: bold;
   font-size: 4.6rem;
-  margin-top: 3rem;
-  margin-bottom: 5rem;
   text-align: center;
   letter-spacing: 0.3rem;
+  margin: 3rem 0 5rem;
 }
 
 .our {
@@ -102,41 +101,11 @@ body {
   color: #133936;
 }
 
-.about-p {
+.about-p,
+.description-team {
   font-size: 1.6rem;
   font-family: "Poppins";
   margin-top: 2.5rem;
-}
-
-.img-aboutUs {
-  border-radius: 1rem;
-}
-
-.image-container {
-  width: 350px;
-  height: 200px;
-  overflow: hidden;
-  margin: 0 auto;
-}
-
-.image-container img {
-  width: 100%;
-  height: 100%;
-  object-fit: cover;
-}
-
-.img-aboutUs {
-  border-radius: 1rem;
-}
-
-.aboutUs-team {
-  color: #133936;
-  font-family: "Avigea";
-  font-size: 4.6rem;
-  letter-spacing: 0.3rem;
-  text-align: center;
-  margin-top: 5rem;
-  margin-bottom: 5rem;
 }
 
 .names-team {
@@ -146,10 +115,23 @@ body {
   font-size: 3rem;
 }
 
-.description-team {
-  font-size: 1.4rem;
-  font-family: "Poppins";
-  margin-top: 2rem;
+/* Imágenes */
+.img-aboutUs {
+  border-radius: 1rem;
+}
+
+.image-container {
+  width: 45rem;
+  height: 30rem;
+  overflow: hidden;
+  position: relative;
+  margin: 0 auto;
+}
+
+.image-container img {
+  width: 100%;
+  height: auto;
+  object-fit: cover;
 }
 
 .image-container-aspect {
@@ -159,18 +141,16 @@ body {
   overflow: hidden;
   border-radius: 1rem;
   margin-bottom: 2rem;
-
 }
 
 .image-container-aspect img {
   position: absolute;
   top: 0;
   left: 0;
+  object-fit: cover;
   width: 100%;
   height: 100%;
-  object-fit: cover;
 }
-
 
 .image-container-team {
   width: 30rem;
@@ -186,23 +166,14 @@ body {
   object-fit: cover;
 }
 
-.aboutUs-footer {
-  background-color: #133936;
-  font-family: "Poppins";
-  color: #FFFFFF;
-  padding: 1rem 0;
-  text-align: center;
+.image-container-team img[alt="Betzabet"] {
+  object-position: center top;
 }
 
-.social-media-icons {
-  list-style-type: none;
-  display: flex;
-  justify-content: center;
-  gap: 1rem;
-}
-
-a {
-  text-decoration: none;
+/* Íconos sociales */
+.icons-team {
+  color: #133936;
+  margin-bottom: 1.5rem;
 }
 
 i {
@@ -212,19 +183,32 @@ i {
 }
 
 i:hover {
-  color: #a5a29F;
+  color: #998F76;
   transform: scale(1.1);
   cursor: pointer;
 }
 
-.logo-footer {
-  width: 10rem;
-  height: 10rem;
-  object-fit: contain;
-  margin: 1rem auto;
-  display: block;
+a {
+  text-decoration: none;
 }
 
+/* Footer */
+.aboutUs-footer {
+  background-color: #133936;
+  font-family: "Poppins";
+  color: #FFFFFF;
+  padding: 1rem 0;
+  text-align: center;
+  width: 100%;
+  margin: 0;
+}
+
+.social-media-icons {
+  list-style-type: none;
+  display: flex;
+  justify-content: center;
+  gap: 1rem;
+}
 
 .footer-menu {
   list-style: none;
@@ -244,10 +228,83 @@ i:hover {
   color: #998F76;
   text-decoration: underline;
 }
-.image-container-team img[alt="Betzabet"] {
+
+.logo-footer {
+  width: 10rem;
+  height: 10rem;
+  object-fit: contain;
+  margin: 1rem auto;
+  display: block;
+}
+
+/* Media Queries para móviles */
+@media (max-width: 768px) {
+
+  .aboutUs-title,
+  .aboutUs-team {
+    font-size: 3rem;
+    text-align: center;
+  }
+
+  .our,
+  .our-sub {
+    font-size: 2.8rem;
+    text-align: center;
+  }
+
+  .about-p,
+  .description-team {
+    font-size: 1.4rem;
+    text-align: justify;
+    padding: 0 1rem;
+  }
+
+  .names-team {
+    font-size: 2rem;
+    text-align: center;
+  }
+
+  .image-container,
+  .image-container-team {
     width: 100%;
-    height: 100%;
-    object-fit: cover;
-    object-position: center top; 
-    position: relative;
+    height: auto;
+    max-width: 300px;
+  }
+
+  .logo-navbar {
+    width: 4rem;
+    height: 4rem;
+  }
+
+  .btn-login {
+    width: 100%;
+    max-width: 12rem;
+    font-size: 1.2rem;
+  }
+
+  .navbar .nav-link {
+    font-size: 1.2rem;
+    margin: 0.5rem 1rem;
+  }
+
+  .footer-menu {
+    flex-direction: column;
+    gap: 1rem;
+    align-items: center;
+  }
+
+  .footer-menu a {
+    font-size: 1.2rem;
+  }
+
+  .logo-footer {
+    width: 8rem;
+    height: 8rem;
+  }
+
+  .social-media-icons {
+    flex-direction: row;
+    flex-wrap: wrap;
+    gap: 0.5rem;
+  }
 }
