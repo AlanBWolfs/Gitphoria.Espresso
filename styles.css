@@ -198,6 +198,7 @@ a {
 /* Footer */
 .general-footer {
   background-color: #133936;
+  position: sticky;
   font-family: "Poppins";
   color: #FFFFFF;
   padding: 1rem 0;
