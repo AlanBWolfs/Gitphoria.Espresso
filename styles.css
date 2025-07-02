@@ -12,7 +12,7 @@ img {
   display: block;
 }
 
-/* Navbar */
+/*!!!!!!!!!!!!!!!!!! Navbar */
 .logo-navbar {
   width: 5rem;
   height: 5rem;
@@ -73,7 +73,7 @@ img {
   animation: pulse 1s infinite;
 }
 
-/* Títulos y textos */
+/*!!!!!!!!!!!!!!!!!!!! Títulos y textos */
 .main-title {
   font-family: "Avigea";
   color: #133936;
@@ -114,7 +114,7 @@ img {
   font-size: 3rem;
 }
 
-/* Imágenes */
+/*!!!!!!!!!!!!!!!!!!!!!!!!! Imágenes */
 .img-aboutUs {
   border-radius: 1rem;
 }
@@ -173,7 +173,7 @@ img {
   object-position: center top;
 }
 
-/* Íconos sociales */
+/*!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!! Íconos sociales */
 .icons-team {
   color: #133936;
   margin-bottom: 1.5rem;
@@ -195,7 +195,7 @@ a {
   text-decoration: none;
 }
 
-/* Footer */
+/*!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!! Footer */
 .general-footer {
   background-color: #133936;
   position: sticky;
@@ -241,7 +241,7 @@ a {
   display: block;
 }
 
-/* Media Queries para móviles */
+/*!!!!!!!!!!!!!!!!!!!! Media Queries para móviles */
 @media (max-width: 768px) {
 
   .main-title {
