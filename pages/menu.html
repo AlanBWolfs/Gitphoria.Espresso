@@ -1,92 +1,26 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.7/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-LN+7fdVzj6u52u30Kp6M/trliBMCMKTyK833zpbD+pXdCLuTusPj697FH4R/5mcr" crossorigin="anonymous">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css" integrity="sha512-Evv84Mr4kqVGRNSgIGL/F/aIDqQb7xQ2vcrdIwxfjThSH8CSR7PBEakCr51Ck+w+/U6swU2Im1vVX0SVk9ABhg==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+
+    <title> Menu</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.7/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-LN+7fdVzj6u52u30Kp6M/trliBMCMKTyK833zpbD+pXdCLuTusPj697FH4R/5mcr" crossorigin="anonymous">
     <link rel="stylesheet" href="/styles.css">
-    <title>Menú</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css"
+        integrity="sha512-Evv84Mr4kqVGRNSgIGL/F/aIDqQb7xQ2vcrdIwxfjThSH8CSR7PBEakCr51Ck+w+/U6swU2Im1vVX0SVk9ABhg=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+
 </head>
+
 <body>
-    <header>
-        <nav class="navbar navbar-expand-md navbar-header">
-            <div class="container-fluid px-0">
-                <!-- Logo alineado a la izquierda -->
-                <a class="navbar-brand" href="/index.html">
-                    <img class="logo-navbar" src="/assets/logo-blanco.png" alt="logo-blanco">
-                </a>
 
-                <!-- Botón responsive -->
-                <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav"
-                    aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
-                    <span class="navbar-toggler-icon"></span>
-                </button>
+    <div id="navbar"></div>
 
-                <!-- Menú alineado a la derecha -->
-                <div class="collapse navbar-collapse" id="navbarNav">
-                    <ul class="navbar-nav ms-auto align-items-center">
-                        <li class="nav-item">
-                            <a class="nav-link" href="menu.html">Menú</a>
-                        </li>
-                        <li class="nav-item">
-                            <a class="nav-link" href="acercaDe.html">Nosotros</a>
-                        </li>
-                        <li class="nav-item">
-                            <a class="nav-link" href="contact.html">Contáctanos</a>
-                        </li>
-                        <div class="d-flex align-items-center">
-                            <li class="nav-item">
-                                <a class="nav-link" href="#"><svg xmlns="http://www.w3.org/2000/svg" width="16"
-                                        height="16" fill="currentColor" class="cart-icon" viewBox="0 0 16 16">
-                                        <path
-                                            d="M0 1.5A.5.5 0 0 1 .5 1H2a.5.5 0 0 1 .485.379L2.89 3H14.5a.5.5 0 0 1 .491.592l-1.5 8A.5.5 0 0 1 13 12H4a.5.5 0 0 1-.491-.408L2.01 3.607 1.61 2H.5a.5.5 0 0 1-.5-.5M5 12a2 2 0 1 0 0 4 2 2 0 0 0 0-4m7 0a2 2 0 1 0 0 4 2 2 0 0 0 0-4m-7 1a1 1 0 1 1 0 2 1 1 0 0 1 0-2m7 0a1 1 0 1 1 0 2 1 1 0 0 1 0-2" />
-                                    </svg></a>
-                        </div>
-                        </li>
-                        </li>
-                        <li class="nav-item">
-                            <a class="nav-link" href="registro.html"><button type="button" class="btn-login">Inicia sesión</button></a>
-                        </li>
-                    </ul>
-                </div>
-            </div>
-        </nav>
-    </header>
-    
-    <footer class="general-footer">
-        <div class="container-fluid px-0">
-            <div class="row text-center align-items-center justify-content-between">
-                <div class="col">
-                    <ul class="social-media-icons d-flex justify-content-center p-0 m-0">
-                        <li class="list-inline-item">
-                            <a href="https://web.whatsapp.com" target="_blank"><i class="fa-brands fa-whatsapp"></i></a>
-                        </li>
-                        <li class="list-inline-item">
-                            <a href="https:/www.instagram.com" target="_blank"><i
-                                    class="fa-brands fa-instagram"></i></a>
-                        </li>
-                        <li class="list-inline-item">
-                            <a href="https:/www.facebook.com" target="_blank"><i class="fa-brands fa-facebook"></i></a>
-                        </li>
-                        <li class="list-inline-item">
-                            <a href="https:/www.x.com" target="_blank"><i class="fa-brands fa-x-twitter"></i></a>
-                        </li>
-                    </ul>
-                </div>
-                <div class="col">
-                    <img src="/assets/logo-footer.png" alt="Logo footer" class="logo-footer">
-                </div>
-                <div class="col">
-                    <ul class="footer-menu d-flex justify-content-center p-0 m-0">
-                        <li class="list-inline-item"><a href="menu.html">Menú</a></li>
-                        <li class="list-inline-item"><a href="acercaDe.html">Nosotros</a></li>
-                        <li class="list-inline-item"><a href="contact.html">Contáctanos</a></li>
-                    </ul>
-                </div>
-            </div>
-        </div>
-    </footer>
-    
+    <script src="../js/includeComponentes.js"></script>
+
 </body>
+
 </html>
