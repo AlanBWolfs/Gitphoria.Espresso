@@ -12,7 +12,7 @@ img {
   display: block;
 }
 
-/* Navbar */
+/*!!!!!!!!!!!!!!!!!! Navbar */
 .logo-navbar {
   width: 5rem;
   height: 5rem;
@@ -73,7 +73,7 @@ img {
   animation: pulse 1s infinite;
 }
 
-/* Títulos y textos */
+/*!!!!!!!!!!!!!!!!!!!! Títulos y textos */
 .main-title {
   font-family: "Avigea";
   color: #133936;
@@ -82,6 +82,20 @@ img {
   text-align: center;
   letter-spacing: 0.3rem;
   margin: 3rem 0 5rem;
+}
+
+.home-main-title {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  font-family: "Avigea";
+  text-align: center;
+  color: #ffffff;
+  font-weight: bold;
+  font-size: 4.6rem;
+  letter-spacing: 0.3rem;
+  z-index: 2;
 }
 
 .golden-sub {
@@ -114,7 +128,7 @@ img {
   font-size: 3rem;
 }
 
-/* Imágenes */
+/*!!!!!!!!!!!!!!!!!!!!!!!!! Imágenes */
 .img-aboutUs {
   border-radius: 1rem;
 }
@@ -173,7 +187,7 @@ img {
   object-position: center top;
 }
 
-/* Íconos sociales */
+/*!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!! Íconos sociales */
 .icons-team {
   color: #133936;
   margin-bottom: 1.5rem;
@@ -195,7 +209,7 @@ a {
   text-decoration: none;
 }
 
-/* Footer */
+/*!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!! Footer */
 .general-footer {
   background-color: #133936;
   position: sticky;
@@ -241,7 +255,35 @@ a {
   display: block;
 }
 
+
+.contact-icon {
+  color: #a5a29f;
+  font-size: 5rem;
+}
+
+.icon-label {
+  font-family: "Poppins";
+  color: #133936;
+  font-weight: bold;
+  font-size: 1.4rem;
+}
+
+.business-name {
+  font-family: "Poppins";
+  color: #998F76;
+  font-size: 1.2rem;
+  text-decoration: underline;
+}
+
+
+.map-espresso {
+  border-radius: 2rem;
+}
+
 /* Media Queries para móviles */
+
+/*!!!!!!!!!!!!!!!!!!!! Media Queries para móviles */
+
 @media (max-width: 768px) {
 
   .main-title {
@@ -322,4 +364,49 @@ a {
   .container {
     margin-bottom: 4rem;
   }
+}
+
+/*!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!! - Home*/
+.mainBanner {
+  position: relative;
+  height: 50vh;
+  background-image: url('/assets/Banner.png');
+  background-size: cover;
+  background-position: center;
+  overflow: hidden;
+}
+
+.mainBanner::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(rgb(0, 0, 0),rgb(0, 0, 0),black,#133936);
+  /* background-color:#133936; Rojo semitransparente */
+  mix-blend-mode:darken; /* Alternativas: overlay, screen, darken */
+  pointer-events: none;
+  opacity: 75%;
+}
+
+.general-green-button{
+  background-color: #133936 !important;
+  color: white !important;
+  font-size: 1.25rem;
+  padding: 12px 30px;
+  border-radius: 6px;
+  font-weight: 600;
+  border: none;
+}
+
+
+
+
+
+/*!!!!!!!!!!!!!!!!!!!! Ids - Casos específicos*/
+
+#contactForm{
+  padding-top: 10rem;
+  padding-bottom: 10rem;
 }
