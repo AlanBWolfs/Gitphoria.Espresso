@@ -84,6 +84,20 @@ img {
   margin: 3rem 0 5rem;
 }
 
+.home-main-title {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  font-family: "Avigea";
+  text-align: center;
+  color: #ffffff;
+  font-weight: bold;
+  font-size: 4.6rem;
+  letter-spacing: 0.3rem;
+  z-index: 2;
+}
+
 .golden-sub {
   font-family: "Avigea";
   font-weight: bold;
@@ -351,6 +365,35 @@ a {
     margin-bottom: 4rem;
   }
 }
+
+/*!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!! - Home*/
+.mainBanner {
+  position: relative;
+  height: 50vh;
+  background-image: url('/assets/Banner.png');
+  background-size: cover;
+  background-position: center;
+  overflow: hidden;
+}
+
+.mainBanner::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(rgb(0, 0, 0),rgb(0, 0, 0),black,#133936);
+  /* background-color:#133936; Rojo semitransparente */
+  mix-blend-mode:darken; /* Alternativas: overlay, screen, darken */
+  pointer-events: none;
+  opacity: 75%;
+}
+
+
+
+
+
 
 /*!!!!!!!!!!!!!!!!!!!! Ids - Casos específicos*/
 
