@@ -256,6 +256,15 @@ a {
 }
 
 
+.general-green-button{
+  background-color: #133936 !important;
+  color: white !important;
+  font-size: 1.25rem;
+  padding: 12px 30px;
+  border-radius: 6px;
+  font-weight: 600;
+  border: none;
+}
 
 
 
