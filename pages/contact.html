@@ -16,7 +16,50 @@
 
 <body>
     <header>
-    <div id="navbar"></div>
+        <nav class="navbar navbar-expand-md navbar-header">
+            <div class="container-fluid px-0">
+                <!-- Logo alineado a la izquierda -->
+                <a class="navbar-brand" href="/index.html">
+                    <img class="logo-navbar" src="/assets/logo-blanco.png" alt="logo-blanco">
+                </a>
+
+                <!-- Botón responsive -->
+                <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav"
+                    aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+
+                <!-- Menú alineado a la derecha -->
+                <div class="collapse navbar-collapse" id="navbarNav">
+                    <ul class="navbar-nav ms-auto align-items-center">
+                        <li class="nav-item">
+                            <a class="nav-link" href="menu.html">Menú</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="acercaDe.html">Nosotros</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="contact.html">Contáctanos</a>
+                        </li>
+                        <div class="d-flex align-items-center">
+                            <li class="nav-item">
+                                <a class="nav-link" href="#"><svg xmlns="http://www.w3.org/2000/svg" width="16"
+                                        height="16" fill="currentColor" class="cart-icon" viewBox="0 0 16 16">
+                                        <path
+                                            d="M0 1.5A.5.5 0 0 1 .5 1H2a.5.5 0 0 1 .485.379L2.89 3H14.5a.5.5 0 0 1 .491.592l-1.5 8A.5.5 0 0 1 13 12H4a.5.5 0 0 1-.491-.408L2.01 3.607 1.61 2H.5a.5.5 0 0 1-.5-.5M5 12a2 2 0 1 0 0 4 2 2 0 0 0 0-4m7 0a2 2 0 1 0 0 4 2 2 0 0 0 0-4m-7 1a1 1 0 1 1 0 2 1 1 0 0 1 0-2m7 0a1 1 0 1 1 0 2 1 1 0 0 1 0-2" />
+                                    </svg></a>
+                        </div>
+                        </li>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="registro.html"><button type="button" class="btn-login">Inicia
+                                    sesión</button></a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </nav>
+        <div id="navbar"></div>
     </header>
     <!-- test -->
 
@@ -25,15 +68,15 @@
         <div class="row justify-content-evenly">
             <div class="col-lg-4">
                 <form>
-                    <h2>Contáctanos</h2>
+                    <h2 class="green-sub">Contáctanos</h2>
                     <br>
-                    <h1>Ponte en Contacto</h1>
+                    <h1 class="green-sub">Ponte en Contacto</h1>
                     <div class="mb-3">
-                        <label for="name" class="form-label">Nombre</label>
+                        <label for="name" class="form-label, standard-p">Nombre</label>
                         <input type="text" class="form-control" id="name" required>
                     </div>
                     <div class="mb-3">
-                        <label for="exampleInputEmail1" class="form-label">Email address</label>
+                        <label for="exampleInputEmail1" class="form-label">Email</label>
                         <input type="email" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp">
                     </div>
                     <div class="mb-3">
@@ -41,10 +84,10 @@
                         <input type="text" class="form-control" id="text" required>
                     </div>
                     <div class="mb-3">
-                        <label for="text" class="form-label">Mensaje</label>
-                        <input type="text" class="form-control" id="text" required>
+                        <label for="textarea" class="form-label">Mensaje</label>
+                        <textarea type="textarea" class="form-control" id="textarea" required></textarea>
                     </div>
-                    <button type="submit" class="btn btn-primary">Enviar</button>
+                    <button type="submit" class="btn btn-primary" style="text-align: center;">Enviar</button>
                 </form>
             </div>
             <div class="col-lg-4">
