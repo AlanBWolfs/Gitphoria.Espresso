@@ -323,3 +323,10 @@ a {
     margin-bottom: 4rem;
   }
 }
+
+/*!!!!!!!!!!!!!!!!!!!! Ids - Casos específicos*/
+
+#contactForm{
+  padding-top: 10rem;
+  padding-bottom: 10rem;
+}
