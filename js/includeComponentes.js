@@ -16,4 +16,4 @@ fetch(`${rutaBase}navbar.html`)
         document.getElementById('navbar').innerHTML = data;
     })
     //Si algo sale mal, este bloque muestra en la consola del navegador el error
-    .catch(error => console.error('Error cargando navbar: '), error);
+    .catch(error => console.error('Error cargando navbar:', error));
