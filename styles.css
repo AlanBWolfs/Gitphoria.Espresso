@@ -185,30 +185,6 @@ a {
 }
 
 
-.contact-icon {
-  color: #a5a29f;
-  font-size: 5rem;
-}
-
-.icon-label {
-  font-family: "Poppins";
-  color: #133936;
-  font-weight: bold;
-  font-size: 1.4rem;
-}
-
-.business-name {
-  font-family: "Poppins";
-  color: #998F76;
-  font-size: 1.2rem;
-  text-decoration: underline;
-}
-
-
-.map-espresso {
-  border-radius: 2rem;
-}
-
 /* Media Queries para móviles */
 
 /*!!!!!!!!!!!!!!!!!!!! Media Queries para móviles */
