@@ -49,20 +49,21 @@ img {
 }
 
 .cart-icon:hover {
-  color: #b3a67f;
-  transform: scale(1.1);
+  color: #A2845E;
+  transform: rotate(360deg) scale(1.2);
   cursor: pointer;
 }
 
 .btn-login {
-  background-color: #998F76;
+  background-color: #A2845E;
   color: #FFFFFF;
   border: none;
   border-radius: 1rem;
   width: 9rem;
   height: 3.5rem;
   font-family: "Poppins";
-  font-weight: bold;
+  font-weight: 500;
+  transition: background-color 0.3s ease, color 0.3s ease, transform 0.3s ease;
 }
 
 .btn-login:hover {
