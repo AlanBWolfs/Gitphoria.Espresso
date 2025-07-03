@@ -28,7 +28,7 @@ img {
 }
 
 .navbar .nav-link {
-  color: #FFFFFF !important;
+  color: #FFFFFF;
   font-size: 1.4rem;
   font-weight: bold;
   font-family: "Poppins";
@@ -37,32 +37,33 @@ img {
 }
 
 .navbar .nav-link:hover {
-  color: #998F76 !important;
-  text-decoration: underline;
+  color: #A2845E;
+  transform: scale(1.10);
 }
 
 .cart-icon {
-  color: #998F76;
+  color: #FFFFFF;
   width: 2.5rem;
   transition: all 0.3s ease;
   background-color: transparent;
 }
 
 .cart-icon:hover {
-  color: #b3a67f;
-  transform: scale(1.1);
+  color: #A2845E;
+  transform: rotate(360deg) scale(1.2);
   cursor: pointer;
 }
 
 .btn-login {
-  background-color: #998F76;
+  background-color: #A2845E;
   color: #FFFFFF;
   border: none;
   border-radius: 1rem;
-  width: 12rem;
-  height: 4.5rem;
+  width: 9rem;
+  height: 3.5rem;
   font-family: "Poppins";
-  font-weight: bold;
+  font-weight: 500;
+  transition: background-color 0.3s ease, color 0.3s ease, transform 0.3s ease;
 }
 
 .btn-login:hover {
@@ -80,7 +81,7 @@ img {
   font-weight: bold;
   font-size: 4.6rem;
   text-align: center;
-  letter-spacing: 0.3rem;
+  letter-spacing: 0.2rem;
   margin: 3rem 0 5rem;
 }
 
@@ -103,7 +104,7 @@ img {
   font-weight: bold;
   font-size: 4rem;
   letter-spacing: 0.2rem;
-  color: #998F76;
+  color: #A2845E;
 }
 
 .green-sub {
