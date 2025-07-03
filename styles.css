@@ -67,23 +67,30 @@ img {
 
 
 .btn-login {
-  background-color: #A2845E;
+  background-color: transparent;
   color: #FFFFFF;
-  border: none;
-  border-radius: 1rem;
-  width: 9rem;
-  height: 3.5rem;
+  border: 3px solid #A2845E;
+  padding: 8px 22px;
+  border-radius: 5rem;
   font-family: "Poppins";
-  font-weight: 500;
-  transition: background-color 0.3s ease, color 0.3s ease, transform 0.3s ease;
+  font-weight: 800;
+  letter-spacing: 0.5px;
+  transition: all 0.3s ease;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+  cursor: pointer;
+  font-size: 15px;
 }
 
 .btn-login:hover {
-  background-color: #b3a67f;
-  transform: scale(1.05);
-  cursor: pointer;
-  box-shadow: 0 0 15px rgba(255, 255, 255, 0.3);
-  animation: pulse 1s infinite;
+  border: 2.5px solid #FFFFFF;
+  background-color: #998F76;
+  color: #FFFFFF;
+  transform: translateY(-2px);
+  box-shadow: 0 6px 12px rgba(0, 0, 0, 0.2);
+}
+.btn-login:active {
+  transform: scale(0.97); /* Se “hunde” un poco */
+  box-shadow: 0 3px 6px rgba(0, 0, 0, 0.25);
 }
 
 .navbar-toggler{
