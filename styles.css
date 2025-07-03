@@ -294,13 +294,7 @@ a {
 
 
 
-/*!!!!!!!!!!!!!!!!!!!! Ids - Casos específicos*/
 
-#contactForm {
-  padding-top: 10rem;
-  padding-bottom: 10rem;
-
-/*!!!!!!!!!!!!!!!!!!!! Ids - Casos específicos*/
 
 .contactanos {
   position: relative;
@@ -351,10 +345,4 @@ form{
 }
 input.invalid{
   border: 2px solid red;
-}
-.error-hint {
-  color: red;
-  font-size: 12px;
-  margin-top: -5px;
-  margin-bottom: 10px;
-}
+};
