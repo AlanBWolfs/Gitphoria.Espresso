@@ -1,0 +1,298 @@
+html {
+  font-size: 62.5%;
+}
+
+body {
+  background-color: #FFFFFF;
+}
+
+img {
+  max-width: 100%;
+  height: auto;
+  display: block;
+}
+
+/*!!!!!!!!!!!!!!!!!! Navbar */
+.logo-navbar {
+  width: 5rem;
+  height: 5rem;
+  margin-left: 2rem;
+}
+
+.navbar-header {
+  background-color: #133936;
+  width: 100%;
+  margin: 0;
+  padding-left: 0;
+  padding-right: 0;
+}
+
+.navbar .nav-link {
+  color: #FFFFFF;
+  font-size: 1.4rem;
+  font-weight: bold;
+  font-family: "Poppins";
+  margin: 0 1.5rem;
+  transition: color 0.3s ease;
+}
+
+.navbar .nav-link:hover {
+  color: #A2845E;
+  transform: scale(1.10);
+}
+
+.cart-icon {
+  color: #FFFFFF;
+  width: 2.5rem;
+  transition: all 0.3s ease;
+  background-color: transparent;
+}
+
+.cart-icon:hover {
+  color: #A2845E;
+  transform: rotate(360deg) scale(1.2);
+  cursor: pointer;
+}
+
+.btn-login {
+  background-color: #A2845E;
+  color: #FFFFFF;
+  border: none;
+  border-radius: 1rem;
+  width: 9rem;
+  height: 3.5rem;
+  font-family: "Poppins";
+  font-weight: 500;
+  transition: background-color 0.3s ease, color 0.3s ease, transform 0.3s ease;
+}
+
+.btn-login:hover {
+  background-color: #b3a67f;
+  transform: scale(1.05);
+  cursor: pointer;
+  box-shadow: 0 0 15px rgba(255, 255, 255, 0.3);
+  animation: pulse 1s infinite;
+}
+
+/*!!!!!!!!!!!!!!!!!!!! Títulos y textos */
+.main-title {
+  font-family: "Avigea";
+  color: #133936;
+  font-weight: bold;
+  font-size: 4.6rem;
+  text-align: center;
+  letter-spacing: 0.2rem;
+  margin: 3rem 0 5rem;
+}
+
+.home-main-title {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  font-family: "Avigea";
+  text-align: center;
+  color: #ffffff;
+  font-weight: bold;
+  font-size: 4.6rem;
+  letter-spacing: 0.3rem;
+  z-index: 2;
+}
+
+.golden-sub {
+  font-family: "Avigea";
+  font-weight: bold;
+  font-size: 4rem;
+  letter-spacing: 0.2rem;
+  color: #A2845E;
+}
+
+.green-sub {
+  font-family: "Avigea";
+  font-weight: bold;
+  font-size: 4.2rem;
+  letter-spacing: 0.2rem;
+  color: #133936;
+}
+
+.standard-p {
+  font-size: 1.6rem;
+  font-family: "Poppins";
+  margin-top: 2.5rem;
+}
+
+
+
+i {
+  color: #FFFFFF;
+  font-size: 2.5rem;
+  margin: 1rem;
+}
+
+i:hover {
+  color: #998F76;
+  transform: scale(1.1);
+  cursor: pointer;
+}
+
+a {
+  text-decoration: none;
+}
+
+/*!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!! Footer */
+.general-footer {
+  background-color: #133936;
+  position: sticky;
+  font-family: "Poppins";
+  color: #FFFFFF;
+  padding: 1rem 0;
+  text-align: center;
+  width: 100%;
+  margin: 0;
+}
+
+.social-media-icons {
+  list-style-type: none;
+  display: flex;
+  justify-content: center;
+  gap: 1rem;
+}
+
+.footer-menu {
+  list-style: none;
+  display: flex;
+  justify-content: center;
+  gap: 2rem;
+  padding-left: 0;
+}
+
+.footer-menu a {
+  color: #FFFFFF;
+  font-size: 1.4rem;
+  font-weight: bold;
+}
+
+.footer-menu a:hover {
+  color: #998F76;
+  text-decoration: underline;
+}
+
+.logo-footer {
+  width: 10rem;
+  height: 10rem;
+  object-fit: contain;
+  margin: 1rem auto;
+  display: block;
+}
+
+
+.contact-icon {
+  color: #a5a29f;
+  font-size: 5rem;
+}
+
+.icon-label {
+  font-family: "Poppins";
+  color: #133936;
+  font-weight: bold;
+  font-size: 1.4rem;
+}
+
+.business-name {
+  font-family: "Poppins";
+  color: #998F76;
+  font-size: 1.2rem;
+  text-decoration: underline;
+}
+
+
+.map-espresso {
+  border-radius: 2rem;
+}
+
+/* Media Queries para móviles */
+
+/*!!!!!!!!!!!!!!!!!!!! Media Queries para móviles */
+
+@media (max-width: 768px) {
+
+  .main-title {
+    font-size: 3rem;
+    text-align: center;
+  }
+
+  .golden-sub,
+  .green-sub {
+    font-size: 2.8rem;
+    text-align: center;
+  }
+
+  .standard-p {
+    font-size: 1.4rem;
+    text-align: justify;
+    padding: 0 1rem;
+  }
+
+
+  .logo-navbar {
+    width: 4rem;
+    height: 4rem;
+  }
+
+  .btn-login {
+    width: 100%;
+    max-width: 12rem;
+    font-size: 1.2rem;
+  }
+
+  .navbar .nav-link {
+    font-size: 1.2rem;
+    margin: 0.5rem 1rem;
+  }
+
+  .footer-menu {
+    flex-direction: column;
+    gap: 1rem;
+    align-items: center;
+  }
+
+  .footer-menu a {
+    font-size: 1.2rem;
+  }
+
+  .logo-footer {
+    width: 8rem;
+    height: 8rem;
+  }
+
+  .social-media-icons {
+    flex-direction: row;
+    flex-wrap: wrap;
+    gap: 0.5rem;
+  }
+}
+
+@media (max-width: 768px) {
+
+  section,
+  .container {
+    margin-bottom: 4rem;
+  }
+}
+
+
+.general-green-button{
+  background-color: #133936 !important;
+  color: white !important;
+  font-size: 1.25rem;
+  padding: 12px 30px;
+  border-radius: 6px;
+  font-weight: 600;
+  border: none;
+}
+
+
+
+
+
+
