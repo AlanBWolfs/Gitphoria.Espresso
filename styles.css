@@ -390,14 +390,61 @@ a {
   opacity: 75%;
 }
 
-
-
-
-
-
 /*!!!!!!!!!!!!!!!!!!!! Ids - Casos específicos*/
 
-#contactForm{
-  padding-top: 10rem;
-  padding-bottom: 10rem;
+.contactanos {
+  position: relative;
+  padding: 40px;
+  color: whitesmoke;
+  max-height: 100vh;
+  font-size: 30px;
+  overflow: hidden;
+  z-index: 1;
+  font-family: poppins, sans-serif;
+}
+
+.contactanos::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-image: url('/assets/marcoDeCafe.jpg');
+  background-size: cover;
+  background-repeat: no-repeat;
+  filter: blur(1.6px);           /* Adjust blur as needed */
+  opacity: 0.95;                /* Adjust opacity as needed */
+  z-index: -1;
+}
+form{
+  padding: 40px;
+
+}
+
+.form-group label{
+  display: block;
+  font-size: 15px;
+  margin-bottom: 3px;
+  font-family: poppins, sans-serif;
+  text-align: left;
+}
+.form-group input{
+  width: 320px;
+  padding: 4px;
+  font-size: 15px;
+  color:#333;
+  font-family: poppins, sans-serif;
+  border-radius: 50px;
+  text-align: center;
+  margin-bottom: 4px;
+}
+input.invalid{
+  border: 2px solid red;
+}
+.error-hint {
+  color: red;
+  font-size: 12px;
+  margin-top: -5px;
+  margin-bottom: 10px;
 }

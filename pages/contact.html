@@ -64,32 +64,32 @@
     <!-- test -->
 
     <!-- Contact Form -->
-    <div class="container" id="contactForm">
-        <div class="row justify-content-evenly">
-            <div class="col-lg-4">
-                <form>
-                    <h2>Contáctanos</h2>
-                    <br>
-                    <h1>Ponte en Contacto</h1>
-                    <div class="mb-3">
-                        <label for="name" class="form-label">Nombre</label>
-                        <input type="text" class="form-control" id="name" required>
-                    </div>
-                    <div class="mb-3">
-                        <label for="exampleInputEmail1" class="form-label">Email address</label>
-                        <input type="email" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp">
-                    </div>
-                    <div class="mb-3">
-                        <label for="text" class="form-label">Motivo</label>
-                        <input type="text" class="form-control" id="text" required>
-                    </div>
-                    <div class="mb-3">
-                        <label for="text" class="form-label">Mensaje</label>
-                        <input type="text" class="form-control" id="text" required>
-                    </div>
-                    <button type="submit" class="btn btn-primary">Enviar</button>
-                </form>
+     
+            <div class="contactanos">
+                    <h1>Contáctanos</h2>
+                        <p>Envianos un mensaje:</p>
             </div>
+            <form>
+                <div class="form-group col-lg-4">
+                    <label for="name">Nombre:</label>
+                    <input 
+                    class="invalid"
+                    placeholder="Ingresa tu nombre"
+                    />
+                    <div class="error-hint">Campo Requerido*</div>
+                </div>
+                <button
+            </form>
+
+
+
+
+
+
+
+
+
+
             <div class="col-lg-4">
                 <p class="standard-p text-center"><strong>En Espresso Café valoramos cada opinión.</strong></p>
                 <p class="standard-p text-center">Tu experiencia nos ayuda a mejorar, por eso te invitamos a
@@ -182,8 +182,9 @@
 
     <script src=" https://cdn.jsdelivr.net/npm/bootstrap@5.3.6/dist/js/bootstrap.bundle.min.js"
         integrity="sha384-j1CDi7MgGQ12Z7Qab0qlWQ/Qqz24Gc6BM0thvEMVjHnfYGF0rmFCozFSxQBxwHKO" crossorigin="anonymous">
-        </script>
-
+    </script>
+    <script src="https://cdn.jsdelivr.net/npm/emailjs-com@3/dist/email.min.js"></script>
+    <script src="contact.js"></script>
 </body>
 
 </html>
