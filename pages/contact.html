@@ -2,156 +2,127 @@
 <html lang="en">
 
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Contáctanos</title>
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.7/dist/css/bootstrap.min.css" rel="stylesheet"
-        integrity="sha384-LN+7fdVzj6u52u30Kp6M/trliBMCMKTyK833zpbD+pXdCLuTusPj697FH4R/5mcr" crossorigin="anonymous">
-    <link rel="stylesheet" href="/styles.css">
-    <link rel="stylesheet" href="/styles-espresso-cafe/contact.css">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css"
-        
-        
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Contáctanos</title>
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.7/dist/css/bootstrap.min.css" rel="stylesheet"
+    integrity="sha384-LN+7fdVzj6u52u30Kp6M/trliBMCMKTyK833zpbD+pXdCLuTusPj697FH4R/5mcr" crossorigin="anonymous" />
+  <link rel="stylesheet" href="/styles.css" />
+  <link rel="stylesheet" href="/styles-espresso-cafe/contact.css" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css" />
 </head>
+
 <body>
-    
-    <div id="navbar"></div>
-    
-    <!-- test -->
+  <div id="navbar"></div>
 
-     <!-- Contact Form -->
-    <div class="container form-group" id="contactForm">
-        <div class="row justify-content-evenly">
-            <div class="col-lg-4">
-<<<<<<< HEAD
-                <form>
-                    <h2 class="green-sub">Contáctanos</h2>
-                    <br>
-                    <h1 class="green-sub">Ponte en Contacto</h1>
-                    <div class="mb-3">
-                        <label for="name" class="form-label, standard-p">Nombre</label>
-                        <input type="text" class="form-control" id="name" required>
-                    </div>
-                    <div class="mb-3">
-                        <label for="exampleInputEmail1" class="form-label">Email</label>
-                        <input type="email" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp">
-                    </div>
-                    <div class="mb-3">
-                        <label for="text" class="form-label">Motivo</label>
-                        <input type="text" class="form-control" id="text" required>
-                    </div>
-                    <div class="mb-3">
-                        <label for="textarea" class="form-label">Mensaje</label>
-                        <textarea type="textarea" class="form-control" id="textarea" required></textarea>
-                    </div>
-                    <button type="submit" class="btn btn-primary" style="text-align: center;">Enviar</button>
-=======
-                <form id="contactFormMain" class="contact-form" novalidate>
-                    <h2 class="contact-subtitle">Contáctanos</h2>
-                    <br>
-                    <h1 class="contact-title">Envíenos un Mensaje</h1>
+  <!-- Contacto en columnas -->
+  <div class="container mt-5 mb-5">
+    <div class="row justify-content-center align-items-start">
 
-                    <div class="mb-3 form-group">
-                        <label for="name" class="contact-label">Nombre</label>
-                        <input name="name" type="text" class="contact-input" id="name" placeholder="Nombre completo">
-                        <div class="error-hint hidden">Campo requerido*</div>
-                    </div>
+      <!-- Columna izquierda: Formulario -->
+      <div class="col-lg-6 mb-5">
+        <form id="contactFormMain" class="contact-form" novalidate>
+          <h2 class="contact-subtitle">Contáctanos</h2>
+          <br />
+          <h1 class="contact-title">Ponte en Contacto</h1>
 
-                <div class="mb-3 form-group">
-                    <label for="exampleInputEmail1" class="contact-label">Email</label>
-                    <input type="email" class="contact-input" id="exampleInputEmail1" placeholder="example@gmail.com" required>
-                    <div class="error-hint hidden">Campo requerido*</div>
-                 </div>
+          <div class="mb-3 form-group">
+            <label for="name" class="contact-label">Nombre</label>
+            <input name="name" type="text" class="contact-input" id="name" placeholder="Nombre completo" required />
+            <div class="error-hint hidden">Campo requerido*</div>
+          </div>
 
-                    <div class="mb-3 form-group">
-                        <label for="motivo" class="contact-label ">Motivo</label>
-                        <input type="text" class="contact-input" id="motivo" placeholder="Motivo del mensaje" required>
-                        <div class="error-hint hidden">Campo requerido*</div>
-                    </div>
+          <div class="mb-3 form-group">
+            <label for="exampleInputEmail1" class="contact-label">Email</label>
+            <input type="email" class="contact-input" id="exampleInputEmail1" placeholder="example@gmail.com"
+              required />
+            <div class="error-hint hidden">Campo requerido*</div>
+          </div>
 
-                    <div class="mb-3 form-group">
-                        <label for="textarea" class="contact-label">Mensaje</label>
-                        <textarea class="contact-input" id="textarea" rows="4" placeholder="Escribe tu mensaje aquí"
-                            required></textarea>
-                            <div class="error-hint hidden">Campo requerido*</div>
-                    </div>
+          <div class="mb-3 form-group">
+            <label for="motivo" class="contact-label">Motivo</label>
+            <input type="text" class="contact-input" id="motivo" placeholder="Motivo del mensaje" required />
+            <div class="error-hint hidden">Campo requerido*</div>
+          </div>
 
-                    <button type="submit" class="contact-submit-btn">Enviar</button>
->>>>>>> 1b80df2 (formulario de validacion e  integracion de EmailJS)
-                </form>
-                <div class="hidden" id="Gracias">Gracias por contactarte con nosotros</div>
-            </div>
-            
- <!-- Aqui se termina el formulario de Validacion -->
+          <div class="mb-3 form-group">
+            <label for="textarea" class="contact-label">Mensaje</label>
+            <textarea class="contact-input" id="textarea" rows="4" placeholder="Escribe tu mensaje aquí"
+              required></textarea>
+            <div class="error-hint hidden">Campo requerido*</div>
+          </div>
 
-            <div class="col-lg-4">
-                <p class="standard-p text-center"><strong>En Espresso Café valoramos cada opinión.</strong></p>
-                <p class="standard-p text-center">Tu experiencia nos ayuda a mejorar, por eso te invitamos a
-                    contactarnos a través de nuestras redes
-                    sociales o mediante el formulario que encontrarás en esta página. ¡Estamos aquí para escucharte!</p>
+          <button type="submit" class="contact-submit-btn">Enviar</button>
+        </form>
+        <div class="hidden" id="Gracias">Gracias por contactarte con nosotros</div>
+      </div>
 
-                <div class="row mt-4 contact-icons-grid">
-                    <div class="col-6 mb-4">
-                        <div class="d-flex flex-column align-items-center text-center">
-                            <i class="fa-brands fa-instagram contact-icon"></i>
-                            <p class="icon-label">Instagram</p>
-                            <a href="https://www.instagram.com/espressocafe10?igsh=MWRkemFhZ3R6MnQwMQ==" target="_blank"
-                                class="business-name">espressocafe10</a>
-                        </div>
-                    </div>
-                    <div class="col-6 mb-4">
-                        <div class="d-flex flex-column align-items-center text-center">
-                            <i class="fa-brands fa-facebook contact-icon"></i>
-                            <p class="icon-label">Facebook</p>
-                            <a href="https://www.facebook.com/profile.php?id=61576385543112" target="_blank"
-                                class="business-name">Espresso Café</a>
-                        </div>
-                    </div>
-                    <div class="col-6 mb-4">
-                        <div class="d-flex flex-column align-items-center text-center">
-                            <i class="fa-brands fa-whatsapp contact-icon"></i>
-                            <p class="icon-label">WhatsApp</p>
-                            <p class="business-name">+52 7712365116</p>
-                        </div>
-                    </div>
-                    <div class="col-6 mb-4">
-                        <div class="d-flex flex-column align-items-center text-center">
-                            <i class="fa-solid fa-location-dot contact-icon"></i>
-                            <p class="icon-label">Ubicación</p>
-                            <a href="https://maps.app.goo.gl/Ju8t6VKxvB513HP6A?g_st=iw" target="Ubicación"
-                                class="business-name">Espresso Café</a>
-                        </div>
-                    </div>
-                    <div class="col-12 map-container mb-5">
-                        <iframe
-                            src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3804.854908849491!2d-93.113289!3d17.5144382!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x85ec4d2c81b18b39%3A0xfb85acb60fe56b9f!2sEspresso%20cafe!5e0!3m2!1ses-419!2smx!4v1751432977626!5m2!1ses-419!2smx"
-                            width="400" height="300" style="border:0;" allowfullscreen="" loading="lazy"
-                            referrerpolicy="no-referrer-when-downgrade" class="map-espresso"></iframe>
-                    </div>
-                </div>
-            </div>
+      <!-- Columna derecha: Información + Redes + Mapa -->
+      <div class="col-lg-6">
+        <p class="standard-p text-center">
+          <strong>En Espresso Café valoramos cada opinión.</strong>
+        </p>
+        <p class="standard-p text-center">
+          Tu experiencia nos ayuda a mejorar, por eso te invitamos a contactarnos a través de nuestras redes sociales o
+          mediante el formulario que encontrarás en esta página. ¡Estamos aquí para escucharte!
+        </p>
+
+        <div class="row mt-4 contact-icons-grid">
+          <div class="col-6 mb-4 text-center">
+            <i class="fa-brands fa-instagram contact-icon"></i>
+            <p class="icon-label">Instagram</p>
+            <a href="https://www.instagram.com/espressocafe10" target="_blank"
+              class="business-name">espressocafe10</a>
+          </div>
+          <div class="col-6 mb-4 text-center">
+            <i class="fa-brands fa-facebook contact-icon"></i>
+            <p class="icon-label">Facebook</p>
+            <a href="https://www.facebook.com/profile.php?id=61576385543112" target="_blank"
+              class="business-name">Espresso Café</a>
+          </div>
+          <div class="col-6 mb-4 text-center">
+            <i class="fa-brands fa-whatsapp contact-icon"></i>
+            <p class="icon-label">WhatsApp</p>
+            <p class="business-name">+52 7712365116</p>
+          </div>
+          <div class="col-6 mb-4 text-center">
+            <i class="fa-solid fa-location-dot contact-icon"></i>
+            <p class="icon-label">Ubicación</p>
+            <a href="https://maps.app.goo.gl/Ju8t6VKxvB513HP6A?g_st=iw" target="_blank"
+              class="business-name">Espresso Café</a>
+          </div>
+
+          <div class="col-12 text-center">
+            <iframe
+              src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3804.854908849491!2d-93.113289!3d17.5144382!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x85ec4d2c81b18b39%3A0xfb85acb60fe56b9f!2sEspresso%20cafe!5e0!3m2!1ses-419!2smx!4v1751432977626!5m2!1ses-419!2smx"
+              width="100%" height="300" style="border:0;" allowfullscreen="" loading="lazy"
+              referrerpolicy="no-referrer-when-downgrade" class="map-espresso"></iframe>
+          </div>
         </div>
+      </div>
+
     </div>
+  </div>
 
-    <!--Fin test -->
+  <!-- Footer -->
+  <footer id="footer"></footer>
 
-    <footer id="footer"></footer>
-    <script src="../js/includeComponentes.js"></script>
-    <script src=" https://cdn.jsdelivr.net/npm/bootstrap@5.3.6/dist/js/bootstrap.bundle.min.js"
-        integrity="sha384-j1CDi7MgGQ12Z7Qab0qlWQ/Qqz24Gc6BM0thvEMVjHnfYGF0rmFCozFSxQBxwHKO" crossorigin="anonymous">
-    </script>
-    <script src="https://cdn.jsdelivr.net/npm/emailjs-com@3/dist/email.min.js"></script>
-    <script defer src="contact.js"></script>
-    <script type="text/javascript"
-        src="https://cdn.jsdelivr.net/npm/@emailjs/browser@4/dist/email.min.js">
-</script>
-<script type="text/javascript">
-   (function(){
+  <!-- Scripts -->
+  <script src="../js/includeComponentes.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.6/dist/js/bootstrap.bundle.min.js"
+    integrity="sha384-j1CDi7MgGQ12Z7Qab0qlWQ/Qqz24Gc6BM0thvEMVjHnfYGF0rmFCozFSxQBxwHKO" crossorigin="anonymous">
+  </script>
+  <script src="https://cdn.jsdelivr.net/npm/emailjs-com@3/dist/email.min.js"></script>
+  <script defer src="contact.js"></script>
+  <script type="text/javascript"
+    src="https://cdn.jsdelivr.net/npm/@emailjs/browser@4/dist/email.min.js"></script>
+  <script type="text/javascript">
+    (function () {
       emailjs.init({
         publicKey: "--BwLEdCZl4T1FTIP",
       });
-   })();
-</script>
+    })();
+  </script>
 </body>
 
 </html>
