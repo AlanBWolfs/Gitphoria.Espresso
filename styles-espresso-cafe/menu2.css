@@ -1,81 +1,88 @@
-
-
-.card {
-    
-  margin: 20px; 
-  background-color: #133936;          
-  border-radius: 20px;               
-  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.2);
-  overflow: hidden;
-  transition: transform 0.3s ease, box-shadow 0.3s ease;
+/*fuente personalizada tipo de archivo .otf*/
+@font-face {
+    font-family: "Avigea";
+    src: url(/assets/fonts/Avigea-6YGKo.otf) format("opentype");
 }
 
-.card:hover {
-  transform: translateY(-5px);
-  box-shadow: 0 12px 25px rgba(0, 0, 0, 0.3);
+.card {
+    /*separa la cad de otros elementos o bordes*/
+    margin: 20px;
+    background-color: #133936;
+    border-radius: 20px;
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.2);
+    /*Asegura que ningun hijo sobresalga del borde*/
+    overflow: hidden;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
 }
 
 .card-img-wrapper {
-  background-color: #133936;          
-  padding: 15px;                     
+    /*Mraco verde al rededor del area dorada*/
+    background-color: #133936;
+    padding: 15px;/*Deje espacio para que el area de la card no toque los bordes*/
 }
 
 .card-img-container {
-  background-color: #FFFFFF;          
-  height: 170px;                     
-  border-radius: 15px;                
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  position: relative;
+    background-color: #ffffff;
+    /*Fija la atura del area blanca*/
+    height: 170px;
+    border-radius: 15px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    /*permite colocar el ícono del corazon sobre este bloque*/
+    position: relative;
 }
 
 .card-img {
-  height: 150px;                       
-  width: auto;                       
-  border-radius: 10px;               
+    height: 150px;
+    width: auto;
+    border-radius: 10px;
 }
 
 .heart-icon {
-  position: absolute;
-  bottom: 10px;
-  right: 10px;
-  color: red;
-  font-size: 1.2rem;
-  cursor: pointer;
+    position: absolute;
+    bottom: 10px;
+    right: 10px;
+    color: red;
+    font-size: 1.6rem;
+    cursor: pointer;
 }
 
 .card-title {
-  color: #FFFFFF;
-  letter-spacing: 1.5px;
-  font-family: 'Avigea', sans-serif;
-  font-weight: 100;
-  text-align: center;
-  margin: 10px 0 5px 0;
+    color: #ffffff;
+    letter-spacing: 1.5px;
+    font-family: "Avigea", sans-serif;
+    font-weight: 100;
+    text-align: center;
+    margin: 10px 0 5px 0;
 }
 
 .card-price {
-  color: #FFFFFF;
-  text-align: center;
-  margin-bottom: 20px;
-  font-weight: 600;
+    color: #ffffff;
+    text-align: center;
+    margin-bottom: 20px;
+    font-weight: 600;
 }
 
 .btn-add {
-  display: block;
-  margin: 0 auto;
-  background-color: #A2845E;
-  color: #FFFFFF;
-  border: none;
-  border-radius: 30px;
-  padding: 8px 20px;
-  text-align: center;
-  font-weight: 600;
-  transition: background-color 0.3s ease, transform 0.2s ease;
-  text-decoration: none;
+    /*No permite que otros elementos esten a lado y pone los elementos abajo vertical*/
+    display: block;
+    margin: 0 auto;
+    background-color: #a2845e;
+    color: #ffffff;
+    border: none;
+    border-radius: 30px;
+    padding: 8px 20px;
+    text-align: center;
+    letter-spacing: 0.2px;
+    font-weight: 700;
+    transition: background-color 0.3s ease, transform 0.2s ease;
+    text-decoration: none;
 }
 
 .btn-add:hover {
-  background-color: #585858;
-  transform: scale(1.05);
+    background-color: #ffffff;
+    border: 2px solid #a2845e;
+    color: #a2845e;
+    transform: scale(1.05);
 }
