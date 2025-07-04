@@ -23,6 +23,7 @@
     <div class="container form-group" id="contactForm">
         <div class="row justify-content-evenly">
             <div class="col-lg-4">
+<<<<<<< HEAD
                 <form>
                     <h2 class="green-sub">Contáctanos</h2>
                     <br>
@@ -44,6 +45,39 @@
                         <textarea type="textarea" class="form-control" id="textarea" required></textarea>
                     </div>
                     <button type="submit" class="btn btn-primary" style="text-align: center;">Enviar</button>
+=======
+                <form id="contactFormMain" class="contact-form" novalidate>
+                    <h2 class="contact-subtitle">Contáctanos</h2>
+                    <br>
+                    <h1 class="contact-title">Envíenos un Mensaje</h1>
+
+                    <div class="mb-3 form-group">
+                        <label for="name" class="contact-label">Nombre</label>
+                        <input name="name" type="text" class="contact-input" id="name" placeholder="Nombre completo">
+                        <div class="error-hint hidden">Campo requerido*</div>
+                    </div>
+
+                <div class="mb-3 form-group">
+                    <label for="exampleInputEmail1" class="contact-label">Email</label>
+                    <input type="email" class="contact-input" id="exampleInputEmail1" placeholder="example@gmail.com" required>
+                    <div class="error-hint hidden">Campo requerido*</div>
+                 </div>
+
+                    <div class="mb-3 form-group">
+                        <label for="motivo" class="contact-label ">Motivo</label>
+                        <input type="text" class="contact-input" id="motivo" placeholder="Motivo del mensaje" required>
+                        <div class="error-hint hidden">Campo requerido*</div>
+                    </div>
+
+                    <div class="mb-3 form-group">
+                        <label for="textarea" class="contact-label">Mensaje</label>
+                        <textarea class="contact-input" id="textarea" rows="4" placeholder="Escribe tu mensaje aquí"
+                            required></textarea>
+                            <div class="error-hint hidden">Campo requerido*</div>
+                    </div>
+
+                    <button type="submit" class="contact-submit-btn">Enviar</button>
+>>>>>>> 1b80df2 (formulario de validacion e  integracion de EmailJS)
                 </form>
                 <div class="hidden" id="Gracias">Gracias por contactarte con nosotros</div>
             </div>
