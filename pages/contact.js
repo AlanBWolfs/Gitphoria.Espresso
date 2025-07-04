@@ -1,32 +1,85 @@
-const form = document.querySelector(`form`);
-//fijando valor al local storage
-//localStorage.setItem("ch55", "francisco, maara, sarai, alan");
-//obteniendo valor del local storage
-console.log(localStorage.getItem("ch55"));
-//eliminando llave y valor del localstorage
-//localStorage.removeItem("ch55");
-//eliminar todo del local
-//localStorage.clear();
-form.addEventListener(`submit`, function(event) {
-event.preventDefault();
-const firstName = form.elements[`firstName`].value;
-const lname = form.elements[`lastName`].value;
-const email = form.elements[`email`].value;
-const password = form.elements[`password`].value;
-const phone = form.elements[`phoneNumber`].value;
-const dataArray = [...new FormData(form)];
-const dataObject = Object.fromEntries(dataArray);
-const dataText = JSON.stringify(dataObject);
-localStorage.setItem(dataObject.email,dataText)
-console.log('first Name: ', firstName);
-console.log('last Name: ', lname);
-console.log('phone Number: ', phone);
-console.log('email: ', email)
-console.log('password: ', password);
-form.reset();
-// setTimeout recibe una funcion de callback donde va lo que se va a ejecutar
-  //y como segundo argumento recibe el tiempo en milisegundos
-setTimeout(() =>{
- window.location.href = "/pages/contact.html";
-}  , 3000);
+const form = document.querySelector("#contactFormMain");
+const nameInput = document.querySelector("#name");
+const emailInput = document.querySelector("#exampleInputEmail1");
+const motivoInput = document.querySelector("#motivo");
+const mensajeInput = document.querySelector("#textarea");
+const Gracias = document.querySelector("#Gracias");
+
+
+const nameError = nameInput.nextElementSibling;
+const isValidEmail = (email) => {
+const re = /^(([^<>()\[\]\\.,;:\s@"]+(\.[^<>()\[\]\\.,;:\s@"]+)*)|(".+"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/;
+return re.test(String(email).toLowerCase());
+};
+const inputs = [nameInput, emailInput, motivoInput, mensajeInput];
+
+let isFormValid = false;
+let isValidationOn = false;
+
+const resetElm =(elm) => {
+  elm.classList.remove("is-invalid");
+  elm.nextElementSibling.classList.add("hidden");
+};
+
+const invalidateElm = (elm) => {
+  elm.classList.add("is-invalid");
+  elm.nextElementSibling.classList.remove("hidden");
+};
+
+const validateInputs = () => {
+  if (!isValidationOn) return false;
+  isFormValid = true;
+  inputs.forEach(resetElm);
+
+  if (!nameInput.value) {
+    invalidateElm(nameInput);
+    isFormValid = false;
+  }
+  if (!isValidEmail(emailInput.value)) {
+    invalidateElm(emailInput);
+    isFormValid = false;
+  }
+  if (!motivoInput.value) {
+    invalidateElm(motivoInput);
+    isFormValid = false;
+  }
+  if (!mensajeInput.value) {
+    invalidateElm(mensajeInput);
+    isFormValid = false;
+  }
+
+  return isFormValid;
+};
+
+form.addEventListener('submit', (e) => {
+e.preventDefault();
+isValidationOn = true;
+const valid = validateInputs();
+if (valid) {
+  // Recoger los datos del formulario
+  var templateparams = {
+  from_name: nameInput.value,
+  email: emailInput.value,
+  motivo: motivoInput.value,
+  message: mensajeInput.value,
+  };
+  // Enviar el correo electrónico
+  
+  emailjs.send('service_espressoGmail', 'template_Form', templateparams)
+  .then(function(response) {
+  form.remove();
+  Gracias.classList.remove("hidden");
+  console.log("Email enviado correctamente", response.status, response.text);
+}, function (error){
+  alert("Ocurrió un error. trata de nuevo");
+  console.log("Failed...", error);
 });
+}//cierre de if valid
+});//cierre event listener submit
+
+inputs.forEach(input =>{
+input.addEventListener('input', () => {
+  validateInputs();
+});
+});
+//correo electronico atencion.cafeespresso@gmail.com password: cafe.espresso
