@@ -1,19 +1,72 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.7/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-LN+7fdVzj6u52u30Kp6M/trliBMCMKTyK833zpbD+pXdCLuTusPj697FH4R/5mcr" crossorigin="anonymous">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css" integrity="sha512-Evv84Mr4kqVGRNSgIGL/F/aIDqQb7xQ2vcrdIwxfjThSH8CSR7PBEakCr51Ck+w+/U6swU2Im1vVX0SVk9ABhg==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.7/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-LN+7fdVzj6u52u30Kp6M/trliBMCMKTyK833zpbD+pXdCLuTusPj697FH4R/5mcr" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css"
+        integrity="sha512-Evv84Mr4kqVGRNSgIGL/F/aIDqQb7xQ2vcrdIwxfjThSH8CSR7PBEakCr51Ck+w+/U6swU2Im1vVX0SVk9ABhg=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
     <link rel="stylesheet" href="/styles.css">
+    <link rel="stylesheet" href="/styles-espresso-cafe/register.css">
     <title>Registro</title>
 </head>
 
 <body>
     <div id="navbar"></div>
-    
+
+    <div class="register-wrapper">
+        <div class="register-image d-none d-md-block">
+            <img src="/assets/imagen-registro.jpeg" alt="registro" class="image-register" />
+        </div>
+
+        <div class="register-form-container">
+            <h1 class="main-title">Regístrate</h1>
+            <form id="registerForm" class="needs-validation" novalidate>
+                <div class="row">
+                    <div class="col-md-6 mb-3">
+                        <label for="firstName" class="form-label label-name">Nombre</label>
+                        <input type="text" class="form-control name-input" id="firstName" required />
+                        <div class="invalid-feedback">Por favor ingresa tu nombre.</div>
+                    </div>
+
+                    <div class="col-md-6 mb-3">
+                        <label for="lastName" class="form-label label-name">Apellido</label>
+                        <input type="text" class="form-control name-input" id="lastName" required />
+                        <div class="invalid-feedback">Por favor ingresa tu apellido.</div>
+                    </div>
+                </div>
+
+                <div class="mb-3">
+                    <label for="email" class="form-label label-name">Correo electrónico</label>
+                    <input type="email" class="form-control general-input" id="email" required />
+                    <div class="invalid-feedback">Ingresa un correo válido.</div>
+                </div>
+
+                <div class="mb-3">
+                    <label for="password" class="form-label label-name">Contraseña</label>
+                    <input type="password" class="form-control general-input" id="password" required minlength="6" />
+                    <div class="invalid-feedback">La contraseña debe tener al menos 6 caracteres.</div>
+                </div>
+
+                <div class="mb-3">
+                    <label for="confirmPassword" class="form-label label-name">Confirmar contraseña</label>
+                    <input type="password" class="form-control general-input" id="confirmPassword" required />
+                    <div class="invalid-feedback" id="confirmPasswordFeedback">Debes confirmar la contraseña
+                        correctamente.</div>
+                </div>
+
+                <button type="submit" class="button-register">Registrarse</button>
+            </form>
+
+            <p class="p-login">¿Ya tienes cuenta? <a href="#" class="login">Inicia sesión</a></p>
+        </div>
+    </div>
+
     <div id="footer"></div>
     <script src="../js/includeComponentes.js"></script>
-
 </body>
+
 </html>
