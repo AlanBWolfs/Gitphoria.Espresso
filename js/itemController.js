@@ -7,13 +7,15 @@ class ItemsController {
     }
 
     // Create the addItem method
-    addItem(name, description,imageUrl) {
+    addItem(nombre, description, price, imageUrl) {
         const item = {
             // Increment the currentId property
             id: this.currentId++,
-            name: name,
+            name: nombre,
             description: description,
-            imageUrl: imageUrl
+            price: price,
+            img: imageUrl || 'https://via.placeholder.com/150', // Default image if no imageUrl is provided
+            createdAt: new Date()   
         };
 
         // Push the item to the items property

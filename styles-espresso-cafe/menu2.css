@@ -37,6 +37,9 @@
     height: 150px;
     width: auto;
     border-radius: 10px;
+    padding:0px;
+    border: 0px;
+    object-fit:cover;
 }
 
 .heart-icon {
@@ -85,4 +88,13 @@
     border: 2px solid #a2845e;
     color: #a2845e;
     transform: scale(1.05);
+}
+
+.list-items {
+    display: inline;
+    flex-wrap: wrap;
+    justify-content: space-evenly;
+    align-items: center;
+    min-width: 80vw;
+    padding: 20px;
 }

@@ -1,5 +1,4 @@
-
-const menuElementos=[
+export const menuElementos = [
 {id:1,type:"Comida",category:"Huevos",subcategory:null,nombre:"Omelette de jamón y queso Monterrey Jack",description:"Un par de huevos acompañados de salsa a elegir (roja o verde). Frijoles refritos y totoposte de la región.",price:90,},
 {id:2,type:"Comida",category:"Huevos",subcategory:null,nombre:"Omelette de espinacas",description:"Un par de huevos batidos, rellenos de champiñones, tomate cherry y queso Monterrey Jack. Acompañados de salsa a elegir (roja o verde), frijoles refritos y totoposte de la región.",price:90,},
 {id:3,type:"Comida",category:"Huevos",subcategory:null,nombre:"Huevos clásicos",description:"Un par de huevos revueltos con jamón de pavo. Acompañados de frijoles fritos, plátanos y totoposte de la región.",price:80,},
