@@ -13,6 +13,7 @@
     /*Asegura que ningun hijo sobresalga del borde*/
     overflow: hidden;
     transition: transform 0.3s ease, box-shadow 0.3s ease;
+    margin: 6rem;
 }
 
 .card-img-wrapper {
@@ -90,8 +91,8 @@
     transform: scale(1.05);
 }
 
-.list-items {
-    display: inline;
+#list-items {
+    display: flex;
     flex-wrap: wrap;
     justify-content: space-evenly;
     align-items: center;
