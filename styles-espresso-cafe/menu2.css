@@ -1,101 +1,184 @@
-/*fuente personalizada tipo de archivo .otf*/
+/* ======= Fuentes ======= */
+/* Avigea desde assets */
 @font-face {
     font-family: "Avigea";
     src: url(/assets/fonts/Avigea-6YGKo.otf) format("opentype");
 }
 
-.card {
-    /*separa la cad de otros elementos o bordes*/
-    margin: 20px;
-    background-color: #133936;
-    border-radius: 20px;
-    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.2);
-    /*Asegura que ningun hijo sobresalga del borde*/
-    overflow: hidden;
-    transition: transform 0.3s ease, box-shadow 0.3s ease;
-    margin: 6rem;
+/* Poppins desde Google Fonts */
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;700&display=swap');
+
+/* ======= General ======= */
+body {
+    font-family: "Poppins", sans-serif;
+    background-color: #f5f5f5;
+    margin: 0;
+    padding: 0;
+    color: #333;
 }
 
-.card-img-wrapper {
-    /*Mraco verde al rededor del area dorada*/
+h2 {
+    width: 100%;
+    text-align: center;
+    margin: 3rem 0 1.5rem;
+    font-family: "Avigea", serif;
+    font-size: 2.5rem;
+    color: #133936;
+}
+
+h3 {
+    width: 100%;
+    text-align: center;
+    margin: 2rem 0 1rem;
+    font-family: "Avigea", serif;
+    font-size: 2rem;
+    color: #133936;
+}
+
+/* ======= Contenedor General ======= */
+#menu-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 20px;
+}
+
+/* ======= Subcategoría ======= */
+.subcategoria {
+    width: 100%;
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    gap: 2rem;
+    margin-bottom: 4rem;
+    justify-items: center;
+}
+
+/* ======= Tarjeta ======= */
+.card {
     background-color: #133936;
-    padding: 15px;/*Deje espacio para que el area de la card no toque los bordes*/
+    color: #ffffff;
+    border-radius: 20px;
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.15);
+    overflow: hidden;
+    width: 100%;
+    max-width: 350px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    height: 100%;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.card:hover {
+    transform: translateY(-8px);
+    box-shadow: 0 15px 30px rgba(0, 0, 0, 0.25);
+}
+
+/* ======= Imagen con Marco Verde ======= */
+.card-img-wrapper {
+    border: 3px solid #1f4f47;
+    background-color: #ffffff;
+    border-radius: 15px;
+    margin: 10px;
+    padding: 5px;
 }
 
 .card-img-container {
     background-color: #ffffff;
-    /*Fija la atura del area blanca*/
-    height: 170px;
-    border-radius: 15px;
+    border-radius: 10px;
+    overflow: hidden;
     display: flex;
     justify-content: center;
     align-items: center;
-    /*permite colocar el ícono del corazon sobre este bloque*/
-    position: relative;
+    height: 200px;
 }
 
 .card-img {
-    height: 150px;
-    width: auto;
+    max-height: 100%;
+    max-width: 100%;
+    object-fit: contain;
     border-radius: 10px;
-    padding:0px;
-    border: 0px;
-    object-fit:cover;
+    transition: transform 0.3s ease;
 }
 
-.heart-icon {
-    position: absolute;
-    bottom: 10px;
-    right: 10px;
-    color: red;
-    font-size: 1.6rem;
-    cursor: pointer;
+.card:hover .card-img {
+    transform: scale(1.05);
+}
+
+/* ======= Contenido Tarjeta ======= */
+.card-content {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between; /* Esto hace que el botón se vaya hasta abajo */
+    height: 100%;
+    padding: 15px 20px;
+    flex-grow: 1;
 }
 
 .card-title {
-    color: #ffffff;
-    letter-spacing: 1.5px;
-    font-family: "Avigea", sans-serif;
-    font-weight: 100;
     text-align: center;
-    margin: 10px 0 5px 0;
+    font-size: 1.6rem;
+    margin: 10px 0 5px;
+    font-family: "Avigea", serif;
+    letter-spacing: 0.5px;
+    color: #ffffff;
+}
+
+.card-description {
+    text-align: center;
+    font-size: 0.95rem;
+    color: #dddddd;
+    margin-bottom: 10px;
+    line-height: 1.4;
+    flex-grow: 1; /* Hace que las descripciones largas empujen el botón hacia abajo */
 }
 
 .card-price {
-    color: #ffffff;
     text-align: center;
-    margin-bottom: 20px;
+    font-size: 1.2rem;
+    margin: 5px 0;
     font-weight: 600;
+    color: #a2845e;
 }
 
+.card-horario {
+    text-align: center;
+    font-size: 0.85rem;
+    color: #cccccc;
+    margin-bottom: 10px;
+}
+
+/* ======= Botón Agregar al Carrito ======= */
 .btn-add {
-    /*No permite que otros elementos esten a lado y pone los elementos abajo vertical*/
     display: block;
-    margin: 0 auto;
+    width: 80%;
+    margin: 10px auto 0 auto;
     background-color: #a2845e;
     color: #ffffff;
     border: none;
-    border-radius: 30px;
-    padding: 8px 20px;
+    border-radius: 25px;
+    padding: 10px 0;
     text-align: center;
-    letter-spacing: 0.2px;
-    font-weight: 700;
+    font-size: 1rem;
+    font-weight: 600;
+    cursor: pointer;
     transition: background-color 0.3s ease, transform 0.2s ease;
-    text-decoration: none;
+    font-family: "Poppins", sans-serif;
 }
 
 .btn-add:hover {
     background-color: #ffffff;
-    border: 2px solid #a2845e;
     color: #a2845e;
+    border: 2px solid #a2845e;
     transform: scale(1.05);
 }
 
-#list-items {
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: space-evenly;
-    align-items: center;
-    min-width: 80vw;
-    padding: 20px;
+/* ======= Responsive ======= */
+@media (max-width: 768px) {
+    .subcategoria {
+        grid-template-columns: 1fr;
+    }
+    .card {
+        max-width: 90%;
+    }
 }
