@@ -119,8 +119,8 @@
 /* Estilo para campos inválidos */
 /*normalmente tambien siempre esta oculto esto le pondra el marco rojo al campo cuando sea invalido*/
 .is-invalid {
-  border: 3px solid #AC1948 ;
-  box-shadow: 0 0 5px rgba(172, 25, 72, 0.598);
+  border: 2px solid #b41246 ;
+  box-shadow: 0 0 3px rgba(172, 25, 72, 0.605);
 }
 /*lo llame desde el ID*/
 #Gracias {
