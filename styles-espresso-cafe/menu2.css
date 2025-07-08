@@ -1,8 +1,8 @@
 /* ======= Fuentes ======= */
 /* Avigea desde assets */
 @font-face {
-    font-family: "Avigea";
-    src: url(/assets/fonts/Avigea-6YGKo.otf) format("opentype");
+  font-family: "Avigea";
+  src: url(/assets/fonts/Avigea-6YGKo.otf) format("opentype");
 }
 
 /* Poppins desde Google Fonts */
