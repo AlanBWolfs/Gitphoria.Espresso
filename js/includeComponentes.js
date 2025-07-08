@@ -1,37 +1,21 @@
-//Espera que toda la estructura HTML del comumento (el DOM) se haya cargado y este lista , y solo entonces ejecuta el código que esta dentro de la función
-document.addEventListener('DOMContentLoaded', () => {
-    //Ruta de la URL que se ve en el navegador
-    //Revisa si la cadena del path contiene la palabra pages devuelve un vertadero o falso si es verdadero ../ y si es falso ./ utilizando un operador ternario
+//Se crea una funcion para cargar la barra de navegación y el footer
+export function cargarNavFooter(){
+    // primero detectamos si estamos en paginas 
     const rutaBase = window.location.pathname.includes('/pages') ? '../' : './';
-    // carga el navbar 
-    //fetch solicita (descarga) un archivo desde el servidor.
-    //${rutaBase}navbar.html construye la ruta correcta del archivo
-    fetch(`${rutaBase}navbar.html`)
-        //cuando el archivo llega (como respuesta), lo convierte a texto.
-        //El contenido de navbar.html no es codigo JS ni JSON, es texto HTML, por eso se usa .text()
-        .then(response => response.text())
-        //Una vez convertido (HTML del navbar) en texto, se ejecuta la función 
-        //data contiene todo el codigo HTML que hay en navbar.html
+    //cargar Navbar 
+    fetch (`${rutaBase}navbar.html`)
+        .then(res=> res.text())
         .then(data => {
-            //Inserta el HTML dentro del <div id = "navbar"> que hay en las paginas
-            //Es decir remplaza el div vacío con el contenido del archivo navbar.html
             document.getElementById('navbar').innerHTML = data;
         })
-        //Si algo sale mal, este bloque muestra en la consola del navegador el error
-        .catch(error => console.error('Error cargando navbar:', error));
+        .catch(err => console.error('Error cargando navbar', err));
 
+    //cargar Footer 
     fetch(`${rutaBase}footer.html`)
-        //cuando el archivo llega (como respuesta), lo convierte a texto.
-        //El contenido de navbar.html no es codigo JS ni JSON, es texto HTML, por eso se usa .text()
-        .then(response => response.text())
-        //Una vez convertido (HTML del navbar) en texto, se ejecuta la función 
-        //data contiene todo el codigo HTML que hay en footer.html
-        .then(data => {
-            //Inserta el HTML dentro del <div id = "footer"> que hay en las paginas
-            //Es decir remplaza el div vacío con el contenido del archivo navbar.html
+        .then(res=> res.text())
+        .then(data =>{
             document.getElementById('footer').innerHTML = data;
         })
-        //Si algo sale mal, este bloque muestra en la consola del navegador el error
-        .catch(error => console.error('Error cargando footer:', error));
-});
-
+        .catch(err => console.err('Error cargango footer',err));
+}
+document.addEventListener('DOMContentLoaded',cargarNavFooter);
