@@ -19,8 +19,8 @@
 
 .map-espresso {
   border-radius: 2rem;
-  border: solid #a5a29fbd 1px;
- box-shadow: 0px 3px 3px 3px rgba(0, 0, 0, 0.408);
+  border: 1px solid #d9d9d9;
+box-shadow: 0px 1px 3px 2px #998f76ba;
  }
 
 /* Formulario principal */
