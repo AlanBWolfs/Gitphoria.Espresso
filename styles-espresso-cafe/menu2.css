@@ -34,7 +34,8 @@ h3 {
     font-size: 2rem;
     color: #133936;
 }
-p{
+
+p {
     white-space: pre-line;
     text-align: center;
 }
@@ -85,22 +86,16 @@ p{
     border-radius: 15px;
     margin: 10px;
     padding: 5px;
-}
-
-.card-img-container {
-    background-color: #ffffff;
-    border-radius: 10px;
-    overflow: hidden;
     display: flex;
     justify-content: center;
     align-items: center;
-    height: 200px;
+    height: 220px; /* Altura fija para todas las imágenes */
 }
 
 .card-img {
     max-height: 100%;
     max-width: 100%;
-    object-fit: contain;
+    object-fit: contain; /* Mantiene proporción sin recortar */
     border-radius: 10px;
     transition: transform 0.3s ease;
 }
@@ -152,7 +147,7 @@ p{
     margin-bottom: 10px;
 }
 
-/* ======= Botones Editar y Eliminar ======= */
+/* ======= Botones ======= */
 .card-buttons {
     display: flex;
     justify-content: center;
@@ -173,6 +168,7 @@ p{
     background-color: #ffc107;
     color: #133936;
 }
+
 .btn-cart {
     background-color: #998f76; 
     color: #ffffff;           
@@ -184,6 +180,7 @@ p{
     cursor: pointer;
     transition: background-color 0.3s ease, transform 0.2s ease;
 }
+
 .btn-cart:hover {
     background-color: #b08d57; /* Dorado más oscuro al hacer hover */
 }
