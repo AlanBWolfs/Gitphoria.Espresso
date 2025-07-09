@@ -1,21 +1,19 @@
-
-.form-container{
+.form-container {
   display: flex;
   align-content: center;
   justify-content: center;
 }
-.p-login{
+.p-login {
   font-family: "Poppins";
   font-size: 1.2rem;
   text-align: center;
 }
-.a-login{
-  color: #998F76;
+.a-login {
+  color: #998f76;
   font-weight: 600;
 }
 
-
-.form-label{
+.form-label {
   font-family: "Poppins";
   font-size: 1.6rem;
   color: #133936;
@@ -23,15 +21,15 @@
   margin-top: 1rem;
 }
 
-.form-control{
- width: 50rem;
+.form-control {
+  width: 50rem;
   height: 5rem;
   border-radius: 2.5rem;
-  background-color: #A5A29F;
+  background-color: #a5a29f;
   margin-top: 1rem;
 }
 
-.login-button{
+.login-button {
   background-color: #133936;
   color: aliceblue;
   width: 50rem;
@@ -42,20 +40,19 @@
   margin-top: 1rem;
 }
 
-.login-button:hover{
-  background-color: #998F76;
+.login-button:hover {
+  background-color: #998f76;
   color: aliceblue;
   transform: scale(1.1);
   cursor: pointer;
 }
 
-.form-check{
+.form-check {
   display: flex;
   align-content: center;
-
 }
 
-.form-check-label{
+.form-check-label {
   font-family: "Poppins";
   font-size: 1.1rem;
   color: #133936;
@@ -63,12 +60,12 @@
   margin-left: 0.3rem;
 }
 
-.check-input{
+.check-input {
   margin-top: 1rem;
-  border: solid color #A5A29F;
+  border: solid color #a5a29f;
 }
 
-.text-end{
+.text-end {
   font-family: "Poppins";
   font-size: 1.1rem;
   color: #133936;
@@ -100,15 +97,13 @@
   display: flex;
   justify-content: center;
   align-items: center;
-  
 }
 
 .login-icons:hover {
   transform: scale(1.1);
-  background-color: #998F76;
+  background-color: #998f76;
   color: aliceblue;
   transition: transform 0.5s ease;
-  
 }
 
 .image-social-wrapper {
@@ -124,8 +119,8 @@
 
 #login-container {
   display: grid;
- min-height: 100dvh;
- grid-template-rows: auto 1fr auto;
+  min-height: 100dvh;
+  grid-template-rows: auto 1fr auto;
   height: 100vh;
 }
 
@@ -135,5 +130,4 @@
   align-items: center;
   justify-content: center;
   height: 100%;
-
 }
