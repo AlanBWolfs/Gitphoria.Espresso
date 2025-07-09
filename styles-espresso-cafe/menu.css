@@ -1,0 +1,71 @@
+ /* Poppins desde Google Fonts */
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;700&display=swap');
+
+ h2 {
+            width: 100%;
+            text-align: center;
+            margin: 3rem 0 1rem; 
+            font-family: "Avigea", serif;
+            font-size: 2.5rem;
+            color: #133936;
+            text-transform: uppercase;
+            position: relative;
+            padding-bottom: 0.5rem; 
+        }
+
+        h2::after {
+            content: "";
+            position: absolute;
+            bottom: 0;
+            left: 50%;
+            transform: translateX(-50%);
+            width: 500px;
+            height: 1px;
+            background-color: #A5A29F;
+        }
+
+        h3 {
+            font-family: "poppins";
+            font-size: 1.5rem; 
+            color: #133936;
+            font-weight: 60px;
+            margin: 0.5rem 0 0; 
+            text-align: center;
+            width: 100%;
+        }
+
+        .menu-section {
+            margin-bottom: 3rem;
+        }
+
+        .buttons-container {
+            display: flex;
+            justify-content: center;
+            gap: 4rem;
+            margin: 1.5rem 0;
+        }
+
+        .button-group {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            width: 150px; 
+        }
+
+        .circle-btn {
+            width: 100px;
+            height: 100px;
+            border-radius: 50%;
+            background-color: #133936;
+            display: flex;
+            justify-content: space-around;
+            align-items: center;
+            text-decoration: none;
+            color: white;
+            font-size: 2.5rem;
+            transition: transform 0.3s;
+        }
+
+        .circle-btn:hover {
+            transform: scale(1.1);
+        }

@@ -181,6 +181,19 @@ export const menuElementos ={
                 },
             ]
         }
+    },
+    Bebidas:{
+        Especiales:{
+            shots:[
+                {
+                    id:20,
+                    nombre: "Espresso",
+                    description: "Mezcla de espinaca baby, bolitas de queso crema, arandanos deshidratados, nueces, trozoa de durazno y aderezo de miel con mostaza.",
+                    precio: 75.00,
+                    imagen: "/assets/Ensalada.png"
+                }
+            ]
+        }
     }
 }
 
