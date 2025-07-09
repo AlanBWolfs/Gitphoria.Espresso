@@ -21,96 +21,96 @@
     <title>Document</title>
   </head>
   <body>
-    <div id="login-container">
-    <div id="navbar"></div>
+    <div class="col-12" id="login-container">
+      <div id="navbar"></div>
 
-    <div class="container mt-3" id= "login-items">
-      <div class="row justify-content-evenly">
-        <div class="col-6">
-          <h1 class="main-title">Bienvenido</h1>
+      <div class="container mt-3" id="login-items">
+        <div class="row justify-content-evenly">
+          <div class="col-6">
+            <h1 class="main-title">Bienvenido</h1>
 
-          <!--Formulario-->
-          <div class="form-container">
-            <form id="login-form">
-              <p class="p-login">
-                ¿No tienes cuenta?.
-                <a href="/pages/registro.html" class="a-login">Regístrate</a>
-              </p>
-              <div class="mb-3">
-                <label for="correo" class="form-label">Correo</label>
-                <input
-                  type="email"
-                  class="form-control"
-                  id="email"
-                  aria-describedby="emailHelp"
-                />
-              </div>
-              <div class="mb-3">
-                <label for="contraseña" class="form-label">Contraseña</label>
-                <input type="password" class="form-control" id="password" />
-              </div>
-              <div
-                class="invalid-feedback d-block"
-                id="loginError"
-                style="display: none"
-              >
-                <!-- Aquí aparecerán los mensajes de error -->
-              </div>
-              <div
-                class="mb-3 d-flex justify-content-between align-items-center"
-              >
-                <div class="form-check mb-0">
+            <!--Formulario-->
+            <div class="form-container">
+              <form id="login-form">
+                <p class="p-login">
+                  ¿No tienes cuenta?.
+                  <a href="/pages/registro.html" class="a-login">Regístrate</a>
+                </p>
+                <div class="mb-3">
+                  <label for="correo" class="form-label">Correo</label>
                   <input
-                    type="checkbox"
-                    class="check-input"
-                    id="check-me-out"
+                    type="email"
+                    class="form-control"
+                    id="email"
+                    aria-describedby="emailHelp"
                   />
-                  <label class="form-check-label" for="check-me-out"
-                    >Recordarme</label
-                  >
                 </div>
-                <a href="#" class="text-end">¿Olvidaste la contraseña?</a>
-              </div>
+                <div class="mb-3">
+                  <label for="contraseña" class="form-label">Contraseña</label>
+                  <input type="password" class="form-control" id="password" />
+                </div>
+                <div
+                  class="invalid-feedback d-block"
+                  id="loginError"
+                  style="display: none"
+                >
+                  <!-- Aquí aparecerán los mensajes de error -->
+                </div>
+                <div
+                  class="mb-3 d-flex justify-content-between align-items-center"
+                >
+                  <div class="form-check mb-0">
+                    <input
+                      type="checkbox"
+                      class="check-input"
+                      id="check-me-out"
+                    />
+                    <label class="form-check-label" for="check-me-out"
+                      >Recordarme</label
+                    >
+                  </div>
+                  <a href="#" class="text-end">¿Olvidaste la contraseña?</a>
+                </div>
 
-              <button type="submit" class="btn login-button">
-                Iniciar sesión
-              </button>
-            </form>
+                <button type="submit" class="btn login-button">
+                  Iniciar sesión
+                </button>
+              </form>
+            </div>
           </div>
-        </div>
 
-        <div class="col-6">
-          <div class="image-social-wrapper">
-            <img
-              src="/assets/logo-verde.png"
-              alt="logo verde"
-              class="main-logo"
-            />
-            <div class="social-icons">
-              <ul>
-                <li>
-                  <a href="#"
-                    ><i class="fa-brands fa-instagram login-icons"></i
-                  ></a>
-                </li>
-                <li>
-                  <a href="#"
-                    ><i class="fa-brands fa-facebook login-icons"></i
-                  ></a>
-                </li>
-                <li>
-                  <a href="#"
-                    ><i class="fa-brands fa-whatsapp login-icons"></i
-                  ></a>
-                </li>
-              </ul>
+          <div class="col-6">
+            <div class="image-social-wrapper">
+              <img
+                src="/assets/logo-verde.png"
+                alt="logo verde"
+                class="main-logo"
+              />
+              <div class="social-icons">
+                <ul>
+                  <li>
+                    <a href="#"
+                      ><i class="fa-brands fa-instagram login-icons"></i
+                    ></a>
+                  </li>
+                  <li>
+                    <a href="#"
+                      ><i class="fa-brands fa-facebook login-icons"></i
+                    ></a>
+                  </li>
+                  <li>
+                    <a href="#"
+                      ><i class="fa-brands fa-whatsapp login-icons"></i
+                    ></a>
+                  </li>
+                </ul>
+              </div>
             </div>
           </div>
         </div>
       </div>
-    </div>
 
-    <div id="footer"></div>
+      <div id="footer"></div>
     </div>
     <script
       src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.7/dist/js/bootstrap.min.js"
