@@ -1,4 +1,5 @@
 import { menuElementos } from './menu-data.js';
+import { menuElementosX } from './menu-data.js';
 
 export function renderMenu() {
     // buscamos en el html un elemento que tenda el id (menu-container)
@@ -32,18 +33,47 @@ export function renderMenu() {
         }
     }
 }
+
+export function renderDrinks() {
+  const container = document.getElementById('menu-container');
+  container.innerHTML = '';
+
+  for (const categoria in menuElementosX.bebida) {
+    const h2 = document.createElement('h2');
+    h2.textContent = categoria;
+    container.append(h2);
+
+    const subcategorias = menuElementosX.bebida[categoria];
+
+    for (const sub in subcategorias) {
+      const h3 = document.createElement('h3');
+      h3.textContent = sub;
+      container.append(h3);
+
+      const grid = document.createElement('div');
+      grid.className = 'subcategoria';
+
+      subcategorias[sub].forEach(item => {
+        grid.append(crearTarjeta(item));
+      });
+
+      container.append(grid);
+    }
+  }
+}
+
 function crearTarjeta(item) {
   const card = document.createElement('div');
   card.className = 'card';
   card.innerHTML = `
     <div class="card-img-wrapper">
       <div class="card-img-container">
-        <img src="${item.imagen || '../assets/default.png'}" alt="${item.nombre}" class="card-img">
+        <img src="${item.image || '../assets/default.png'}" alt="${item.name}" class="card-img">
 
       </div>
     </div>
     <div class="card-content">
-      <h4 class="card-title">${item.nombre}</h4>
+      <h4 class="card-title">${item.name}</h4>
       <p class="card-description">${item.description}</p>
       <p class="card-options">
         ${
@@ -52,7 +82,7 @@ function crearTarjeta(item) {
             : ''
         }
       </p>
-      <p class="card-price">$${item.precio.toFixed(2)}</p>
+      <p class="card-price">$${item.price.toFixed(2)}</p>
       <p class="card-horario">${item.horario || ''}</p>
       <div class="card-buttons">
         <button class="btn btn-cart">Agregar al carrito</button>
