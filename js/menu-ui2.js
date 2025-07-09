@@ -1,94 +1,66 @@
 import { menuElementos } from './menu-data.js';
-import { menuElementosX } from './menu-data.js';
 
 export function renderMenu() {
-    // buscamos en el html un elemento que tenda el id (menu-container)
-    //y lo gusrdamos en la "container"
-    const container = document.getElementById('menu-container');
-    //limpia el contenedor, si ya habia un menu antes, lo borra 
-    container.innerHTML = '';
-    //con el for recorro las categorias de alimentos 
-    for (const cat in menuElementos.alimentos) {
-        //creamos un elemento h2
-        const h2 = document.createElement('h2');
-        //Asignamos texto al elemento h2 (cat contiene desayunos y especiales)
-        h2.textContent = cat;
-        //lo agrega al html real 
-        container.append(h2);
-        //console.log(cat);
-        //recorremos las subcategorias (claves)
-        for (const sub in menuElementos.alimentos[cat]) {
-            const h3 = document.createElement('h3');
-            h3.textContent = sub;
-            container.append(h3)
-            //creamos un elemento div
-            const grid = document.createElement('div');
-            //<div class="subcategoria"></div>; para css
-            grid.className = 'subcategoria';
-            menuElementos.alimentos[cat][sub].forEach(item => {
-                //console.log('platillo', item);
-                grid.append(crearTarjeta(item));
-            });
-            container.append(grid);
-        }
-    }
-}
-
-export function renderDrinks() {
+  //contenedor donde se pondrá el menu
   const container = document.getElementById('menu-container');
   container.innerHTML = '';
+  //obtenemos la parte del URL despues del ? obtenemos los valores de los parametros tipo y categoria 
+  //ejemplo:
+  //"menu2.html?tipo=bebidas&categoria=Calientes
+  // tipo bebidas, categoria calientes
+  const params = new URLSearchParams(window.location.search);
+  const tipo = params.get('tipo'); // solo tenemos 2 tipos alimentos y bebidas
+  const categoria = params.get('categoria'); // (Desayunos, Especiales, Extras) dependiendo el tipo
 
-  for (const categoria in menuElementosX.bebida) {
+
+  const categoriaDatos = menuElementos[tipo][categoria];
+
+  // Recorrer las subcategorías (en desayunos: huevos y chilaquiles)
+  for (const subcategoria in categoriaDatos) {
     const h2 = document.createElement('h2');
-    h2.textContent = categoria;
-    container.append(h2);
+    h2.textContent = subcategoria;
+    container.appendChild(h2);
 
-    const subcategorias = menuElementosX.bebida[categoria];
+    const grid = document.createElement('div');
+    grid.className = 'subcategoria';
 
-    for (const sub in subcategorias) {
-      const h3 = document.createElement('h3');
-      h3.textContent = sub;
-      container.append(h3);
-
-      const grid = document.createElement('div');
-      grid.className = 'subcategoria';
-
-      subcategorias[sub].forEach(item => {
-        grid.append(crearTarjeta(item));
+    // Cada subcategoria es un array de items (productos ejemplo los platillos de huevos)
+    const items = categoriaDatos[subcategoria];
+    //verificamos que los itemns realmente sean un array y despues recorremos cada elemento de los items o sea los productos 
+    if (Array.isArray(items)) {
+      items.forEach(item => {
+        grid.appendChild(crearTarjeta(item));//llamamos a la función 
       });
-
-      container.append(grid);
     }
+
+    container.appendChild(grid);//contenedor genral de todas las tarjetas
   }
 }
 
 function crearTarjeta(item) {
   const card = document.createElement('div');
   card.className = 'card';
+
+  // Para manejar diferencias en las propiedades (name / nombre, price / precio, image / imagen)
+  const nombre = item.name || item.nombre || 'Sin nombre';
+  const descripcion = item.description || item.descripcion || '';
+  const precio = item.price !== undefined ? item.price : (item.precio !== undefined ? item.precio : 0);
+  const imagen = item.image || item.imagen || '../assets/default.png';
+
   card.innerHTML = `
     <div class="card-img-wrapper">
-      <div class="card-img-container">
-        <img src="${item.image || '../assets/default.png'}" alt="${item.name}" class="card-img">
-
-      </div>
+      <img src="${imagen}" alt="${nombre}" class="card-img">
     </div>
     <div class="card-content">
-      <h4 class="card-title">${item.name}</h4>
-      <p class="card-description">${item.description}</p>
-      <p class="card-options">
-        ${
-            item.opciones && item.opciones.salsas
-            ? 'Salsas disponibles: ' + item.opciones.salsas.join(' • ')
-            : ''
-        }
-      </p>
-      <p class="card-price">$${item.price.toFixed(2)}</p>
-      <p class="card-horario">${item.horario || ''}</p>
+      <h4 class="card-title">${nombre}</h4>
+      <p class="card-description">${descripcion}</p>
+      <p class="card-price">$${precio.toFixed(2)}</p>
       <div class="card-buttons">
         <button class="btn btn-cart">Agregar al carrito</button>
       </div>
     </div>
   `;
+
   return card;
 }
 

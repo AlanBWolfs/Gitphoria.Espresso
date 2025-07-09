@@ -7,11 +7,3 @@ document.addEventListener('DOMContentLoaded', () => {
     renderMenu();
   }
 });
-import { renderDrinks } from './menu-ui2.js';
-document.addEventListener('DOMContentLoaded', () => {
-  cargarNavFooter();
-  if (window.location.pathname.includes('menu3.html')) {
-    //console.log('Invocando renderDrinks()');
-    renderDrinks();
-  }
-});
