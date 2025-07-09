@@ -8,7 +8,7 @@ export const menuElementos ={
                     description: "2 huevos batidos, rellenos de champiñones, tomate cherry y queso Monterrey Jack acompañados de salsa a elegir (roja o verde) frijoles refritos y totoposte de la región",
                     price: 90.00,
                     horario: "7:30 AM - 1:30PM",
-                    image: "/menuItems/assets/ommelette.jpg",
+                    image: "/assets/menuItems/ommelette.jpg",
                     opciones:{
                         salsas: ["roja","verde"]
                     }
@@ -19,7 +19,7 @@ export const menuElementos ={
                     description: "2 huevos revueltos con jamón de pavo acompañados de frijoles fritos platanos y totoposte de la región",
                     price: 80.00,
                     horario: "7:30 AM - 1:30PM",
-                    image: "/menuItems/assets/huevos2.png"
+                    image: "/assets/menuItems/huevos2.png"
                 },
                 {
                     id:3,
@@ -27,7 +27,7 @@ export const menuElementos ={
                     description: "2 huevos revueltos con salchicha de res acompañados de frijoles fritos platanos y totoposte de la región",
                     price: 85.00,
                     horario: "7:30 AM - 1:30PM",
-                    image: "/menuItems/assets/huevos.png"
+                    image: "/assets/menuItems/huevos.png"
                 },
                 {
                     id:4,
@@ -35,7 +35,7 @@ export const menuElementos ={
                     description: "2 huevos revueltos con tomate, cebolla y chile serrano acompañados de frijoles fritos platanos y totoposte de la región",
                     price: 80.00,
                     horario: "7:30 AM - 1:30PM",
-                    image: "/menuItems/assets/huevos.png"
+                    image: "/assets/menuItems/huevos.png"
                 },
                 {
                     id:5,
@@ -43,7 +43,7 @@ export const menuElementos ={
                     description: "2 huevos revueltos con longaniza de la región  acompañados de frijoles fritos platanos y totoposte de la región",
                     price: 85.00,
                     horario: "7:30 AM - 1:30PM",
-                    image: "/menuItems/assets/huevos.png"
+                    image: "/assets/menuItems/huevos.png"
                 },
                 {
                     id:6,
@@ -195,14 +195,14 @@ export const menuElementos ={
                     name:"Agua",
                     description:"Una bebida recomendada por la casa",
                     price:16,
-                    image:"/assets/menuItems/logo-verde.png"
+                    image:"/assets/menuItems/water.png"
                 },
                 {
                     id:67,
                     name:"Amper, agua de coco",
                     description:"Una bebida recomendada por la casa",
                     price:37,
-                    image:"/assets/menuItems/logo-verde.png"
+                    image:"/assets/menuItems/water.png"
                 },
                 {
                     id:68,
@@ -216,28 +216,28 @@ export const menuElementos ={
                     name:"Jugos",
                     description:"Una bebida recomendada por la casa",
                     price:18,
-                    image:"/assets/menuItems/logo-verde.png"
+                    image:"/assets/menuItems/frozen.png"
                 },
                 {
                     id:70,
                     name:"Powerade",
                     description:"Una bebida recomendada por la casa",
                     price:30,
-                    image:"/assets/menuItems/logo-verde.png"
+                    image:"/assets/menuItems/frozenmango.png"
                 },
                 {
                     id:71,
                     name:"Refresco, agua mineral",
                     description:"Una bebida recomendada por la casa",
                     price:25,
-                    image:"/assets/menuItems/logo-verde.png"
+                    image:"/assets/menuItems/water.png"
                 },
                 {
                     id:72,
                     name:"Shot extra café",
                     description:"Una bebida recomendada por la casa",
                     price:15,
-                    image:"/assets/menuItems/logo-verde.png"
+                    image:"/assets/menuItems/espresso.png"
                 },
             ]
         }
