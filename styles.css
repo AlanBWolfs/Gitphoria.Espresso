@@ -118,7 +118,7 @@ img {
   margin: 3rem 0 5rem;
 }
 
-.home-main-title {
+/*.home-main-title {
   position: absolute;
   top: 50%;
   left: 50%;
@@ -131,7 +131,7 @@ img {
   font-size: 4rem;
   letter-spacing: 0.3rem;
   z-index: 2;
-}
+}*/
 
 .golden-sub {
   font-family: "Avigea";
