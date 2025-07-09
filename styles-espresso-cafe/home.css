@@ -2,7 +2,7 @@
 .mainBanner {
   position: relative;
   height: 50vh;
-  background-image: url('/assets/Banner.png');
+  background-image: url('/assets/Banner2.png');
   background-size: cover;
   background-position: center;
   overflow: hidden;
@@ -21,4 +21,20 @@
   /* Alternativas: overlay, screen, darken */
   pointer-events: none;
   opacity: 75%;
+}
+
+.carousel-inner {
+  height: 45rem;
+  border-radius: 2rem;
+  margin-bottom: 5rem;
+}
+
+.carousel-item {
+  height: 100%;
+}
+
+.carousel-item img {
+  height: 100%;
+  width: 100%;
+  object-fit: cover;
 }
