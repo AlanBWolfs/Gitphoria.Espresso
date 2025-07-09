@@ -180,16 +180,83 @@ export const menuElementos ={
                     image: "/assets/Ensalada.png"
                 },
             ]
+        },
+        Extras:{
+            ProductosExtras:[
+                {
+                    id:23,
+                    nombre: "Agua",
+                    description: "Una bebida recomendada por la casa",
+                    precio: 16.00,
+                    imagen: "/assets/Ensalada.png"
+                }
+            ]
         }
     },
-    Bebidas:{
+    bebidas:{
         Especiales:{
             shots:[
                 {
-                    id:20,
-                    nombre: "Espresso",
-                    description: "Mezcla de espinaca baby, bolitas de queso crema, arandanos deshidratados, nueces, trozoa de durazno y aderezo de miel con mostaza.",
-                    precio: 75.00,
+                    id:21,
+                    nombre: "Affogato",
+                    description: "Helado doble de vainilla con un shot de espresso.",
+                    precio: 70.00,
+                    imagen: "/assets/Ensalada.png"
+                },
+                {
+                    d:22,
+                    nombre: "Affogato Especial",
+                    description: "Helado doble con un shot de espresso y un shot de Baileys.",
+                    precio: 80.00,
+                    imagen: "/assets/Ensalada.png"
+                }
+            ]
+        },
+        Frias:{
+            frozen:[
+                {
+                    id:24,
+                    nombre: "Fresa Yogurth",
+                    description: "Una bebida recomendada por la casa",
+                    precio: 85.00,
+                    imagen: "/assets/Ensalada.png"
+                }
+            ],
+            Refresh:[
+                {
+                    id:25,
+                    nombre: "Fresa refresh",
+                    description: "Una bebida recomendada por la casa",
+                    precio: 16.00,
+                    imagen: "/assets/Ensalada.png"
+                }
+            ],
+            bebidasFrias:[
+                {
+                    id:26,
+                    nombre: "Americano frío",
+                    description: "Una bebida recomendada por la casa",
+                    precio: 50.00,
+                    imagen: "/assets/Ensalada.png"
+                }
+            ],
+            preWorkout:[
+                {
+                    id:27,
+                    nombre: "Cold brew latte",
+                    description: "Una bebida recomendada por la casa",
+                    precio: 70.00,
+                    imagen: "/assets/Ensalada.png"
+                }
+            ]
+        },
+        Calientes:{
+            bebidasCalientes:[
+                {
+                    id:28,
+                    nombre: "Americano",
+                    description: "Una bebida recomendada por la casa",
+                    precio: 45.00,
                     imagen: "/assets/Ensalada.png"
                 }
             ]
@@ -198,7 +265,7 @@ export const menuElementos ={
 }
 
 
-export const menuElementosX = {
+/*export const menuElementosX = {
 //!!!!!!!!!!!!!!!!!!!!!!!!!!! BEBIDAS !!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
 bebida:{
     especiales:{
@@ -326,4 +393,4 @@ extras:{
         {id:72,name:"Shot extra café",description:"Una bebida recomendada por la casa",price:15,image:"/assets/menuItems/logo-verde.png"},
     ]
 }
-}
+}*/
