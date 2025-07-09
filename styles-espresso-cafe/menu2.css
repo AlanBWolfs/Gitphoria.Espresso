@@ -1,8 +1,8 @@
 /* ======= Fuentes ======= */
 /* Avigea desde assets */
 @font-face {
-  font-family: "Avigea";
-  src: url(/assets/fonts/Avigea-6YGKo.otf) format("opentype");
+    font-family: "Avigea";
+    src: url(/assets/fonts/Avigea-6YGKo.otf) format("opentype");
 }
 
 /* Poppins desde Google Fonts */
@@ -33,6 +33,10 @@ h3 {
     font-family: "Avigea", serif;
     font-size: 2rem;
     color: #133936;
+}
+p{
+    white-space: pre-line;
+    text-align: center;
 }
 
 /* ======= Contenedor General ======= */
@@ -74,7 +78,7 @@ h3 {
     box-shadow: 0 15px 30px rgba(0, 0, 0, 0.25);
 }
 
-/* ======= Imagen con Marco Verde ======= */
+/* ======= Imagen ======= */
 .card-img-wrapper {
     border: 3px solid #1f4f47;
     background-color: #ffffff;
@@ -109,7 +113,7 @@ h3 {
 .card-content {
     display: flex;
     flex-direction: column;
-    justify-content: space-between; /* Esto hace que el botón se vaya hasta abajo */
+    justify-content: space-between;
     height: 100%;
     padding: 15px 20px;
     flex-grow: 1;
@@ -130,7 +134,7 @@ h3 {
     color: #dddddd;
     margin-bottom: 10px;
     line-height: 1.4;
-    flex-grow: 1; /* Hace que las descripciones largas empujen el botón hacia abajo */
+    flex-grow: 1;
 }
 
 .card-price {
@@ -148,29 +152,53 @@ h3 {
     margin-bottom: 10px;
 }
 
-/* ======= Botón Agregar al Carrito ======= */
-.btn-add {
-    display: block;
-    width: 80%;
-    margin: 10px auto 0 auto;
-    background-color: #a2845e;
-    color: #ffffff;
-    border: none;
-    border-radius: 25px;
-    padding: 10px 0;
-    text-align: center;
-    font-size: 1rem;
-    font-weight: 600;
-    cursor: pointer;
-    transition: background-color 0.3s ease, transform 0.2s ease;
-    font-family: "Poppins", sans-serif;
+/* ======= Botones Editar y Eliminar ======= */
+.card-buttons {
+    display: flex;
+    justify-content: center;
+    gap: 10px;
+    margin-top: 10px;
 }
 
-.btn-add:hover {
-    background-color: #ffffff;
-    color: #a2845e;
-    border: 2px solid #a2845e;
-    transform: scale(1.05);
+.card-buttons button {
+    font-size: 0.85rem;
+    padding: 6px 12px;
+    border-radius: 30px;
+    border: none;
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+
+.btn-edit {
+    background-color: #ffc107;
+    color: #133936;
+}
+.btn-cart {
+    background-color: #998f76; 
+    color: #ffffff;           
+    border: none;
+    border-radius: 30px;
+    padding: 6px 12px;
+    font-size: 0.85rem;
+    font-weight: 500;
+    cursor: pointer;
+    transition: background-color 0.3s ease, transform 0.2s ease;
+}
+.btn-cart:hover {
+    background-color: #b08d57; /* Dorado más oscuro al hacer hover */
+}
+
+.btn-edit:hover {
+    background-color: #e0a800;
+}
+
+.btn-delete {
+    background-color: #dc3545;
+    color: #ffffff;
+}
+
+.btn-delete:hover {
+    background-color: #c82333;
 }
 
 /* ======= Responsive ======= */
