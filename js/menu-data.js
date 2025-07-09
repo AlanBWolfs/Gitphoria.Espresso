@@ -8,7 +8,7 @@ export const menuElementos ={
                     description: "2 huevos batidos, rellenos de champiñones, tomate cherry y queso Monterrey Jack acompañados de salsa a elegir (roja o verde) frijoles refritos y totoposte de la región",
                     price: 90.00,
                     horario: "7:30 AM - 1:30PM",
-                    image: "/menuItems/assets/ommelette.jpg",
+                    image: "/assets/menuItems/ommelette.jpg",
                     opciones:{
                         salsas: ["roja","verde"]
                     }
@@ -19,7 +19,7 @@ export const menuElementos ={
                     description: "2 huevos revueltos con jamón de pavo acompañados de frijoles fritos platanos y totoposte de la región",
                     price: 80.00,
                     horario: "7:30 AM - 1:30PM",
-                    image: "/menuItems/assets/huevos2.png"
+                    image: "/assets/menuItems/huevos2.png"
                 },
                 {
                     id:3,
@@ -27,7 +27,7 @@ export const menuElementos ={
                     description: "2 huevos revueltos con salchicha de res acompañados de frijoles fritos platanos y totoposte de la región",
                     price: 85.00,
                     horario: "7:30 AM - 1:30PM",
-                    image: "/menuItems/assets/huevos.png"
+                    image: "/assets/menuItems/huevos.png"
                 },
                 {
                     id:4,
@@ -35,7 +35,7 @@ export const menuElementos ={
                     description: "2 huevos revueltos con tomate, cebolla y chile serrano acompañados de frijoles fritos platanos y totoposte de la región",
                     price: 80.00,
                     horario: "7:30 AM - 1:30PM",
-                    image: "/menuItems/assets/huevos.png"
+                    image: "/assets/menuItems/huevos.png"
                 },
                 {
                     id:5,
@@ -43,7 +43,7 @@ export const menuElementos ={
                     description: "2 huevos revueltos con longaniza de la región  acompañados de frijoles fritos platanos y totoposte de la región",
                     price: 85.00,
                     horario: "7:30 AM - 1:30PM",
-                    image: "/menuItems/assets/huevos.png"
+                    image: "/assets/menuItems/huevos.png"
                 },
                 {
                     id:6,
@@ -184,81 +184,389 @@ export const menuElementos ={
         Extras:{
             ProductosExtras:[
                 {
-                    id:23,
-                    nombre: "Agua",
-                    description: "Una bebida recomendada por la casa",
-                    precio: 16.00,
-                    imagen: "/assets/menuItems/Ensalada.png"
-                }
+                    id:21,
+                    name:"Palomitas",
+                    description:"Una bebida recomendada por la casa",
+                    price:25,
+                    image:"/assets/menuItems/logo-verde.png"
+                },
+                {
+                    id:66,
+                    name:"Agua",
+                    description:"Una bebida recomendada por la casa",
+                    price:16,
+                    image:"/assets/menuItems/water.png"
+                },
+                {
+                    id:67,
+                    name:"Amper, agua de coco",
+                    description:"Una bebida recomendada por la casa",
+                    price:37,
+                    image:"/assets/menuItems/water.png"
+                },
+                {
+                    id:68,
+                    name:"Cambio de leche",
+                    description:"Una bebida recomendada por la casa",
+                    price:12,
+                    image:"/assets/menuItems/logo-verde.png"
+                },
+                {
+                    id:69,
+                    name:"Jugos",
+                    description:"Una bebida recomendada por la casa",
+                    price:18,
+                    image:"/assets/menuItems/frozen.png"
+                },
+                {
+                    id:70,
+                    name:"Powerade",
+                    description:"Una bebida recomendada por la casa",
+                    price:30,
+                    image:"/assets/menuItems/frozenmango.png"
+                },
+                {
+                    id:71,
+                    name:"Refresco, agua mineral",
+                    description:"Una bebida recomendada por la casa",
+                    price:25,
+                    image:"/assets/menuItems/water.png"
+                },
+                {
+                    id:72,
+                    name:"Shot extra café",
+                    description:"Una bebida recomendada por la casa",
+                    price:15,
+                    image:"/assets/menuItems/espresso.png"
+                },
             ]
         }
     },
     bebidas:{
         Especiales:{
             shots:[
-                {
-                    id:21,
-                    nombre: "Affogato",
-                    description: "Helado doble de vainilla con un shot de espresso.",
-                    precio: 70.00,
-                    imagen: "/assets/menuItems/Ensalada.png"
-                },
-                {
-                    d:22,
-                    nombre: "Affogato Especial",
-                    description: "Helado doble con un shot de espresso y un shot de Baileys.",
-                    precio: 80.00,
-                    imagen: "/assets/menuItems/Ensalada.png"
-                }
+            {
+                id:60,
+                name:"Affogato",
+                description:"Helado doble de vainilla con un shot de espresso.",
+                price:70,
+                image:"/assets/menuItems/affogato.png"
+            },
+            {
+                id:61,
+                name:"Affogato especial",
+                description:"Helado doble con un shot de espresso y un shot de Baileys",
+                price:80,
+                image:"/assets/menuItems/affogato.png"
+            },
+            {
+                id:62,
+                name:"Calimocho",
+                description:"Vino espumo lambrusco, Coca-Cola y rodajas de limón",
+                price:70,
+                image:"/assets/menuItems/carajillo.png"
+            },
+            {
+                id:63,
+                name:"Carajillo",
+                description:"Mezcla de licor especiado con espresso doble.",
+                price:70,
+                image:"/assets/menuItems/carajillo.png"
+            },
+            {
+                id:64,
+                name:"Carajillo especial",
+                description:"Mezcla de licor especiado con espresso doble y con un shot de Baileys.",
+                price:80,
+                image:"/assets/menuItems/carajillo.png"
+            },
+            {
+                id:65,
+                name:"Tinto de verano",
+                description:"Vino espumo lambrusco, shot de limón, agua mineral y Gingerale",
+                price:70,
+                image:"/assets/menuItems/frozenberry.png"
+            },
             ]
         },
         Frias:{
             frozen:[
                 {
-                    id:24,
-                    nombre: "Fresa Yogurth",
-                    description: "Una bebida recomendada por la casa",
-                    precio: 85.00,
-                    imagen: "/assets/menuItems/Ensalada.png"
-                }
+                    id:44,
+                    name:"Chai vainilla frozen",
+                    description:"null",
+                    price:85,
+                    image:"/assets/menuItems/frozen.png"
+                },
+                {
+                    id:45,
+                    name:"Fresa yogurt",
+                    description:"null",
+                    price:75,
+                    image:"/assets/menuItems/malteada.png"
+                },
+                {
+                    id:46,
+                    name:"Frutos rojos yogurt",
+                    description:"null",
+                    price:75,
+                    image:"/assets/menuItems/malteada.png"
+                },
+                {
+                    id:47,
+                    name:"Maracoco yogurt",
+                    description:"null",
+                    price:75,
+                    image:"/assets/menuItems/frozenmango.png"
+                },
+                {
+                    id:48,
+                    name:"Maracuyá yogurt",
+                    description:"null",
+                    price:75,
+                    image:"/assets/menuItems/frozenmango.png"
+                },
+                {
+                    id:49,
+                    name:"Matcha Frozen",
+                    description:"null",
+                    price:85,
+                    image:"/assets/menuItems/icedmatcha.png"
+                },
+                {
+                    id:50,
+                    name:"Taro frozen",
+                    description:"null",
+                    price:85,
+                    image:"/assets/menuItems/icedmatcha.png"
+                },
+                {
+                    id:51,
+                    name:"Zarzamora yogurt",
+                    description:"null",
+                    price:75,
+                    image:"/assets/menuItems/frozenberry.png"
+                },
             ],
             Refresh:[
                 {
-                    id:25,
-                    nombre: "Fresa refresh",
-                    description: "Una bebida recomendada por la casa",
-                    precio: 16.00,
-                    imagen: "/assets/menuItems/Ensalada.png"
-                }
-            ],
-            bebidasFrias:[
+                    id:56,
+                    name:"Fresa refresh",
+                    description:"Base a elegir: limonada, agua mineral o leche.",
+                    price:55,
+                    image:"/assets/menuItems/frozen.png"
+                },
                 {
-                    id:26,
-                    nombre: "Americano frío",
-                    description: "Una bebida recomendada por la casa",
-                    precio: 50.00,
-                    imagen: "/assets/menuItems/Ensalada.png"
-                }
+                    id:57,
+                    name:"Mango refresh",
+                    description:"Base a elegir: limonada, agua mineral o leche.",
+                    price:55,
+                    image:"/assets/menuItems/frozenmango.png"
+                },
+                {
+                    id:58,
+                    name:"Manzana verde refresh",
+                    description:"Base a elegir: limonada, agua mineral o leche.",
+                    price:55,
+                    image:"/assets/menuItems/frozenberry.png"
+                },
+                {
+                    id:59,
+                    name:"Moras refresh",
+                    description:"Base a elegir: limonada, agua mineral o leche.",
+                    price:55,
+                    image:"/assets/menuItems/frozenberry.png"
+                },
+        ],
+            bebidasFrias:[
+            {
+                id:34,
+                name:"Americano frío",
+                description:"null",
+                price:50,
+                image:"/assets/menuItems/icedcoffee.png"
+            },
+            {
+                id:35,
+                name:"Español latte frío",
+                description:"null",
+                price:65,
+                image:"/assets/menuItems/icedcoffee.png"
+            },
+            {
+                id:36,
+                name:"Late frío con sabor",
+                description:"Mocca, cajeta, crema irlandesa, vainilla, caramelo.",
+                price:65,
+                image:"/assets/menuItems/frappe.png"
+            },
+            {
+                id:37,
+                name:"Latte frío",
+                description:"null",
+                price:60,
+                image:"/assets/menuItems/frappe.png"
+            },
+            {
+                id:38,
+                name:"Matcha / coco latte frío",
+                description:"null",
+                price:80,
+                image:"/assets/menuItems/icedmatcha.png"
+            },
+            {
+                id:39,
+                name:"Matcha / fresa latte frío",
+                description:"null",
+                price:75,
+                image:"/assets/menuItems/icedmatcha.png"
+            },
+            {
+                id:40,
+                name:"Matcha latte frío",
+                description:"null",
+                price:65,
+                image:"/assets/menuItems/icedmatcha.png"
+            },
+            {
+                id:41,
+                name:"Taro / coco latte frío",
+                description:"null",
+                price:80,
+                image:"/assets/menuItems/frappe.png"
+            },
+            {
+                id:42,
+                name:"Taro / fresa latte frío",
+                description:"null",
+                price:75,
+                image:"/assets/menuItems/frappe.png"
+            },
+            {
+                id:43,
+                name:"Taro latte frío",
+                description:"null",
+                price:65,
+                image:"/assets/menuItems/frappe.png"
+            },
             ],
             preWorkout:[
                 {
-                    id:27,
-                    nombre: "Cold brew latte",
-                    description: "Una bebida recomendada por la casa",
-                    precio: 70.00,
-                    imagen: "/assets/menuItems/Ensalada.png"
-                }
+                    id:52,
+                    name:"Cold brew Gingerale",
+                    description:"null",
+                    price:70,
+                    image:"/assets/menuItems/icedcoffee.png"
+                },
+                {
+                    id:53,
+                    name:"Cold brew latte",
+                    description:"null",
+                    price:70,
+                    image:"/assets/menuItems/icedcoffee.png"
+                },
+                {
+                    id:54,
+                    name:"Cold brew Sunrise",
+                    description:"null",
+                    price:70,
+                    image:"/assets/menuItems/icedcoffee.png"
+                },
+                {
+                    id:55,
+                    name:"Monster americano",
+                    description:"null",
+                    price:70,
+                    image:"/assets/menuItems/icedcoffee.png"
+                },
             ]
         },
         Calientes:{
             bebidasCalientes:[
                 {
+                    id:22,
+                    name:"Americano",
+                    description:"null",
+                    price:45,
+                    image:"/assets/menuItems/espresso.png"
+                },
+                {
+                    id:23,
+                    name:"Chocolate",
+                    description:"null",
+                    price:65,
+                    image:"/assets/menuItems/espresso.png"
+                },
+                {
+                    id:24,
+                    name:"Dirty chai latte",
+                    description:"null",
+                    price:70,
+                    image:"/assets/menuItems/latte.png"
+                },
+                {
+                    id:25,
+                    name:"Español latte",
+                    description:"null",
+                    price:65,
+                    image:"/assets/menuItems/latte.png"
+                },
+                {
+                    id:26,
+                    name:"Espresso",
+                    description:"null",
+                    price:30,
+                    image:"/assets/menuItems/espresso.png"
+                },
+                {
+                    id:27,
+                    name:"Espresso doble cortado",
+                    description:"null",
+                    price:40,
+                    image:"/assets/menuItems/espresso.png"
+                },
+                {
                     id:28,
-                    nombre: "Americano",
-                    description: "Una bebida recomendada por la casa",
-                    precio: 45.00,
-                    imagen: "/assets/menuItems/Ensalada.png"
-                }
+                    name:"Filtrado de especialidad",
+                    description:"Método de extracción: V60, Chemex o prensa francesa.",
+                    price:70,
+                    image:"/assets/menuItems/espresso.png"
+                },
+                {
+                    id:29,
+                    name:"Latte",
+                    description:"null",
+                    price:60,
+                    image:"/assets/menuItems/latte.png"
+                },
+                {
+                    id:30,
+                    name:"Latte con sabor",
+                    description:"Mocca, cajeta, crema irlandesa, vainilla, caramelo.",
+                    price:65,
+                    image:"/assets/menuItems/latte.png"
+                },
+                {
+                    id:31,
+                    name:"Matcha latte",
+                    description:"null",
+                    price:65,
+                    image:"/assets/menuItems/matcha.png"
+                },
+                {
+                    id:32,
+                    name:"Taro latte",
+                    description:"null",
+                    price:65,
+                    image:"/assets/menuItems/matcha.png"
+                },
+                {
+                    id:33,
+                    name:"Tizana",
+                    description:"null",
+                    price:55,
+                    image:"/assets/menuItems/tea.png"
+                },
             ]
         }
     }
