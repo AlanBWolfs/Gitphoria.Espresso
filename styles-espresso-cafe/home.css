@@ -64,6 +64,15 @@
   width: 100%;
   object-fit: cover;
 }
-.fas {
+
+.button-ordena-ahora {
+  background-color: #133936;  
   color: white;
+  z-index: 10;                
+  position: relative;         
+  font-weight: bold;
+  padding: 10px 20px;
+  border-radius: 5px;
+  text-decoration: none;
 }
+
