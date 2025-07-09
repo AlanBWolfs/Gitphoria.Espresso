@@ -195,14 +195,14 @@ export const menuElementos ={
                     name:"Agua",
                     description:"Una bebida recomendada por la casa",
                     price:16,
-                    image:"/assets/menuItems/logo-verde.png"
+                    image:"/assets/menuItems/water.png"
                 },
                 {
                     id:67,
                     name:"Amper, agua de coco",
                     description:"Una bebida recomendada por la casa",
                     price:37,
-                    image:"/assets/menuItems/logo-verde.png"
+                    image:"/assets/menuItems/water.png"
                 },
                 {
                     id:68,
@@ -216,28 +216,28 @@ export const menuElementos ={
                     name:"Jugos",
                     description:"Una bebida recomendada por la casa",
                     price:18,
-                    image:"/assets/menuItems/logo-verde.png"
+                    image:"/assets/menuItems/frozen.png"
                 },
                 {
                     id:70,
                     name:"Powerade",
                     description:"Una bebida recomendada por la casa",
                     price:30,
-                    image:"/assets/menuItems/logo-verde.png"
+                    image:"/assets/menuItems/frozenmango.png"
                 },
                 {
                     id:71,
                     name:"Refresco, agua mineral",
                     description:"Una bebida recomendada por la casa",
                     price:25,
-                    image:"/assets/menuItems/logo-verde.png"
+                    image:"/assets/menuItems/water.png"
                 },
                 {
                     id:72,
                     name:"Shot extra café",
                     description:"Una bebida recomendada por la casa",
                     price:15,
-                    image:"/assets/menuItems/logo-verde.png"
+                    image:"/assets/menuItems/espresso.png"
                 },
             ]
         }
