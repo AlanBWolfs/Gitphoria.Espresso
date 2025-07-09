@@ -7,7 +7,7 @@ document.addEventListener("DOMContentLoaded", function () {
   );
 
   form.addEventListener("submit", function (event) {
-    // Bootstrap validation
+    // validación de bootstrap
     if (!form.checkValidity()) {
       event.preventDefault();
       event.stopPropagation();
@@ -27,17 +27,17 @@ document.addEventListener("DOMContentLoaded", function () {
 
     form.classList.add("was-validated");
 
-    // Guardar en localStorage si el formulario es válido y las contraseñas coinciden
+    // Guardado en localStorage si el formulario es válido y las contraseñas coinciden
     if (form.checkValidity() && password.value === confirmPassword.value) {
       const userData = {
         firstName: document.getElementById("firstName").value,
         lastName: document.getElementById("lastName").value,
         email: document.getElementById("email").value,
-        password: password.value, // No guardar contraseñas en texto plano en producción
+        password: password.value, // No guardar contraseñas en texto plano en un futuro
       };
       localStorage.setItem("userData", JSON.stringify(userData));
-      // Puedes mostrar un mensaje o redirigir al usuario aquí si lo deseas
-      // event.preventDefault(); // Descomenta si NO quieres enviar el formulario
+      // se va a poder redirigir al usuario en un futuro
+      // event.preventDefault(); // Descomentar si NO se quiere enviar el formulario
     }
   });
 });
