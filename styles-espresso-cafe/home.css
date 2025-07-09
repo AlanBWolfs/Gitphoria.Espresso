@@ -28,7 +28,7 @@
     rgba(0, 0, 0, 0.326),
     rgba(19, 57, 54, 0.38)
   ),
-  url('/assets/espreso-cafe\ 3.jpeg');
+  url('/assets/aboutus.jpg');
   background-size: cover;
   background-position: center;
   background-repeat: no-repeat;
@@ -64,4 +64,6 @@
   width: 100%;
   object-fit: cover;
 }
-
+.fas {
+  color: white;
+}
