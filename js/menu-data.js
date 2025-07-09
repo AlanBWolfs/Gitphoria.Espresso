@@ -8,7 +8,7 @@ export const menuElementos ={
                     description: "2 huevos batidos, rellenos de champiñones, tomate cherry y queso Monterrey Jack acompañados de salsa a elegir (roja o verde) frijoles refritos y totoposte de la región",
                     price: 90.00,
                     horario: "7:30 AM - 1:30PM",
-                    image: "/assets/ommelette.jpg",
+                    image: "/menuItems/assets/ommelette.jpg",
                     opciones:{
                         salsas: ["roja","verde"]
                     }
@@ -19,7 +19,7 @@ export const menuElementos ={
                     description: "2 huevos revueltos con jamón de pavo acompañados de frijoles fritos platanos y totoposte de la región",
                     price: 80.00,
                     horario: "7:30 AM - 1:30PM",
-                    image: "../assets/huevos2.png"
+                    image: "/menuItems/assets/huevos2.png"
                 },
                 {
                     id:3,
@@ -27,7 +27,7 @@ export const menuElementos ={
                     description: "2 huevos revueltos con salchicha de res acompañados de frijoles fritos platanos y totoposte de la región",
                     price: 85.00,
                     horario: "7:30 AM - 1:30PM",
-                    image: "../assets/huevos.png"
+                    image: "/menuItems/assets/huevos.png"
                 },
                 {
                     id:4,
@@ -35,7 +35,7 @@ export const menuElementos ={
                     description: "2 huevos revueltos con tomate, cebolla y chile serrano acompañados de frijoles fritos platanos y totoposte de la región",
                     price: 80.00,
                     horario: "7:30 AM - 1:30PM",
-                    image: "../assets/huevos.png"
+                    image: "/menuItems/assets/huevos.png"
                 },
                 {
                     id:5,
@@ -43,7 +43,7 @@ export const menuElementos ={
                     description: "2 huevos revueltos con longaniza de la región  acompañados de frijoles fritos platanos y totoposte de la región",
                     price: 85.00,
                     horario: "7:30 AM - 1:30PM",
-                    image: "../assets/huevos.png"
+                    image: "/menuItems/assets/huevos.png"
                 },
                 {
                     id:6,
@@ -51,7 +51,7 @@ export const menuElementos ={
                     description: "2 huevos revueltos con jamón de pavo acompañados de frijoles fritos platanos y totoposte de la región",
                     price: 85.00,
                     horario: "7:30 AM - 1:30PM",
-                    image: "../assets/huevos.png"
+                    image: "/assets/menuItems/huevos.png"
                 },
                 {
                     id:7,
@@ -59,7 +59,7 @@ export const menuElementos ={
                     description: "2 huevos estrellados sobre una cama de tortilla, queso y jamón, bañados con salsa a elegir (verde o roja) y chicharos, acompañados de frijoles fritos y platanos fritos.",
                     price: 100.00,
                     horario: "7:30 AM - 1:30PM",
-                    image: "../assets/huevos.png",
+                    image: "/assets/menuItems/huevos.png",
                     opciones:{
                         salsas: ["roja","verde"]
                     }
@@ -72,7 +72,7 @@ export const menuElementos ={
                     description: "Tortilla frita bañada con la salsa de su preferencia, crema, queso Monterrey Jack, aguacate y cebolla curtida.",
                     price: 100.00,
                     horario: "7:30 AM - 1:30PM",
-                    image: "/assets/chilaquiles.png",
+                    image: "/assets/menuItems/chilaquiles.png",
                     proteinas: {
                         "Huevo": 15.00,
                         "pollo": 20.00,
@@ -92,28 +92,28 @@ export const menuElementos ={
                     name: "Jamon Serrano",
                     description: "2 rebanadas de pan de masa madre con semillas Montado en una cama de aguacate, queso crema Tomate cherry, hojas verdes y aderezo de la casa",
                     price: 90.00,
-                    image: "/assets/toastjamon.png"
+                    image: "/assets/menuItems/toastjamon.png"
                 },
                 {
                    id:10,
                     name: "Salmon Ahumado",
                     description: "2 rebanadas de masa madre con semillas montado en una cama de huacamole, queso crema tomate cherry, hojas verdes y aderezo de la casa.",
                     price: 100.00,
-                    image: "/assets/toastsalmon.png"
+                    image: "/assets/menuItems/toastsalmon.png"
                 },
                 {
                    id:11,
                     name: "Huevos estrellados",
                     description: "2 rebanadas de pan de masa madre con semillas Montado en una cama de aguacate, queso crema Tomate cherry, hojas verdes y aderezo de la casa",
                     price: 90.00,
-                    image: "/assets/toasthuevo.png"
+                    image: "/assets/menuItems/toasthuevo.png"
                 },
                 {
                    id:12,
                     name: "Dulces",
                     description: "2 rebanadas de pan de masa madre con semillas Montado en una cama de queso crema con coulis de frutas(durazno, fresa, maracuya, piña o moras)",
                     price: 75.00,
-                    image: "/assets/dulces.png"
+                    image: "/assets/menuItems/dulces.png"
                 },
 
             ],
@@ -123,28 +123,28 @@ export const menuElementos ={
                     name: "Jamon Serrano",
                     description: "1 pieza de bagels de parmesano, montado en una cama de guacamole, queso crema, hojas verdes y aderezo de la casa.",
                     price: 85.00,
-                    image: "/assets/dulces.png"
+                    image: "/assets/menuItems/dulces.png"
                 },
                 {
                    id:14,
                     name: "Slamon ahumado",
                     description: "1 pieza de bagels de parmesano, montado en una cama de guacamole, queso crema, hojas verdes y aderezo de la casa.",
                     price: 95.00,
-                    image: "/assets/bagelsalmon.png"
+                    image: "/assets/menuItems/bagelsalmon.png"
                 },
                 {
                    id:15,
                     name: "Huevos estrellados",
                     description: "1 pieza de bagels de parmesano, montado en una cama de guacamole, queso crema, hojas verdes y aderezo de la casa.",
                     price: 85.00,
-                    image: "/assets/bagelhuevo.png"
+                    image: "/assets/menuItems/bagelhuevo.png"
                 },
                 {
                    id:16,
                     name: "Clasico",
                     description: "1 pieza de bagels de parmesano, montado en una cama de guacamole, queso crema, hojas verdes y aderezo de la casa.",
                     price: 80.00,
-                    image: "/assets/dulces.png"
+                    image: "/assets/menuItems/dulces.png"
                 },
                 
             ],
@@ -154,21 +154,21 @@ export const menuElementos ={
                     name: "Champiñon",
                     description: "Combinación de hotdog con nuestra salsa para pizza, cubierto de queso Monterrey Jack y aderezo de la casa",
                     price: 75.00,
-                    image: "/assets/hotdogcham.png"
+                    image: "/assets/menuItems/hotdogcham.png"
                 },
                 {
                     id:18,
                     name: "Hawaiano",
                     description: "Combinación de hotdog con nuestra salsa para pizza, cubierto de queso Monterrey Jack y aderezo de la casa",
                     price: 75.00,
-                    image: "/assets/hot.png"
+                    image: "/assets/menuItems/hot.png"
                 },
                 {
                     id:19,
                     name: "Pepperoni",
                     description: "Combinación de hotdog con nuestra salsa para pizza, cubierto de queso Monterrey Jack y aderezo de la casa",
                     price: 75.00,
-                    image: "/assets/hot.png"
+                    image: "/assets/menuItems/hot.png"
                 },
             ],
             Ensalada:[
@@ -177,7 +177,7 @@ export const menuElementos ={
                     name: "Espresso",
                     description: "Mezcla de espinaca baby, bolitas de queso crema, arandanos deshidratados, nueces, trozoa de durazno y aderezo de miel con mostaza.",
                     price: 75.00,
-                    image: "/assets/Ensalada.png"
+                    image: "/assets/menuItems/Ensalada.png"
                 },
             ]
         },
@@ -188,7 +188,7 @@ export const menuElementos ={
                     nombre: "Agua",
                     description: "Una bebida recomendada por la casa",
                     precio: 16.00,
-                    imagen: "/assets/Ensalada.png"
+                    imagen: "/assets/menuItems/Ensalada.png"
                 }
             ]
         }
@@ -201,14 +201,14 @@ export const menuElementos ={
                     nombre: "Affogato",
                     description: "Helado doble de vainilla con un shot de espresso.",
                     precio: 70.00,
-                    imagen: "/assets/Ensalada.png"
+                    imagen: "/assets/menuItems/Ensalada.png"
                 },
                 {
                     d:22,
                     nombre: "Affogato Especial",
                     description: "Helado doble con un shot de espresso y un shot de Baileys.",
                     precio: 80.00,
-                    imagen: "/assets/Ensalada.png"
+                    imagen: "/assets/menuItems/Ensalada.png"
                 }
             ]
         },
@@ -219,7 +219,7 @@ export const menuElementos ={
                     nombre: "Fresa Yogurth",
                     description: "Una bebida recomendada por la casa",
                     precio: 85.00,
-                    imagen: "/assets/Ensalada.png"
+                    imagen: "/assets/menuItems/Ensalada.png"
                 }
             ],
             Refresh:[
@@ -228,7 +228,7 @@ export const menuElementos ={
                     nombre: "Fresa refresh",
                     description: "Una bebida recomendada por la casa",
                     precio: 16.00,
-                    imagen: "/assets/Ensalada.png"
+                    imagen: "/assets/menuItems/Ensalada.png"
                 }
             ],
             bebidasFrias:[
@@ -237,7 +237,7 @@ export const menuElementos ={
                     nombre: "Americano frío",
                     description: "Una bebida recomendada por la casa",
                     precio: 50.00,
-                    imagen: "/assets/Ensalada.png"
+                    imagen: "/assets/menuItems/Ensalada.png"
                 }
             ],
             preWorkout:[
@@ -246,7 +246,7 @@ export const menuElementos ={
                     nombre: "Cold brew latte",
                     description: "Una bebida recomendada por la casa",
                     precio: 70.00,
-                    imagen: "/assets/Ensalada.png"
+                    imagen: "/assets/menuItems/Ensalada.png"
                 }
             ]
         },
@@ -257,7 +257,7 @@ export const menuElementos ={
                     nombre: "Americano",
                     description: "Una bebida recomendada por la casa",
                     precio: 45.00,
-                    imagen: "/assets/Ensalada.png"
+                    imagen: "/assets/menuItems/Ensalada.png"
                 }
             ]
         }
