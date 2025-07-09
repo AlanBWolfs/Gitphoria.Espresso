@@ -57,8 +57,8 @@ isValidationOn = true;
 const valid = validateInputs();
 if (valid) {
   // Recoger los datos del formulario
-  var templateparams = {
-  from_name: nameInput.value,
+  const templateparams = {
+  name: nameInput.value,
   email: emailInput.value,
   motivo: motivoInput.value,
   message: mensajeInput.value,

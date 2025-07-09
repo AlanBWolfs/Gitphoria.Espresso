@@ -19,8 +19,8 @@
 
 .map-espresso {
   border-radius: 2rem;
-  border: solid #a5a29f 1px;
- box-shadow: 5px 5px 10px rgba(0, 0, 0, 0.5);
+  border: 1px solid #d9d9d9;
+box-shadow: 0px 1px 3px 2px #998f76ba;
  }
 
 /* Formulario principal */
@@ -40,7 +40,7 @@
 .contact-subtitle {
   font-family: "avigea", sans-serif;
   font-weight: bold;
-  font-size: 2rem;
+  font-size: 2.3rem;
   color: #133936;
   text-align: center;
   margin-bottom: 0;
@@ -59,8 +59,9 @@
   font-family: "Poppins", sans-serif;
   color: #133936;
   font-weight: 600;
-  font-size: 1.2rem;
+  font-size: 1.5rem;
   margin-bottom: 0.3rem;
+  text-shadow: #998f766c 1px 1px 2px;
 }
 
 .contact-input {
@@ -101,7 +102,7 @@
 
 /* Mensajes de error */
 .error-hint {
-  color: #ac1948;
+  color: #cf0042;
   font-size: 1rem;
   font-family: "Poppins", sans-serif;
   text-align: left;
@@ -116,8 +117,8 @@
 /* Estilo para campos inválidos */
 /*normalmente tambien siempre esta oculto esto le pondra el marco rojo al campo cuando sea invalido*/
 .is-invalid {
-  border: 3px solid #ac1948;
-  box-shadow: 0 0 5px rgba(172, 25, 72, 0.598);
+  border: 3px solid #cf0042;
+  box-shadow: 0px 0px 6px rgb(207, 0, 66);
 }
 /*lo llame desde el ID*/
 #Gracias {
