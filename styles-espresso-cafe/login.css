@@ -15,7 +15,6 @@
 }
 
 
-
 .form-label{
   font-family: "Poppins";
   font-size: 1.6rem;
@@ -47,6 +46,7 @@
   background-color: #998F76;
   color: aliceblue;
   transform: scale(1.1);
+  cursor: pointer;
 }
 
 .form-check{
@@ -100,13 +100,15 @@
   display: flex;
   justify-content: center;
   align-items: center;
-  transition: transform 0.3s ease;
+  
 }
 
 .login-icons:hover {
   transform: scale(1.1);
   background-color: #998F76;
   color: aliceblue;
+  transition: transform 0.5s ease;
+  
 }
 
 .image-social-wrapper {
@@ -118,4 +120,20 @@
 .main-logo {
   width: 50rem;
   height: auto;
+}
+
+#login-container {
+  display: grid;
+ min-height: 100dvh;
+ grid-template-rows: auto 1fr auto;
+  height: 100vh;
+}
+
+#login-items {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  height: 100%;
+
 }
