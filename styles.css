@@ -33,10 +33,11 @@ img {
 
 .navbar-header {
   background-color: #133936;
-  width: 100%;
+  min-width: 100%;
   margin: 0;
   padding-left: 0;
   padding-right: 0;
+
 }
 
 .navbar .nav-link {
@@ -181,12 +182,11 @@ a {
 /*!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!! Footer */
 .general-footer {
   background-color: #133936;
- 
+  min-width: 100%;
   font-family: "Poppins";
   color: #FFFFFF;
   padding: 1rem 0;
   text-align: center;
-  width: 100%;
   margin: 0;
 }
 

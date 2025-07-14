@@ -29,12 +29,12 @@ box-shadow: 0px 1px 3px 2px #998f76ba;
   background-color: #ffffff;
   /*el borde es para que pareca un contenedor flotante*/
   border: solid #00000017 2px;
-  border-radius: 2rem;
+  border-radius: 3rem;
   padding: 6rem;
   width: 100%;
   max-width: 643px;
   /*quite el max-height y height para que se ajuste al contenido*/
-  box-shadow: 0px 3px 3px rgba(0, 0, 0, 0.1);
+  box-shadow: 0px 3px 3px rgba(0, 0, 0, 0.184);
 }
 
 .contact-subtitle {
@@ -67,7 +67,7 @@ box-shadow: 0px 1px 3px 2px #998f76ba;
 .contact-input {
   width: 100%;
   border: 1px solid #d9d9d9;
-  border-radius: 1.2rem;
+  border-radius: 2.5rem;
   padding: 0.85rem 1rem;
   background-color: #d9d9d9;
   margin-bottom: 2rem;
