@@ -1,15 +1,14 @@
 
 .register-wrapper {
  display: flex;
- height: calc(100vh - 80px); 
- align-items: stretch;
+height: 100vh;
  overflow: hidden;
 }
 
 .register-image {
  flex: 1;
  display: flex;
- height: 100%;
+ align-items: stretch;
 }
 
 .image-register {
@@ -23,7 +22,7 @@
   background-color: #fff;
   display: flex;
   flex-direction: column;
-  justify-content: flex-start;
+  justify-content: center;
   padding: 2rem 6rem; 
 }
 
@@ -96,11 +95,19 @@
     height: auto;
   }
 
-  .register-image {
-    display: none;
-  }
-
   .register-form-container {
     padding: 2rem;
+    order: 1;
+  }
+
+  .register-image {
+    height: 200px; /* banner-style */
+    order: 2;
+  }
+
+  .image-register {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
   }
 }

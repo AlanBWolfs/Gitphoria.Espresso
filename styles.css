@@ -13,6 +13,11 @@ body {
   background-color: #FFFFFF;
 }
 
+main{
+  min-height: 100vh;
+}
+
+
 img {
   max-width: 100%;
   height: auto;
@@ -224,8 +229,6 @@ a {
 
 /*!!!!!!!!!!!!!!!!!!!! Media Queries para móviles */
 
-@media (max-width: 768px) {
-
   .main-title {
     font-size: 3rem;
     text-align: center;
@@ -280,7 +283,7 @@ a {
     flex-wrap: wrap;
     gap: 0.5rem;
   }
-}
+
 
 @media (max-width: 768px) {
 
