@@ -1,21 +1,22 @@
 import { menuElementos } from './menu-data.js';
 
-export function renderMenu() {
-  //contenedor donde se pondrá el menu
+export function renderMenu(isAdmin = false) {
+  console.log(isAdmin ? '🛠️ Modo ADMIN (sin carrito)' : '👤 Modo USUARIO');
+
   const container = document.getElementById('menu-container');
   container.innerHTML = '';
-  //obtenemos la parte del URL despues del ? obtenemos los valores de los parametros tipo y categoria 
-  //ejemplo:
-  //"menu2.html?tipo=bebidas&categoria=Calientes
-  // tipo bebidas, categoria calientes
+
   const params = new URLSearchParams(window.location.search);
-  const tipo = params.get('tipo'); // solo tenemos 2 tipos alimentos y bebidas
-  const categoria = params.get('categoria'); // (Desayunos, Especiales, Extras) dependiendo el tipo
+  const tipo = params.get('tipo'); // alimentos o bebidas
+  const categoria = params.get('categoria'); // Desayunos, Especiales, etc.
 
+  const categoriaDatos = menuElementos[tipo]?.[categoria];
+  if (!categoriaDatos) {
+    container.innerHTML = `<p>No se encontró la categoría "${categoria}" para el tipo "${tipo}".</p>`;
+    return;
+  }
 
-  const categoriaDatos = menuElementos[tipo][categoria];
-
-  // Recorrer las subcategorías (en desayunos: huevos y chilaquiles)
+  // Recorrer subcategorías
   for (const subcategoria in categoriaDatos) {
     const h2 = document.createElement('h2');
     h2.textContent = subcategoria;
@@ -24,28 +25,38 @@ export function renderMenu() {
     const grid = document.createElement('div');
     grid.className = 'subcategoria';
 
-    // Cada subcategoria es un array de items (productos ejemplo los platillos de huevos)
     const items = categoriaDatos[subcategoria];
-    //verificamos que los itemns realmente sean un array y despues recorremos cada elemento de los items o sea los productos 
     if (Array.isArray(items)) {
       items.forEach(item => {
-        grid.appendChild(crearTarjeta(item));//llamamos a la función 
+        grid.appendChild(crearTarjeta(item, isAdmin));
       });
     }
 
-    container.appendChild(grid);//contenedor genral de todas las tarjetas
+    container.appendChild(grid);
   }
 }
 
-function crearTarjeta(item) {
+function crearTarjeta(item, isAdmin) {
   const card = document.createElement('div');
   card.className = 'card';
 
-  // Para manejar diferencias en las propiedades (name / nombre, price / precio, image / imagen)
   const nombre = item.name || item.nombre || 'Sin nombre';
   const descripcion = item.description || item.descripcion || '';
   const precio = item.price !== undefined ? item.price : (item.precio !== undefined ? item.precio : 0);
   const imagen = item.image || item.imagen || '../assets/default.png';
+
+  let botonesHTML = '';
+
+  if (!isAdmin) {
+    // SOLO usuarios ven "Agregar al carrito"
+    botonesHTML += `<button class="btn btn-cart">Agregar al carrito</button>`;
+  } else {
+    // SOLO administradores ven Editar y Eliminar
+    botonesHTML += `
+      <button class="btn btn-edit">Editar</button>
+      <button class="btn btn-delete">Eliminar</button>
+    `;
+  }
 
   card.innerHTML = `
     <div class="card-img-wrapper">
@@ -56,7 +67,7 @@ function crearTarjeta(item) {
       <p class="card-description">${descripcion}</p>
       <p class="card-price">$${precio.toFixed(2)}</p>
       <div class="card-buttons">
-        <button class="btn btn-cart">Agregar al carrito</button>
+        ${botonesHTML}
       </div>
     </div>
   `;
@@ -64,16 +75,29 @@ function crearTarjeta(item) {
   return card;
 }
 
-let currentCard = null;
+// Listener global para botones
+document.addEventListener('click', e => {
+  if (e.target.matches('.btn-cart')) {
+    const card = e.target.closest('.card');
+    const nombre = card.querySelector('.card-title').textContent;
+    alert(`"${nombre}" agregado al carrito`);
+    // Aquí va la lógica real para el carrito
+  }
 
-//evento eliminar 
-//eschucha todos los clicks de la pagina 
-document.addEventListener('click', e=>{
-    //verifica si el clic fue en el boton delete con la clase .btn-delete
-    if(e.target.matches('.btn-delete')){
-        //busca el card mas cercano al boton usando closest('card')
-        const card = e.target.closest('.card');
-        //borra la terjeta del DOM
-        card.remove();
+  if (e.target.matches('.btn-delete')) {
+    const card = e.target.closest('.card');
+    const nombre = card.querySelector('.card-title').textContent;
+    const confirmar = confirm(`¿Seguro que quieres eliminar "${nombre}"?`);
+    if (confirmar) {
+      card.remove();
+      console.log(`Producto eliminado: ${nombre}`);
     }
-})
+  }
+
+  if (e.target.matches('.btn-edit')) {
+    const card = e.target.closest('.card');
+    const nombre = card.querySelector('.card-title').textContent;
+    alert(`Editar producto: "${nombre}"`);
+    // Aquí puedes abrir un modal para editar el producto
+  }
+});
