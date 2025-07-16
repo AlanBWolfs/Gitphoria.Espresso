@@ -80,18 +80,34 @@ document.addEventListener('click', e => {
   if (e.target.matches('.btn-cart')) {
     const card = e.target.closest('.card');
     const nombre = card.querySelector('.card-title').textContent;
-    alert(`"${nombre}" agregado al carrito`);
-    // Aquí va la lógica real para el carrito
+
+    // Buscar el producto en menuElementos
+    const params = new URLSearchParams(window.location.search);
+    const tipo = params.get('tipo');
+    const categoria = params.get('categoria');
+
+    const productos = menuElementos[tipo]?.[categoria];
+    let productoSeleccionado = null;
+    for (const sub in productos) {
+      const item = productos[sub].find(p => p.name === nombre);
+      if (item) {
+        productoSeleccionado = item;
+        break;
+      }
+    }
+
+    if (productoSeleccionado) {
+      import('./personalizacion.js').then(mod => {
+        mod.mostrarModalPersonalizacion(productoSeleccionado);
+      });
+    }
   }
 
   if (e.target.matches('.btn-delete')) {
     const card = e.target.closest('.card');
     const nombre = card.querySelector('.card-title').textContent;
-    const confirmar = confirm(`¿Seguro que quieres eliminar "${nombre}"?`);
-    if (confirmar) {
-      card.remove();
-      console.log(`Producto eliminado: ${nombre}`);
-    }
+    alert(`Eliminar producto: "${nombre}"`);
+    // Aquí puedes poner lógica real para eliminar
   }
 
   if (e.target.matches('.btn-edit')) {
