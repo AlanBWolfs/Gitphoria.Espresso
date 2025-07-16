@@ -84,15 +84,21 @@ document.addEventListener('click', e => {
     // Aquí va la lógica real para el carrito
   }
 
-  if (e.target.matches('.btn-delete')) {
-    const card = e.target.closest('.card');
-    const nombre = card.querySelector('.card-title').textContent;
-    const confirmar = confirm(`¿Seguro que quieres eliminar "${nombre}"?`);
-    if (confirmar) {
-      card.remove();
-      console.log(`Producto eliminado: ${nombre}`);
-    }
+  if (e.target.matches('.btn-cart')) {
+  const card = e.target.closest('.card');
+  const nombre = card.querySelector('.card-title').textContent;
+
+  let carrito = JSON.parse(localStorage.getItem('carrito')) || [];
+  carrito.push({
+    nombre,
+    precio: parseFloat(card.querySelector('.card-price').textContent.replace('$', ''))
+  });
+  localStorage.setItem('carrito', JSON.stringify(carrito));
+
+  // Navegar a la página de carrito
+  window.location.href = './carrito.html';
   }
+
 
   if (e.target.matches('.btn-edit')) {
     const card = e.target.closest('.card');
