@@ -124,20 +124,6 @@ img {
   margin: 3rem 0 5rem;
 }
 
-/*.home-main-title {
-  position: absolute;
-  top: 50%;
-  left: 50%;
-  transform: translate(-50%, -50%);
-  font-family: "Avigea";
-  text-align: center;
-  color: #ffffff;
-  letter-spacing: 10px;
-  font-weight: bold;
-  font-size: 4rem;
-  letter-spacing: 0.3rem;
-  z-index: 2;
-}*/
 
 .golden-sub {
   font-family: "Avigea";
@@ -228,6 +214,7 @@ a {
 /* Media Queries para móviles */
 
 /*!!!!!!!!!!!!!!!!!!!! Media Queries para móviles */
+@media (max-width: 768px) {
 
   .main-title {
     font-size: 3rem;
@@ -285,26 +272,15 @@ a {
   }
 
 
-@media (max-width: 768px) {
+
 
   section,
   .container {
     margin-bottom: 4rem;
   }
+
+
 }
-
-
-.general-green-button{
-  background-color: #133936 !important;
-  color: white !important;
-  font-size: 1.25rem;
-  padding: 12px 30px;
-  border-radius: 6px;
-  font-weight: 600;
-  border: none;
-}
-
-
 
 
 
