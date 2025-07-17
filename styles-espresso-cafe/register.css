@@ -29,7 +29,7 @@ height: 100vh;
 .register-title {
   font-family: "Avigea", serif;
   color: #133936;
-  font-size: 4rem;
+  font-size: 6rem;
   margin-bottom: 3rem;
   text-align: center;
   margin: 1rem 0 3rem;
@@ -38,8 +38,9 @@ height: 100vh;
 .label-name {
   font-family: "Poppins";
   color: #133936;
-  font-size: 1.4rem;
+  font-size: 2rem;
   font-weight: 600;
+  margin-bottom: 1rem;
 }
 
 .name-input,
@@ -47,10 +48,10 @@ height: 100vh;
   background-color: #d9d9d9;
   width: 100%;
   height: 4.5rem;
-  border-radius: 2.5rem;
+  border-radius: 3rem;
   font-family: "Poppins";
-  font-size: 1.2rem;
-  padding-left: 1.5rem;
+  font-size: 2rem;
+  padding: 2rem;
   margin-bottom: 2rem;
   box-shadow: 0px 1px 1px 1px #0000004e;
 }
@@ -59,10 +60,10 @@ height: 100vh;
   background-color: #133936;
   color: aliceblue;
   width: 100%;
-  height: 4.5rem;
-  border-radius: 2.5rem;
+  height: 5rem;
+  border-radius: 3rem;
   font-family: "Poppins";
-  font-size: 1.6rem;
+  font-size: 2rem;
   font-weight: 600;
   border: none;
   box-shadow: 0px 1px 1px 1px #0000004e;
@@ -76,18 +77,26 @@ height: 100vh;
   color: #133936;
   font-family: "Poppins";
   margin-top: 1rem;
+  font-size: 2rem;
 }
 
 .login {
   color: #133936;
   font-weight: bold;
   font-family: "Poppins";
-  text-decoration: none;
+  font-size: 2rem;
 }
 
 .login:hover {
   text-decoration: underline;
 }
+
+.invalid-feedback{
+font-size: 2rem;
+font-family: "poppins";
+}
+
+
 
 @media (max-width: 768px) {
   .register-wrapper {
