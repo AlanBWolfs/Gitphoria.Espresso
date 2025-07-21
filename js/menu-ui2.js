@@ -35,7 +35,7 @@ export function renderMenu(isAdmin = false) {
 
     container.appendChild(grid);
   }
-}
+
 
 // Crear la tarjeta HTML de un producto
 function crearTarjeta(item, isAdmin) {
@@ -168,3 +168,4 @@ document.addEventListener('DOMContentLoaded', () => {
     });
   }
 });
+}
