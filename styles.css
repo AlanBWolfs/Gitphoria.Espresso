@@ -5,12 +5,16 @@
   src: url(/assets/fonts/Avigea-6YGKo.otf) format("opentype");
 }
 
+/* Main styles for Gitphoria.Espresso - Updated with merge conflict resolution */
+
 html {
   font-size: 62.5%;
+  overflow-x:clip;
 }
 
 body {
-  background-color: #ffffff;
+  background-color: #FFFFFF;
+  overflow-x:clip;
 }
 
 main {
@@ -105,7 +109,10 @@ img {
 }
 
 .navbar-toggler {
-  border-color: #ffffff;
+  border-color: #FFFFFF;
+  margin-right: 20px;
+  margin-top: 10px;
+  margin-bottom: 10px;
 }
 .navbar-toggler-icon {
   background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' fill='%23A2845E' viewBox='0 0 30 30'%3E%3Cpath stroke='rgba(255,255,255,0.8)' stroke-width='2' d='M4 7h22M4 15h22M4 23h22'/%3E%3C/svg%3E");
