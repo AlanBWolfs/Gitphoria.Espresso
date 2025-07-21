@@ -1,5 +1,6 @@
 import { menuElementos } from './menu-data.js';
 
+// Función para renderizar el menú (sin manipulación DOM directa aún)
 export function renderMenu(isAdmin = false) {
   console.log(isAdmin ? '🛠️ Modo ADMIN (sin carrito)' : '👤 Modo USUARIO');
 
@@ -34,8 +35,9 @@ export function renderMenu(isAdmin = false) {
 
     container.appendChild(grid);
   }
-}
 
+
+// Crear la tarjeta HTML de un producto
 function crearTarjeta(item, isAdmin) {
   const card = document.createElement('div');
   card.className = 'card';
@@ -48,10 +50,10 @@ function crearTarjeta(item, isAdmin) {
   let botonesHTML = '';
 
   if (!isAdmin) {
-    // SOLO usuarios ven "Agregar al carrito"
+    // Usuarios solo ven "Agregar al carrito"
     botonesHTML += `<button class="btn btn-cart">Agregar al carrito</button>`;
   } else {
-    // SOLO administradores ven Editar y Eliminar
+    // Admin ven Editar y Eliminar
     botonesHTML += `
       <button class="btn btn-edit">Editar</button>
       <button class="btn btn-delete">Eliminar</button>
@@ -75,35 +77,95 @@ function crearTarjeta(item, isAdmin) {
   return card;
 }
 
-// Listener global para botones
-document.addEventListener('click', e => {
-  if (e.target.matches('.btn-cart')) {
-    const card = e.target.closest('.card');
-    const nombre = card.querySelector('.card-title').textContent;
-    alert(`"${nombre}" agregado al carrito`);
-    // Aquí va la lógica real para el carrito
-  }
+// Todo el código que manipula el DOM y añade listeners va dentro de DOMContentLoaded
+document.addEventListener('DOMContentLoaded', () => {
+  // Aquí decides si es admin o no, por ejemplo leyendo URL
+  const params = new URLSearchParams(window.location.search);
+  const isAdmin = params.get('admin') === 'true';
 
-  if (e.target.matches('.btn-cart')) {
-  const card = e.target.closest('.card');
-  const nombre = card.querySelector('.card-title').textContent;
+  // Renderizar menú
+  renderMenu(isAdmin);
 
-  let carrito = JSON.parse(localStorage.getItem('carrito')) || [];
-  carrito.push({
-    nombre,
-    precio: parseFloat(card.querySelector('.card-price').textContent.replace('$', ''))
+  // Listener global para botones
+  document.addEventListener('click', e => {
+    if (e.target.matches('.btn-cart')) {
+      const card = e.target.closest('.card');
+      const nombre = card.querySelector('.card-title').textContent;
+
+      let carrito = JSON.parse(localStorage.getItem('carrito')) || [];
+      carrito.push({
+        nombre,
+        precio: parseFloat(card.querySelector('.card-price').textContent.replace('$', ''))
+      });
+      localStorage.setItem('carrito', JSON.stringify(carrito));
+
+      // Navegar a la página de carrito
+      window.location.href = './carrito.html';
+    }
+
+    if (e.target.matches('.btn-edit')) {
+      const card = e.target.closest('.card');
+
+      // Obtener datos actuales del producto
+      const nombre = card.querySelector('.card-title').textContent;
+      const descripcion = card.querySelector('.card-description').textContent;
+      const precio = parseFloat(card.querySelector('.card-price').textContent.replace('$', ''));
+      const imagen = card.querySelector('img').src;
+
+      // Rellenar inputs del modal
+      document.getElementById('nombreProducto').value = nombre;
+      document.getElementById('descripcionProducto').value = descripcion;
+      document.getElementById('precioProducto').value = precio;
+      document.getElementById('imagenProducto').value = imagen;
+      document.getElementById('productoActual').value = nombre;
+
+      // Mostrar modal
+      const modal = new bootstrap.Modal(document.getElementById('modalEditar'));
+      modal.show();
+    }
+
+    if (e.target.matches('.btn-delete')) {
+      const card = e.target.closest('.card');
+      const nombre = card.querySelector('.card-title').textContent;
+      const confirmar = confirm(`¿Seguro que quieres eliminar "${nombre}"?`);
+      if (confirmar) {
+        card.remove();
+        console.log(`Producto eliminado: ${nombre}`);
+      }
+    }
   });
-  localStorage.setItem('carrito', JSON.stringify(carrito));
 
-  // Navegar a la página de carrito
-  window.location.href = './carrito.html';
-  }
+  // Listener para el submit del formulario del modal editar
+  const formEditar = document.getElementById('formEditarProducto');
+  if (formEditar) {
+    formEditar.addEventListener('submit', e => {
+      e.preventDefault();
 
+      const nuevoNombre = document.getElementById('nombreProducto').value;
+      const nuevaDescripcion = document.getElementById('descripcionProducto').value;
+      const nuevoPrecio = parseFloat(document.getElementById('precioProducto').value).toFixed(2);
+      const nuevaImagen = document.getElementById('imagenProducto').value;
+      const productoOriginal = document.getElementById('productoActual').value;
 
-  if (e.target.matches('.btn-edit')) {
-    const card = e.target.closest('.card');
-    const nombre = card.querySelector('.card-title').textContent;
-    alert(`Editar producto: "${nombre}"`);
-    // Aquí puedes abrir un modal para editar el producto
+      // Buscar la tarjeta que estamos editando y actualizarla
+      const cards = document.querySelectorAll('.card');
+      cards.forEach(card => {
+        const titulo = card.querySelector('.card-title');
+        if (titulo.textContent === productoOriginal) {
+          titulo.textContent = nuevoNombre;
+          card.querySelector('.card-description').textContent = nuevaDescripcion;
+          card.querySelector('.card-price').textContent = `$${nuevoPrecio}`;
+          card.querySelector('img').src = nuevaImagen;
+        }
+      });
+
+      // Cerrar modal
+      const modal = bootstrap.Modal.getInstance(document.getElementById('modalEditar'));
+      modal.hide();
+
+      // Resetear formulario para futuras ediciones
+      e.target.reset();
+    });
   }
 });
+}
