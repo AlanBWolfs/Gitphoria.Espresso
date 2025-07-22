@@ -1,0 +1,153 @@
+/* Importar fuente */
+body {
+  font-family: 'Inter', sans-serif;
+  background-color: #f8f9fa;
+  margin: 0;
+  padding: 0;
+  color: #333;
+}
+
+.container {
+  display: flex;
+  justify-content: center;
+  gap: 20px;
+  padding: 20px;
+}
+
+.left-panel,
+.right-panel {
+  background: #fff;
+  border-radius: 12px;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+  padding: 20px;
+}
+
+.left-panel {
+  flex: 2;
+}
+
+.right-panel {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+}
+
+h2, h3 {
+  color: #2c3e50;
+  margin-bottom: 10px;
+}
+
+.toggle-buttons {
+  display: flex;
+  gap: 10px;
+  margin-bottom: 15px;
+}
+
+.toggle {
+  padding: 10px 15px;
+  border: 1px solid #2c3e50;
+  border-radius: 20px;
+  background: #fff;
+  color: #2c3e50;
+  cursor: pointer;
+}
+
+.toggle.active {
+  background: #2c3e50;
+  color: #fff;
+}
+
+.map img {
+  width: 100%;
+  border-radius: 8px;
+}
+
+.location-info {
+  display: flex;
+  align-items: center;
+  margin-top: 15px;
+  gap: 10px;
+}
+
+.pickup-time, .payment {
+  margin-top: 20px;
+}
+
+.select-btn, .edit-btn, .order-btn {
+  background-color: #2c3e50;
+  color: #fff;
+  border: none;
+  padding: 10px 15px;
+  border-radius: 8px;
+  cursor: pointer;
+}
+
+.card-info {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  background: #f1f1f1;
+  border-radius: 8px;
+  padding: 10px;
+}
+
+.card-icons img {
+  height: 20px;
+  margin-right: 5px;
+}
+
+.header {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.logo {
+  border-radius: 50%;
+  width: 40px;
+  height: 40px;
+}
+
+.brand {
+  font-weight: bold;
+  font-size: 1.2em;
+}
+
+.cart-summary, .order-total {
+  background: #f1f1f1;
+  border-radius: 8px;
+  padding: 10px;
+}
+
+.cart-item {
+  display: flex;
+  gap: 10px;
+  align-items: center;
+  margin-top: 10px;
+}
+
+.item-img {
+  width: 60px;
+  border-radius: 8px;
+}
+
+.item-details {
+  flex: 1;
+}
+
+.item-price {
+  font-weight: bold;
+  color: #2c3e50;
+}
+
+.totals .row {
+  display: flex;
+  justify-content: space-between;
+  margin: 5px 0;
+}
+
+.totals .total {
+  font-size: 1.1em;
+  font-weight: bold;
+}
