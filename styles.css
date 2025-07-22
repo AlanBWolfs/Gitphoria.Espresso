@@ -9,12 +9,12 @@
 
 html {
   font-size: 62.5%;
-  overflow-x:clip;
+  overflow-x: clip;
 }
 
 body {
-  background-color: #FFFFFF;
-  overflow-x:clip;
+  background-color: #ffffff;
+  overflow-x: clip;
 }
 
 main {
@@ -109,7 +109,7 @@ img {
 }
 
 .navbar-toggler {
-  border-color: #FFFFFF;
+  border-color: #ffffff;
   margin-right: 20px;
   margin-top: 10px;
   margin-bottom: 10px;
