@@ -13,7 +13,7 @@ html {
 }
 
 body {
-  background-color: #ffffff;
+   background-color: #ffffff;
   overflow-x: clip;
 }
 
@@ -275,3 +275,4 @@ a {
     margin-bottom: 4rem;
   }
 }
+
