@@ -1,99 +1,67 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="es">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.7/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-LN+7fdVzj6u52u30Kp6M/trliBMCMKTyK833zpbD+pXdCLuTusPj697FH4R/5mcr" crossorigin="anonymous">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css" integrity="sha512-Evv84Mr4kqVGRNSgIGL/F/aIDqQb7xQ2vcrdIwxfjThSH8CSR7PBEakCr51Ck+w+/U6swU2Im1vVX0SVk9ABhg==" crossorigin="anonymous" referrerpolicy="no-referrer" />
-    <link rel="stylesheet" href="/styles.css">
-    <link rel="stylesheet" href="/styles-espresso-cafe/shopping-cart.css" />
-    <title>Espresso Café - Carrito</title>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Carrito de compras</title>
+  <!-- Bootstrap CSS -->
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css">
+  <!-- Estilos personalizados -->
+  <link rel="stylesheet" href="/styles-espresso-cafe/shopping-cart.css" />
+  <link rel="stylesheet" href="/styles.css">
 </head>
 <body>
     <div id="navbar"></div>
 
-    <main class="container">
-        <!-- Sección izquierda -->
-        <section class="left-panel">
-            <h2>Detalles del pedido para llevar</h2>
-            <div class="toggle-buttons">
-                <button class="toggle">Entrega a domicilio</button>
-                <button class="toggle active">Recolectar</button>
-            </div>
-            
-            <div class="map">
-                <iframe
-                    src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3804.854908849491!2d-93.113289!3d17.5144382!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x85ec4d2c81b18b39%3A0xfb85acb60fe56b9f!2sEspresso%20cafe!5e0!3m2!1ses-419!2smx!4v1751432977626!5m2!1ses-419!2smx"
-                    width="100%"
-                    height="300"
-                    allowfullscreen=""
-                    loading="lazy"
-                    referrerpolicy="no-referrer-when-downgrade"
-                    class="map-espresso"
-                ></iframe>
-            </div>
+    <main>
+  <div class="container py-4">
+    <h1 class="mb-4 text-center">🛍️ Tu carrito</h1>
 
-            <div class="location-info">
-                <p><span class="icon">📍</span> Espresso Café</p>
-                <p>Avenida Universidad 205 Tabasco 09310</p>
-            </div>
+    <!-- Lista de productos -->
+    <div id="carritoProductos" class="row gy-4">
+      <!-- Las cards se insertan dinámicamente -->
+    </div>
 
-            <div class="pickup-time">
-                <h3>Hora de Recolección</h3>
-                <button class="select-btn">Selecciona</button>
-            </div>
+    <!-- Resumen -->
+    <div class="mt-5">
+      <h3>Total a pagar: <span id="totalCarrito">$0.00</span></h3>
+      <div class="d-flex gap-2 mt-3">
+        <button id="btnVaciarCarrito" class="btn btn-outline-danger">Vaciar carrito</button>
+        <button id="btnContinuarCompra" class="btn btn-success">Continuar compra</button>
+      </div>
+    </div>
+  </div>
 
-            <div class="payment">
-                <h3>Pago</h3>
-                <div class="card-info">
-                    <img src="/assets/credit-card.svg" alt="Tarjetas" class="card-icons">
-                    <span>Juan Hernández ....3545</span>
-                    <button class="edit-btn">Editar</button>
-                </div>
-            </div>
-        </section>
+  <!-- Modal si no ha iniciado sesión -->
+<div class="modal fade" id="modalSesion" tabindex="-1" aria-labelledby="modalSesionLabel" aria-hidden="true">
+  <div class="modal-dialog modal-dialog-centered">
+    <div class="modal-content">
+      <div class="modal-header bg-warning text-dark">
+        <h5 class="modal-title" id="modalSesionLabel">⚠️ Inicio de sesión requerido</h5>
+        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Cerrar"></button>
+      </div>
+      <div class="modal-body">
+        Para continuar con la compra, primero debes iniciar sesión en tu cuenta.
+      </div>
+      <div class="modal-footer">
+        <a href="/pages/login.html" class="btn btn-primary">Iniciar sesión</a>
+        <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Cancelar</button>
+      </div>
+    </div>
+  </div>
+</div>
 
-        <!-- Sección derecha -->
-        <section class="right-panel">
-            <div class="header">
-                <img src="/assets/logo-verde.png" alt="Logo Espresso Café" class="logo">
-                <h2 class="brand">Espresso Café</h2>
-            </div>
-            <button class="order-btn">Hacer el pedido</button>
+  </main>
 
-            <div class="cart-summary">
-                <h3>Resumen del Carrito (1 artículo)</h3>
-                <div class="cart-item">
-                    <img src="/assets/menuItems/bebidafria.png" alt="Caramel Macchiato" class="item-img">
-                    <div class="item-details">
-                        <p><strong>Caramel Macchiato</strong></p>
-                        <p>Elige el tamaño: Grande (650 ml)</p>
-                        <p>Tipo de Leche: Leche de Avena ($17.00)</p>
-                        <p class="item-price">$111.00</p>
-                    </div>
-                </div>
-            </div>
+  <footer id="footer"></footer>
 
-            <div class="order-total">
-                <h3>Total del pedido</h3>
-                <div class="totals">
-                    <div class="linea">
-                        <span>Subtotal</span><span>$111.00</span>
-                    </div>
-                    <div class="linea">
-                        <span>Costo de envío</span><span>$10.00</span>
-                    </div>
-                    <div class="linea total-final">
-                        <strong>Total</strong><strong>$121.00</strong>
-                    </div>
-                </div>
-            </div>
-        </section>
-    </main>
 
-    <div id="footer"></div>
+  <!-- Bootstrap JS -->
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
 
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.7/dist/js/bootstrap.min.js" integrity="sha384-7qAoOXltbVP82dhxHAUje59V5r2YsVfBafyUDxEdApLPmcdhBPg1DKg1ERo0BZlK" crossorigin="anonymous"></script>
-    <script type="module" src="../js/main.js"></script>
+  <script type="module" src="/js/main.js"></script>
+  <!-- Script de carrito -->
+  <script type="module" src="../js/carrito.js"></script>
 </body>
 </html>

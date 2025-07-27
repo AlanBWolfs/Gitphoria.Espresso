@@ -33,15 +33,18 @@ document.addEventListener("DOMContentLoaded", function () {
     // Obtener usuario guardado en localStorage
     const userData = JSON.parse(localStorage.getItem("userData"));
 
-    if (
-      userData &&
-      emailInput.value === userData.email &&
-      passwordInput.value === userData.password
-    ) {
-      // Inicio de sesión exitoso
-      // window.location.href = "/pages/home.html";
-      loginError.style.display = "none";
-      alert("¡Inicio de sesión exitoso!");
+   if (
+  userData &&
+  emailInput.value === userData.email &&
+  passwordInput.value === userData.password
+) {
+  // Marcar sesión activa
+  localStorage.setItem("clienteLogueado", "true");
+  localStorage.setItem("clienteNombre", userData.nombre || "Usuario");
+
+  loginError.style.display = "none";
+  alert("¡Inicio de sesión exitoso!");
+  window.location.href = "/index.html";
     } else {
       loginError.textContent = "Correo o contraseña incorrectos.";
       loginError.style.display = "block";
