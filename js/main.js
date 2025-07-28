@@ -17,9 +17,12 @@ export function actualizarBotonLogin() {
       nuevoLi.className = "nav-item";
 
       const botonPerfil = document.createElement("button");
-      botonPerfil.className = "btn btn-outline-secondary";
+      botonPerfil.className = "btn btn-profile"; // ✅ Estilo personalizado
       botonPerfil.setAttribute("title", "Mi perfil");
-      botonPerfil.innerHTML = `<i class="fa fa-user-circle fa-lg"></i>`;
+      botonPerfil.innerHTML = `
+        <i class="fa fa-user-circle fa-lg"></i>
+        <span class="profile-label">Mi perfil</span>
+      `;
       botonPerfil.onclick = () => window.location.href = "/pages/perfil-usuario.html";
 
       nuevoLi.appendChild(botonPerfil);
@@ -27,6 +30,7 @@ export function actualizarBotonLogin() {
     }
   }
 }
+
 
 // 🚀 Inicialización principal
 document.addEventListener('DOMContentLoaded', () => {

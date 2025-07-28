@@ -18,12 +18,12 @@ function renderizarCheckout() {
         <img src="${producto.imagen}" class="card-img-top" alt="${producto.nombre}">
         <div class="card-body">
           <h5 class="card-title">${producto.nombre}</h5>
-          <p class="card-text">Cantidad: ${producto.cantidad}</p>
-          <p class="card-text">Precio total: $${producto.precioTotal.toFixed(2)}</p>
-          ${producto.salsa ? `<p class="card-text">Salsa: ${producto.salsa}</p>` : ''}
-          ${producto.proteina ? `<p class="card-text">Proteína: ${producto.proteina}</p>` : ''}
-          ${producto.base ? `<p class="card-text">Base: ${producto.base}</p>` : ''}
-          ${producto.notas ? `<p class="card-text"><em>Notas:</em> ${producto.notas}</p>` : ''}
+          <p class="card-text"><strong>Cantidad:</strong> ${producto.cantidad}</p>
+          <p class="card-text"><strong>Precio total:</strong> $${producto.precioTotal.toFixed(2)}</p>
+          ${producto.salsa ? `<p class="card-text"><strong>Salsa:</strong> ${producto.salsa}</p>` : ''}
+          ${producto.proteina ? `<p class="card-text"><strong>Proteína:</strong> ${producto.proteina}</p>` : ''}
+          ${producto.base ? `<p class="card-text"><strong>Base:</strong> ${producto.base}</p>` : ''}
+          ${producto.notas ? `<p class="card-text"><em><strong>Notas:</strong></em> ${producto.notas}</p>` : ''}
         </div>
       </div>
     `;
