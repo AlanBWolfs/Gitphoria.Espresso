@@ -17,6 +17,7 @@
       referrerpolicy="no-referrer"
     />
     <link rel="stylesheet" href="/styles.css" />
+    <link rel="stylesheet" href="/styles-espresso-cafe/perfil.css">
   <title>Mi perfil</title>
 </head>
 <body>
@@ -26,7 +27,7 @@
 
   <!-- 🧑‍💼 Contenido principal del perfil -->
   <main class="container mt-5">
-    <h2 class="text-center mb-4">Bienvenido a tu perfil</h2>
+    <h2 class="text-center mb-4 title-perfil">Bienvenido a tu perfil</h2>
     
     <div class="row justify-content-center">
       <div class="col-md-6">
@@ -38,7 +39,7 @@
             <div class="text-center mt-4">
   <button id="cerrarSesionBtn" class="btn btn-danger">Cerrar sesión</button>
 </div>
-            <button class="btn btn-outline-primary w-100 mt-3">Editar perfil</button>
+            <a href="/pages/editar-perfil.html" class="btn btn-outline-primary w-100 mt-3">Editar perfil</a>
           </div>
         </div>
       </div>
@@ -61,6 +62,7 @@
       crossorigin="anonymous"
     ></script>
     <script type="module" src="/js/main.js"></script>
+    <script src="/js/perfil.js"></script>
     <script src="/js/cerrar-sesion.js"></script>
 </body>
 </html>

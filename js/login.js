@@ -41,6 +41,7 @@ document.addEventListener("DOMContentLoaded", function () {
   // Marcar sesión activa
   localStorage.setItem("clienteLogueado", "true");
   localStorage.setItem("clienteNombre", userData.nombre || "Usuario");
+  localStorage.setItem("clienteCorreo", userData.email);
 
   loginError.style.display = "none";
   alert("¡Inicio de sesión exitoso!");

@@ -6,7 +6,12 @@ document.addEventListener('DOMContentLoaded', () => {
   const isAdmin = params.get('admin') === 'true';
 
   renderMenu(isAdmin);
-  inicializarPersonalizacion();
+
+  // ✅ Solo inicializa personalización si está presente el modal
+  if (document.getElementById('modalPersonalizacion')) {
+    inicializarPersonalizacion();
+  }
+
 
   // Clicks globales para carrito, editar y eliminar
   document.addEventListener('click', e => {
@@ -79,6 +84,11 @@ export function renderMenu(isAdmin = false) {
   console.log(isAdmin ? '🛠️ Modo ADMIN (sin carrito)' : '👤 Modo USUARIO');
 
   const container = document.getElementById('menu-container');
+  if (!container) {
+    
+    return;
+  }
+
   container.innerHTML = '';
 
   const params = new URLSearchParams(window.location.search);

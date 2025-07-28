@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Editar Perfil</title>
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.7/dist/css/bootstrap.min.css" rel="stylesheet" />
+  <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css"
+    />
+  <link rel="stylesheet" href="/styles.css" />
+  <link rel="stylesheet" href="/styles-espresso-cafe/editar-perfil.css" />
+</head>
+<body>
+  <div id="navbar"></div>
+
+  <main class="container mt-5">
+    <h2 class="text-center mb-4">Editar Perfil</h2>
+    <form id="editProfileForm" class="shadow p-4 rounded needs-validation" novalidate>
+      <div class="mb-3">
+        <label for="nombre" class="form-label">Nombre completo</label>
+        <input type="text" class="form-control" id="nombre" required />
+        <div class="invalid-feedback">Por favor, ingresa tu nombre.</div>
+      </div>
+      <div class="mb-3">
+        <label for="email" class="form-label">Correo electrónico</label>
+        <input type="email" class="form-control" id="email" required />
+        <div class="invalid-feedback">Ingresa un correo válido.</div>
+      </div>
+      <div class="mb-3">
+        <label for="password" class="form-label">Nueva contraseña (opcional)</label>
+        <input type="password" class="form-control" id="password" minlength="6" />
+        <div class="invalid-feedback" id="passwordFeedback">
+          Mínimo 6 caracteres, una mayúscula y un número.
+        </div>
+      </div>
+      <button type="submit" class="btn btn-primary w-100 mt-3">Guardar cambios</button>
+      <a href="/pages/perfil-usuario.html" class="btn btn-secondary w-100 mt-2">Cancelar</a>
+    </form>
+  </main>
+
+  <div id="footer" class="mt-5"></div>
+
+  <script src="/js/editar-perfil.js"></script>
+  <script type="module" src="/js/main.js"></script>
+</body>
+</html>
