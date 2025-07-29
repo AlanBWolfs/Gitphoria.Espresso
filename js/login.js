@@ -7,15 +7,15 @@ document.addEventListener("DOMContentLoaded", function () {
   form.addEventListener("submit", function (event) {
     event.preventDefault();
 
-    let valid = true;
-
-    // Reset estilos y mensajes
+    // 🧼 Limpieza visual previa
     emailInput.classList.remove("is-invalid");
     passwordInput.classList.remove("is-invalid");
     loginError.style.display = "none";
     loginError.textContent = "";
 
-    // Validación de campos vacíos
+    let valid = true;
+
+    // ✅ Validación de campos vacíos
     if (!emailInput.value) {
       emailInput.classList.add("is-invalid");
       valid = false;
@@ -30,22 +30,29 @@ document.addEventListener("DOMContentLoaded", function () {
       return;
     }
 
-    // Obtener usuario guardado en localStorage
+    // 🔐 Obtener usuario guardado en localStorage
     const userData = JSON.parse(localStorage.getItem("userData"));
 
-   if (
-  userData &&
-  emailInput.value === userData.email &&
-  passwordInput.value === userData.password
-) {
-  // Marcar sesión activa
-  localStorage.setItem("clienteLogueado", "true");
-  localStorage.setItem("clienteNombre", userData.nombre || "Usuario");
-  localStorage.setItem("clienteCorreo", userData.email);
+    if (
+      userData &&
+      emailInput.value === userData.email &&
+      passwordInput.value === userData.password
+    ) {
+      // ✅ Sesión activa
+      localStorage.setItem("clienteLogueado", "true");
+      localStorage.setItem("clienteNombre", userData.nombre || "Usuario");
+      localStorage.setItem("clienteCorreo", userData.email);
 
-  loginError.style.display = "none";
-  alert("¡Inicio de sesión exitoso!");
-  window.location.href = "/index.html";
+      // 🎯 Separación de roles
+      const correoAdmin = "atencion.cafeespresso@gmail.com";
+      const rolAsignado =
+        userData.email === correoAdmin ? "admin" : "cliente";
+      localStorage.setItem("rolUsuario", rolAsignado);
+
+      loginError.style.display = "none";
+      alert("¡Inicio de sesión exitoso!");
+
+      window.location.href = "/index.html"; // puedes redirigir por rol si querés
     } else {
       loginError.textContent = "Correo o contraseña incorrectos.";
       loginError.style.display = "block";

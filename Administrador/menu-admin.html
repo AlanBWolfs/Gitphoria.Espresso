@@ -17,20 +17,43 @@
 <body>
 
   <main>
-  <!-- BLOQUE SOLO PARA ADMINISTRADOR -->
-<div class="container my-5">
-  <div class="text-center mb-4">
-    <h2 class="text-danger fw-bold">🎛️ Panel del Administrador</h2>
-    <p class="text-muted">Accesos rápidos para gestionar productos:</p>
-  </div>
-  <div class="row row-cols-1 row-cols-md-2 row-cols-lg-3 g-3">
-    <div class="col"><a href="menu2.html?tipo=alimentos&categoria=Desayunos&admin=true" class="btn btn-warning w-100">🍳 Desayunos</a></div>
-    <div class="col"><a href="menu2.html?tipo=alimentos&categoria=Especiales&admin=true" class="btn btn-warning w-100">🥯 Especiales</a></div>
-    <div class="col"><a href="menu2.html?tipo=bebidas&categoria=Calientes&admin=true" class="btn btn-warning w-100">☕ Calientes</a></div>
-    <div class="col"><a href="menu2.html?tipo=bebidas&categoria=Frias&admin=true" class="btn btn-warning w-100">🥤 Frías</a></div>
-    <div class="col"><a href="menu2.html?tipo=bebidas&categoria=Especiales&admin=true" class="btn btn-warning w-100">🍹 Especiales</a></div>
-  </div>
-</div>
+ <!-- BLOQUE SOLO PARA ADMINISTRADOR -->
+      <div class="container my-5">
+        <h3 class="text-danger">Panel del Administrador</h3>
+        <p>Accesos rápidos para editar o eliminar productos:</p>
+        <div class="d-grid gap-2">
+          <a
+            href="menu2.html?tipo=alimentos&categoria=Desayunos&admin=true"
+            class="btn btn-warning"
+          >
+            Desayunos (Admin)
+          </a>
+          <a
+            href="menu2.html?tipo=alimentos&categoria=Especiales&admin=true"
+            class="btn btn-warning"
+          >
+            Especiales (Admin)
+          </a>
+          <a
+            href="menu2.html?tipo=bebidas&categoria=Calientes&admin=true"
+            class="btn btn-warning"
+          >
+            Bebidas Calientes (Admin)
+          </a>
+          <a
+            href="menu2.html?tipo=bebidas&categoria=Frias&admin=true"
+            class="btn btn-warning"
+          >
+            Bebidas Frías (Admin)
+          </a>
+          <a
+            href="menu2.html?tipo=bebidas&categoria=Especiales&admin=true"
+            class="btn btn-warning"
+          >
+            Bebidas Especiales (Admin)
+          </a>
+        </div>
+      </div>
 </main>
 
 
@@ -38,9 +61,15 @@
 
 
 
-
-  <script src="/js/main.js"></script>
+<script
+      src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.6/dist/js/bootstrap.bundle.min.js"
+      integrity="sha384-j1CDi7MgGQ12Z7Qab0qlWQ/Qqz24Gc6BM0thvEMVjHnfYGF0rmFCozFSxQBxwHKO"
+      crossorigin="anonymous"
+    ></script>
+  <script type="module" src="/js/main.js"></script>
+  <script type="module" src="/js/menu-ui2.js"></script>
   <script src="/js/modal-personalizacion.js"></script>
   <script src="/Administrador/js-admin/admin-acceso.js"></script>
+  <script type="module" src="/Administrador/js-admin/admin-manager.js"></script>
 </body>
 </html>
