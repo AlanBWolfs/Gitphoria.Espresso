@@ -119,6 +119,7 @@ function mostrarToast(mensaje, tipo = "info") {
   const container = document.querySelector(".toast-container-dinamica");
   container.appendChild(toast);
 
+  toast.classList.add("show"); // ✅ activa visibilidad completa
   const bsToast = new bootstrap.Toast(toast, { delay: 3000 });
   bsToast.show();
 

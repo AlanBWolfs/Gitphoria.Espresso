@@ -1,4 +1,5 @@
 import { actualizarContadorCarrito } from './utils-carrito.js';
+import { mostrarMensaje } from './modal-personalizacion.js';
 // 🛍️ Renderizar los productos del carrito
 function renderizarCarrito() {
   const carrito = JSON.parse(localStorage.getItem('carrito')) || [];
@@ -30,7 +31,9 @@ function renderizarCarrito() {
           <div class="botones-cantidad">
   <button class="btn btn-outline-secondary btn-sm" data-action="restar" data-index="${index}">−</button>
   <button class="btn btn-outline-secondary btn-sm" data-action="sumar" data-index="${index}">+</button>
-  <button class="btn btn-outline-danger btn-sm" data-action="eliminar" data-index="${index}">🗑️</button>
+  <button class="btn btn-outline-danger btn-sm" data-action="eliminar" data-index="${index}">
+  <i class="fas fa-trash-alt"></i>
+</button>
 </div>
 
         </div>
@@ -114,12 +117,18 @@ document.addEventListener('DOMContentLoaded', () => {
  // 🟢 Continuar compra con validación de sesión
 document.getElementById('btnContinuarCompra').addEventListener('click', () => {
   const clienteLogueado = localStorage.getItem('clienteLogueado') === "true";
+  const carrito = JSON.parse(localStorage.getItem('carrito')) || [];
+
+  if (carrito.length === 0) {
+    mostrarMensaje('Tu carrito está vacío. Agrega un producto antes de continuar 🛒', 'danger');
+    return;
+  }
 
   if (!clienteLogueado) {
     const modalSesion = new bootstrap.Modal(document.getElementById('modalSesion'));
     modalSesion.show();
   } else {
-    window.location.href = "/pages/checkout.html"; // ← ruta final
+    window.location.href = "/pages/checkout.html";
   }
 });
 });

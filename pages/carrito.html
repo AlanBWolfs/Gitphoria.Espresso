@@ -25,7 +25,7 @@
 
     <!-- Resumen -->
     <div class="mt-5">
-      <h3>Total a pagar: <span id="totalCarrito">$0.00</span></h3>
+      <h3><strong>Total a pagar:</strong> <span id="totalCarrito">$0.00</span></h3>
       <div class="botones-finales resumen-carrito">
   <button id="btnVaciarCarrito">Vaciar carrito</button>
   <button id="btnContinuarCompra">Continuar compra</button>
@@ -50,8 +50,12 @@
       </div>
     </div>
   </div>
-</div>
+</div> 
 
+<!--Toast carrito vacío antes de continuar compra-->
+<div class="toast-container position-fixed bottom-0 end-0 p-3 toast-container-dinamica" style="z-index: 1100;">
+  <!-- Aquí se insertan los toasts dinámicos -->
+</div>
   </main>
 
   <footer id="footer"></footer>

@@ -12,7 +12,7 @@ h3,
 #totalCarrito {
   font-size: 2.4rem;
   font-family: "Poppins", sans-serif;
-  color: #133936;
+  color: #998f76;
   font-weight: 600;
   text-align: center;
 }
@@ -149,6 +149,12 @@ h3,
   background-color: #ce0f22;
 }
 
+
+.btn i.fa-trash-alt {
+  font-size: 1.2rem;
+  margin-right: 4px;
+}
+
 /* 💳 Sección resumen */
 .resumen-carrito {
   margin-top: 4rem;
@@ -264,6 +270,70 @@ h3,
   background-color: #b02a37;
 }
 
+/* 🧁 Toast dinámico centrado y estilizado */
+.toast-container-dinamica {
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  z-index: 1100;
+  max-width: 600px;
+  width: 90%;
+  padding: 1rem;
+  pointer-events: none; /* Permite clics detrás del toast */
+}
+
+/* 🟡 Estilo general para toasts */
+.toast {
+  opacity: 0;
+  animation: fadeInToast 0.5s ease forwards;
+  border-radius: 0.8rem;
+  font-size: 1.2rem;
+  font-weight: 500;
+  letter-spacing: 0.3px;
+  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.1);
+  padding: 1rem 1.5rem;
+  pointer-events: auto; /* Clic en botones */
+}
+
+/* 🎨 Fondo y texto por tipo */
+.toast.text-bg-success {
+  background-color: #d1f7d6 !important;
+  color: #1d512f !important;
+}
+
+.toast.text-bg-warning {
+  background-color: #fff3cd !important;
+  color: #856404 !important;
+}
+
+.toast.text-bg-info {
+  background-color: #d0e8ff !important;
+  color: #004085 !important;
+}
+
+.toast.text-bg-danger {
+  background-color: #f8d7da !important;
+  color: #721c24 !important;
+}
+
+/* ❌ Botón de cierre */
+.btn-close-white {
+  filter: brightness(0.3);
+}
+
+/* ✨ Animación de entrada */
+@keyframes fadeInToast {
+  from {
+    opacity: 0;
+    transform: translate(-50%, -40%);
+  }
+  to {
+    opacity: 1;
+    transform: translate(-50%, -50%);
+  }
+}
+
 /* 📱 Responsivo mobile */
 @media (max-width: 768px) {
   .card-producto {
@@ -282,4 +352,31 @@ h3,
   .botones-finales {
     gap: 1.4rem;
   }
+}
+
+/* Unificación de botones sumar / restar / eliminar */
+.botones-cantidad button.btn-sm {
+  width: 38px;
+  height: 38px;
+  padding: 0;
+  border-radius: 0.6rem;
+  font-size: 1.5rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+
+.botones-cantidad .btn-outline-danger i.fa-trash-alt {
+  font-size: 1.4rem;
+  margin: 0;
+  line-height: 1;
+}
+
+.botones-cantidad .btn-outline-danger i {
+  margin: 0 !important;
+  font-size: 1.5rem !important;
+  transform: none !important;
+  cursor: default !important;
+  pointer-events: none;
 }

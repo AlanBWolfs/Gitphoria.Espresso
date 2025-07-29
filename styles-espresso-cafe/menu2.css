@@ -289,6 +289,26 @@ body.modal-open {
   background-color: #b08d57;
 }
 
+/* ✅ Toast visual para confirmación exitosa */
+.toast.text-bg-success {
+  background-color: #d1f7d6 !important;
+  color: #133936 !important;
+  border: 2px solid #1f4f47;
+  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.15);
+  font-size: 1.5rem;
+  font-family: "Poppins", sans-serif;
+  padding: 1.2rem 1.8rem;
+  border-radius: 1rem;
+  letter-spacing: 0.4px;
+}
+
+/* ✅ Icono visual + texto alineado */
+.toast-body::before {
+  margin-right: 0.6rem;
+  font-size: 1.6rem;
+  vertical-align: middle;
+}
+
 /* Responsive para el modal */
 @media (max-width: 768px) {
   #modalPersonalizacion .modal-content {

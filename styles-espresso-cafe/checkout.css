@@ -56,6 +56,11 @@ main h1 {
   margin-bottom: 2rem;
   font-size: 2.8rem;
 }
+
+.checkout-title{
+  font-size: 5.4rem;
+}
+
 main h2 {
   font-family: "Poppins", serif;
   color: #133936;
@@ -67,8 +72,8 @@ main h2 {
 
 main h4 {
   font-family: "Poppins", sans-serif;
-  font-size: 2.2rem;
-  color: #133936;
+  font-size: 3rem;
+  color: #998f76;
   text-align: center;
   margin-top: 2rem;
 }
@@ -153,6 +158,57 @@ button[type="submit"]:hover {
   border: 3px solid #1f4f47;
   border-radius: 15px;
   box-sizing: border-box;
+}
+
+/* 🔔 Estilos generales para todos los toasts */
+.toast-container-dinamica .toast {
+  box-shadow: 0 0.5rem 1rem rgba(0, 0, 0, 0.15);
+  border-radius: 0.75rem;
+  font-family: "Poppins", sans-serif !important;
+  font-size: 1.4rem !important;
+  min-width: 280px;
+  max-width: 420px;
+  backdrop-filter: blur(4px);
+  padding: 1rem 1.6rem;
+  animation: fadeInUp 0.4s ease-out;
+  letter-spacing: 0.3px;
+  border: none !important;
+}
+
+/* ✅ Estilo visual para toast de éxito */
+.toast.text-bg-success {
+  background: linear-gradient(135deg, #198754, #28a745) !important;
+  color: #ffffff !important;
+}
+
+/* ⚠️ Toast de error */
+.toast.text-bg-danger {
+  background: linear-gradient(135deg, #dc3545, #c82333) !important;
+  color: #ffffff !important;
+}
+
+/* ℹ️ Toast informativo */
+.toast.text-bg-info {
+  background: linear-gradient(135deg, #0dcaf0, #31d2f2) !important;
+  color: #000000 !important;
+}
+
+/* ✨ Animación de entrada */
+@keyframes fadeInUp {
+  from {
+    transform: translateY(30px);
+    opacity: 0;
+  }
+  to {
+    transform: translateY(0);
+    opacity: 1;
+  }
+}
+
+/* ❌ Botón de cierre personalizado */
+.toast .btn-close {
+  filter: brightness(0.9);
+  opacity: 0.8;
 }
 
 /* 📱 Responsivo mobile */

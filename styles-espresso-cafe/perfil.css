@@ -1,3 +1,4 @@
+
 .title-perfil{
   font-family: "Avigea";
   color: #133936;
@@ -12,7 +13,8 @@
   box-shadow: 0 6px 15px rgba(19, 57, 54, 0.15);
   background-color: #fdfdfd;
   font-family: "Poppins", sans-serif;
-  padding: 2rem;
+  padding: 6rem;
+  margin-top: 6rem;
 }
 
 /* 🧑‍💼 Título de sección */
@@ -54,8 +56,9 @@
 
 /* ✏️ Botón editar perfil */
 .btn-outline-primary {
-  border: 2px solid #a2845e;
-  color: #a2845e;
+  background-color: #133936;
+  border: 1px solid #133936;
+  color: aliceblue;
   font-weight: 600;
   font-family: "Poppins";
   border-radius: 2rem;
@@ -68,6 +71,18 @@
   color: #ffffff;
   border: 2px solid #a2845e;
   transform: translateY(-2px);
+}
+
+.btn-perfil-estandar {
+  padding: 0.8rem 2rem;
+  font-size: 1.4rem;
+  border-radius: 2rem;
+  font-family: "Poppins";
+  font-weight: bold;
+  width: 100%;
+  max-width: 18rem;
+  display: block;
+  margin: 1rem auto 0; 
 }
 
 /* 🪶 Responsive */
