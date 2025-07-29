@@ -1,4 +1,4 @@
-/* 🛍️ Título y total del carrito */
+/*Título y total del carrito */
 #carrito-title {
   font-size: 5rem;
   letter-spacing: 0.4rem;
@@ -17,7 +17,7 @@ h3,
   text-align: center;
 }
 
-/* 🛑 Mensaje cuando el carrito está vacío */
+/* Mensaje cuando el carrito está vacío */
 #carritoProductos p.text-center {
   font-size: 2rem;
   font-weight: 600;
@@ -27,7 +27,7 @@ h3,
   font-family: "Poppins", sans-serif;
 }
 
-/* 📦 Igualar altura visual de columnas */
+/* Igualar altura visual de columnas */
 #carritoProductos > .col-md-6,
 #carritoProductos > .col-lg-4 {
   display: flex;
@@ -37,7 +37,7 @@ h3,
   flex: 1;
 }
 
-/* 🧩 Card de producto generada dinámicamente */
+/* Card de producto generada dinámicamente */
 .card-producto {
   background-color: #133936;
   border-radius: 1rem;
@@ -97,7 +97,7 @@ h3,
   color: aliceblue;
 }
 
-/* 🎛️ Controles internos (sumar/restar/eliminar) */
+/* Controles internos (sumar/restar/eliminar) */
 .botones-cantidad {
   display: flex;
   justify-content: center;
@@ -155,7 +155,7 @@ h3,
   margin-right: 4px;
 }
 
-/* 💳 Sección resumen */
+/* Sección resumen */
 .resumen-carrito {
   margin-top: 4rem;
   text-align: center;
@@ -165,7 +165,7 @@ h3,
   margin-bottom: 1rem;
 }
 
-/* 🧭 Botones finales */
+/* Botones finales */
 .botones-finales {
   display: flex;
   justify-content: center;
@@ -203,7 +203,7 @@ h3,
   background-color: #998f76;
 }
 
-/* 🧾 Modal iniciar sesión */
+/* Modal iniciar sesión */
 #modalSesion .modal-content {
   background-color: #ffffff;
   border-radius: 1rem;
@@ -212,7 +212,7 @@ h3,
   box-shadow: 0 8px 20px rgba(0,0,0,0.15);
 }
 
-/* ⚠️ Encabezado visual claro */
+/* Encabezado visual claro */
 #modalSesion .modal-header {
   background-color: #fdf8ec;
   border-bottom: none;
@@ -226,7 +226,7 @@ h3,
   font-family: "Avigea", serif;
 }
 
-/* 📄 Texto del cuerpo */
+/* Texto del cuerpo */
 #modalSesion .modal-body {
   font-size: 1.6rem;
   color: #333;
@@ -234,7 +234,7 @@ h3,
   padding: 1.5rem 2rem;
 }
 
-/* 🎯 Botones de acción */
+/* Botones de acción */
 #modalSesion .modal-footer {
   border-top: none;
   display: flex;
@@ -270,7 +270,7 @@ h3,
   background-color: #b02a37;
 }
 
-/* 🧁 Toast dinámico centrado y estilizado */
+/* Toast dinámico centrado y estilizado */
 .toast-container-dinamica {
   position: fixed;
   top: 50%;
@@ -283,7 +283,7 @@ h3,
   pointer-events: none; /* Permite clics detrás del toast */
 }
 
-/* 🟡 Estilo general para toasts */
+/* Estilo general para toasts */
 .toast {
   opacity: 0;
   animation: fadeInToast 0.5s ease forwards;
@@ -296,7 +296,7 @@ h3,
   pointer-events: auto; /* Clic en botones */
 }
 
-/* 🎨 Fondo y texto por tipo */
+/* Fondo y texto por tipo */
 .toast.text-bg-success {
   background-color: #d1f7d6 !important;
   color: #1d512f !important;
@@ -317,12 +317,12 @@ h3,
   color: #721c24 !important;
 }
 
-/* ❌ Botón de cierre */
+/* Botón de cierre */
 .btn-close-white {
   filter: brightness(0.3);
 }
 
-/* ✨ Animación de entrada */
+/* Animación de entrada */
 @keyframes fadeInToast {
   from {
     opacity: 0;
@@ -334,7 +334,7 @@ h3,
   }
 }
 
-/* 📱 Responsivo mobile */
+/* Responsivo mobile */
 @media (max-width: 768px) {
   .card-producto {
     font-size: 1.4rem;

@@ -1,6 +1,6 @@
 import { actualizarContadorCarrito } from './utils-carrito.js';
 import { mostrarMensaje } from './modal-personalizacion.js';
-// 🛍️ Renderizar los productos del carrito
+// Renderizar los productos del carrito
 function renderizarCarrito() {
   const carrito = JSON.parse(localStorage.getItem('carrito')) || [];
   const contenedor = document.getElementById('carritoProductos');
@@ -45,14 +45,14 @@ function renderizarCarrito() {
   calcularTotal();
 }
 
-// 💰 Calcular el total del carrito
+// Calcular el total del carrito
 function calcularTotal() {
   const carrito = JSON.parse(localStorage.getItem('carrito')) || [];
   const total = carrito.reduce((acc, prod) => acc + prod.precioTotal, 0);
   document.getElementById('totalCarrito').textContent = `$${total.toFixed(2)}`;
 }
 
-// 🔄 Actualizar cantidad de un producto
+// Actualizar cantidad de un producto
 function actualizarCantidad(index, operacion) {
   const carrito = JSON.parse(localStorage.getItem('carrito')) || [];
   const producto = carrito[index];
@@ -77,7 +77,7 @@ producto.precioTotal = precioUnitario * producto.cantidad;
   renderizarCarrito();
 }
 
-// 🗑️ Eliminar un producto
+// Eliminar un producto
 function eliminarProducto(index) {
   const carrito = JSON.parse(localStorage.getItem('carrito')) || [];
   carrito.splice(index, 1);
@@ -86,14 +86,14 @@ function eliminarProducto(index) {
   renderizarCarrito();
 }
 
-// 🚮 Vaciar todo el carrito
+// Vaciar todo el carrito
 function vaciarCarrito() {
   localStorage.removeItem('carrito');
   renderizarCarrito();
-  actualizarContadorCarrito(); // ← actualiza el badge tras limpiar el carrito
+  actualizarContadorCarrito(); 
 }
 
-// 🚀 Inicializar eventos
+// nicializar eventos
 document.addEventListener('DOMContentLoaded', () => {
   renderizarCarrito();
 
@@ -113,8 +113,8 @@ document.addEventListener('DOMContentLoaded', () => {
     }
   });
 
-  // Continuar compra (simulación o redirección)
- // 🟢 Continuar compra con validación de sesión
+  
+ //Continuar compra con validación de sesión
 document.getElementById('btnContinuarCompra').addEventListener('click', () => {
   const clienteLogueado = localStorage.getItem('clienteLogueado') === "true";
   const carrito = JSON.parse(localStorage.getItem('carrito')) || [];

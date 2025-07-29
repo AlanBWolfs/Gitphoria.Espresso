@@ -7,7 +7,7 @@ h2 {
             text-align: center;
             margin: 3rem 0 1rem; 
             font-family: "Avigea", serif;
-            font-size: 2.5rem;
+            font-size: 3rem;
             color: #133936;
             text-transform: uppercase;
             position: relative;
@@ -36,6 +36,8 @@ h2 {
         }
 
         .menu-section {
+            padding: 2.8rem;
+            margin-top: 3rem;
             margin-bottom: 3rem;
         }
 

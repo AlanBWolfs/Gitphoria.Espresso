@@ -29,9 +29,9 @@ export function actualizarBotonLogin() {
   }
 }
 
-// 🚀 Inicialización general
+// Inicialización general
 document.addEventListener('DOMContentLoaded', () => {
-  cargarNavFooter(); // ✅ Solo usamos esta, eliminamos el segundo fetch
+  cargarNavFooter(); 
 
   if (window.location.pathname.includes('menu2.html')) {
     const params = new URLSearchParams(window.location.search);

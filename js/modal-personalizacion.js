@@ -76,7 +76,7 @@ export function rellenarOpciones(nombreBuscado) {
           opcionesContainer.appendChild(grupo);
         }
 
-        return; // Solo cargamos una vez
+        return; 
       }
     }
   }

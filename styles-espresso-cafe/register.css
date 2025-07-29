@@ -137,10 +137,10 @@ font-family: "poppins";
 }
 @media (max-height: 700px) {
   .register-wrapper {
-    height: auto;          /* ya no se restringe a 100vh */
-    min-height: 100vh;     /* pero al menos ocupa toda la pantalla */
+    height: auto;          
+    min-height: 100vh;     
     flex-direction: column;
-    overflow-y: auto;      /* ahora permite scroll si el contenido crece */
+    overflow-y: auto;      
   }
 
   .register-form-container {

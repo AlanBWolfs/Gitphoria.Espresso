@@ -7,7 +7,7 @@ document.addEventListener('DOMContentLoaded', () => {
 
   renderMenu(isAdmin);
 
-  // ✅ Solo inicializa personalización si está presente el modal
+  // Solo inicializa personalización si está presente el modal
   if (document.getElementById('modalPersonalizacion')) {
     inicializarPersonalizacion();
   }
@@ -81,7 +81,7 @@ document.addEventListener('DOMContentLoaded', () => {
 
 // Renderizador del menú
 export function renderMenu(isAdmin = false) {
-  console.log(isAdmin ? '🛠️ Modo ADMIN (sin carrito)' : '👤 Modo USUARIO');
+  //console.log(isAdmin ? '🛠️ Modo ADMIN (sin carrito)' : '👤 Modo USUARIO');
 
   const container = document.getElementById('menu-container');
   if (!container) {
@@ -95,11 +95,12 @@ export function renderMenu(isAdmin = false) {
   const tipo = params.get('tipo');
   const categoria = params.get('categoria');
 
+  
   const categoriaDatos = menuElementos[tipo]?.[categoria];
-  if (!categoriaDatos) {
+  /*if (!categoriaDatos) {
     container.innerHTML = `<p>No se encontró la categoría "${categoria}" para el tipo "${tipo}".</p>`;
     return;
-  }
+  }*/
 
   for (const subcategoria in categoriaDatos) {
     const h2 = document.createElement('h2');

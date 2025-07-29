@@ -289,7 +289,7 @@ body.modal-open {
   background-color: #b08d57;
 }
 
-/* ✅ Toast visual para confirmación exitosa */
+/* Toast visual para confirmación exitosa */
 .toast.text-bg-success {
   background-color: #d1f7d6 !important;
   color: #133936 !important;
@@ -302,7 +302,7 @@ body.modal-open {
   letter-spacing: 0.4px;
 }
 
-/* ✅ Icono visual + texto alineado */
+/* Icono visual + texto alineado */
 .toast-body::before {
   margin-right: 0.6rem;
   font-size: 1.6rem;

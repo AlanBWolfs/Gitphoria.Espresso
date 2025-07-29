@@ -7,7 +7,7 @@ document.addEventListener("DOMContentLoaded", function () {
   form.addEventListener("submit", function (event) {
     event.preventDefault();
 
-    // 🧼 Limpieza visual previa
+    // Limpieza visual previa
     emailInput.classList.remove("is-invalid");
     passwordInput.classList.remove("is-invalid");
     loginError.style.display = "none";
@@ -15,7 +15,7 @@ document.addEventListener("DOMContentLoaded", function () {
 
     let valid = true;
 
-    // ✅ Validación de campos vacíos
+    // Validación de campos vacíos
     if (!emailInput.value) {
       emailInput.classList.add("is-invalid");
       valid = false;
@@ -30,7 +30,7 @@ document.addEventListener("DOMContentLoaded", function () {
       return;
     }
 
-    // 🔐 Obtener usuario guardado en localStorage
+    // Obtener usuario guardado en localStorage
     const userData = JSON.parse(localStorage.getItem("userData"));
 
     if (
@@ -38,12 +38,12 @@ document.addEventListener("DOMContentLoaded", function () {
       emailInput.value === userData.email &&
       passwordInput.value === userData.password
     ) {
-      // ✅ Sesión activa
+      // Sesión activa
       localStorage.setItem("clienteLogueado", "true");
       localStorage.setItem("clienteNombre", userData.nombre || "Usuario");
       localStorage.setItem("clienteCorreo", userData.email);
 
-      // 🎯 Separación de roles
+      // Separación de roles
       const correoAdmin = "atencion.cafeespresso@gmail.com";
       const rolAsignado =
         userData.email === correoAdmin ? "admin" : "cliente";
@@ -52,7 +52,7 @@ document.addEventListener("DOMContentLoaded", function () {
       loginError.style.display = "none";
       alert("¡Inicio de sesión exitoso!");
 
-      window.location.href = "/index.html"; // puedes redirigir por rol si querés
+      window.location.href = "/index.html"; 
     } else {
       loginError.textContent = "Correo o contraseña incorrectos.";
       loginError.style.display = "block";

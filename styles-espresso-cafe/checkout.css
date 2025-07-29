@@ -1,4 +1,4 @@
-/* 🧾 Card visual para productos en checkout */
+/* Card visual para productos en checkout */
 .card {
   background-color: #133936;
   border-radius: 1rem;
@@ -14,7 +14,7 @@
   transform: scale(1.01);
 }
 
-/* 🖼️ Imagen del producto */
+/* Imagen del producto */
 .card-img-top {
   max-height: 220px;
   object-fit: contain;
@@ -25,7 +25,7 @@
   padding: 5px;
 }
 
-/* 📄 Contenido de la tarjeta */
+/* Contenido de la tarjeta */
 .card-body {
   padding: 1.6rem;
   flex-grow: 1;
@@ -34,7 +34,7 @@
   justify-content: space-between;
 }
 
-/* 📝 Título y texto del producto */
+/* Título y texto del producto */
 .card-title {
   font-size: 1.8rem;
   font-weight: bold;
@@ -48,7 +48,7 @@
   color: aliceblue;
 }
 
-/* 🧍 Encabezados principales del checkout */
+/* Encabezados principales del checkout */
 main h1 {
   font-family: "Avigea", serif;
   color: #133936;
@@ -78,7 +78,7 @@ main h4 {
   margin-top: 2rem;
 }
 
-/* ⏱️ Texto del tiempo estimado */
+/* Texto del tiempo estimado */
 main p.text-muted {
   text-align: center;
   font-size: 1.4rem;
@@ -87,7 +87,7 @@ main p.text-muted {
   margin-bottom: 2rem;
 }
 
-/* 🧍 Campos del formulario */
+/* Campos del formulario */
 form label {
   font-weight: 600;
   font-size: 1.4rem;
@@ -110,7 +110,7 @@ form input:focus {
   box-shadow: 0 0 0 0.2rem rgba(19, 57, 54, 0.25);
 }
 
-/* ✅ Feedback visual */
+/* Feedback visual */
 .is-valid {
   border-color: #198754;
 }
@@ -118,14 +118,14 @@ form input:focus {
   border-color: #dc3545;
 }
 
-/* ⚠️ Mensaje de error */
+/* Mensaje de error */
 .invalid-feedback {
   font-size: 1.2rem;
   font-family: "Poppins", sans-serif;
   color: #dc3545;
 }
 
-/* 💳 Botón de finalizar compra */
+/* Botón de finalizar compra */
 button[type="submit"] {
   display: block;
   margin: 2rem auto;
@@ -145,8 +145,7 @@ button[type="submit"]:hover {
   background-color: #998f76;
 }
 
-/* 🔧 Corrección imágenes fuera de card */
-/* 🔧 Corrección precisa de imágenes en checkout */
+/* Corrección imágenes fuera de card */
 .card-img-top {
   display: block;
   margin: 10px auto;
@@ -160,7 +159,7 @@ button[type="submit"]:hover {
   box-sizing: border-box;
 }
 
-/* 🔔 Estilos generales para todos los toasts */
+/* Estilos generales para todos los toasts */
 .toast-container-dinamica .toast {
   box-shadow: 0 0.5rem 1rem rgba(0, 0, 0, 0.15);
   border-radius: 0.75rem;
@@ -175,25 +174,25 @@ button[type="submit"]:hover {
   border: none !important;
 }
 
-/* ✅ Estilo visual para toast de éxito */
+/* Estilo visual para toast de éxito */
 .toast.text-bg-success {
   background: linear-gradient(135deg, #198754, #28a745) !important;
   color: #ffffff !important;
 }
 
-/* ⚠️ Toast de error */
+/* Toast de error */
 .toast.text-bg-danger {
   background: linear-gradient(135deg, #dc3545, #c82333) !important;
   color: #ffffff !important;
 }
 
-/* ℹ️ Toast informativo */
+/* Toast informativo */
 .toast.text-bg-info {
   background: linear-gradient(135deg, #0dcaf0, #31d2f2) !important;
   color: #000000 !important;
 }
 
-/* ✨ Animación de entrada */
+/* Animación de entrada */
 @keyframes fadeInUp {
   from {
     transform: translateY(30px);
@@ -205,13 +204,13 @@ button[type="submit"]:hover {
   }
 }
 
-/* ❌ Botón de cierre personalizado */
+/* Botón de cierre personalizado */
 .toast .btn-close {
   filter: brightness(0.9);
   opacity: 0.8;
 }
 
-/* 📱 Responsivo mobile */
+/* Responsivo mobile */
 @media (max-width: 768px) {
   .card {
     font-size: 1.4rem;

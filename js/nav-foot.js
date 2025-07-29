@@ -1,15 +1,19 @@
 import { actualizarContadorCarrito } from './utils-carrito.js';
 import { actualizarBotonLogin } from './main.js';
 
-// ⛑ Modularización del menú dinámico
+// Modularización del menú dinámico
 function configurarMenuDinamico() {
   const menuLink = document.getElementById("menu-dinamico");
   const rol = localStorage.getItem("rolUsuario");
 
   if (menuLink) {
-    const rutaMenu = rol === "admin"
-      ? "/Administrador/menu-admin.html"
-      : "/pages/menu.html";
+    // Lógica según rol
+    let rutaMenu;
+    if (rol === "admin") {
+      rutaMenu = "/Administrador/menu-admin.html";
+    } else {
+      rutaMenu = "/pages/menu.html"; // Cliente o sin sesión
+    }
 
     menuLink.style.cursor = "pointer";
     menuLink.setAttribute("role", "link");
@@ -35,10 +39,9 @@ export function cargarNavFooter() {
     .then(data => {
       document.getElementById('navbar').innerHTML = data;
 
-      // 🔄 Una vez renderizado, aplicamos lógica
       actualizarContadorCarrito();
       actualizarBotonLogin();
-      configurarMenuDinamico(); // 🧠 Esto estaba fallando por tiempos
+      configurarMenuDinamico(); 
     })
     .catch(err => console.error('Error cargando navbar', err));
 

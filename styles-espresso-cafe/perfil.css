@@ -6,7 +6,7 @@
 }
 
 
-/* 🎨 Card de perfil */
+/* Card de perfil */
 .card {
   border-radius: 1rem;
   border: none;
@@ -17,7 +17,7 @@
   margin-top: 6rem;
 }
 
-/* 🧑‍💼 Título de sección */
+/* Título de sección */
 .card-title {
   font-family: "Poppins";
   font-size: 2.8rem;
@@ -26,7 +26,7 @@
   text-align: center;
 }
 
-/* 📄 Detalles del usuario */
+/* Detalles del usuario */
 .card-body p {
   font-size: 1.6rem;
   color: #333333;
@@ -38,7 +38,7 @@
   color: #a2845e;
 }
 
-/* 🔒 Botón cerrar sesión */
+/* Botón cerrar sesión */
 .btn-danger {
   background-color: #c55a5a;
   border: none;
@@ -54,7 +54,7 @@
   background-color: #a33f3f;
 }
 
-/* ✏️ Botón editar perfil */
+/* Botón editar perfil */
 .btn-outline-primary {
   background-color: #133936;
   border: 1px solid #133936;
@@ -87,7 +87,7 @@
 
 
 
-/* 🪶 Responsive */
+/* Responsive */
 @media (max-width: 768px) {
   .card-title {
     font-size: 2.4rem;

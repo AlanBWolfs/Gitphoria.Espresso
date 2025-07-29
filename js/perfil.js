@@ -26,7 +26,7 @@ function renderizarHistorialPedidos() {
     card.className = "card mb-3 shadow-sm";
 
     const totalFormateado = !isNaN(pedido.total) ? `$${parseFloat(pedido.total).toFixed(2)}` : "No disponible";
-    const estado = pedido.tiempoPreparacion || "Sin estado"; // Lo usamos como sustituto visual
+    const estado = pedido.tiempoPreparacion || "Sin estado"; 
 
     // Renderizado básico de productos
     const listaProductos = pedido.productos.map(prod => `
