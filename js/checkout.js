@@ -97,7 +97,7 @@ function finalizarCompra() {
   mostrarToast(`✅ Pedido ${pedidoId} generado exitosamente`, "success");
 
   setTimeout(() => {
-    window.location.href = "/pages/confirmacion.html"; // puedes usar una página de éxito
+    window.location.href = "/pages/perfil-usuario.html"; // puedes usar una página de éxito
   }, 2500);
 }
 
