@@ -61,8 +61,12 @@ function actualizarCantidad(index, operacion) {
     producto.cantidad -= 1;
   }
 
-  const precioUnitario = producto.precioUnitario || (producto.precioTotal / producto.cantidad);
-  producto.precioTotal = precioUnitario * producto.cantidad;
+  if (!producto.precioUnitario) {
+  producto.precioUnitario = producto.precioTotal / producto.cantidad;
+}
+
+const precioUnitario = producto.precioUnitario;
+producto.precioTotal = precioUnitario * producto.cantidad;
 
   carrito[index] = producto;
   localStorage.setItem('carrito', JSON.stringify(carrito));

@@ -158,19 +158,20 @@ if (formPersonalizar) {
     const precioProteina = proteinaEl ? parseFloat(proteinaEl.dataset?.precio) : 0;
     const base = document.querySelector('input[name="base"]:checked')?.value;
 
-    const precioFinal = (precioBase + precioProteina) * cantidad;
+    const precioUnitarioFinal = precioBase + precioProteina;
+const precioFinal = precioUnitarioFinal * cantidad;
 
-    const productoPersonalizado = {
-      nombre,
-      imagen,
-      cantidad,
-      precioUnitario: precioBase,
-      precioTotal: precioFinal,
-      salsa,
-      proteina,
-      base,
-      notas
-    };
+const productoPersonalizado = {
+  nombre,
+  imagen,
+  cantidad,
+  precioUnitario: precioUnitarioFinal, 
+  precioTotal: precioFinal,
+  salsa,
+  proteina,
+  base,
+  notas
+};
 
     const carrito = JSON.parse(localStorage.getItem('carrito')) || [];
     carrito.push(productoPersonalizado);
