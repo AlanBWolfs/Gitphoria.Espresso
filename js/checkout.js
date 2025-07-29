@@ -1,4 +1,4 @@
-// 🚀 Renderizar productos en el checkout
+// Renderizar productos en el checkout
 function renderizarCheckout() {
   const carrito = JSON.parse(localStorage.getItem('carrito')) || [];
   const contenedor = document.getElementById('checkoutProductos');
@@ -18,12 +18,12 @@ function renderizarCheckout() {
         <img src="${producto.imagen}" class="card-img-top" alt="${producto.nombre}">
         <div class="card-body">
           <h5 class="card-title">${producto.nombre}</h5>
-          <p class="card-text">Cantidad: ${producto.cantidad}</p>
-          <p class="card-text">Precio total: $${producto.precioTotal.toFixed(2)}</p>
-          ${producto.salsa ? `<p class="card-text">Salsa: ${producto.salsa}</p>` : ''}
-          ${producto.proteina ? `<p class="card-text">Proteína: ${producto.proteina}</p>` : ''}
-          ${producto.base ? `<p class="card-text">Base: ${producto.base}</p>` : ''}
-          ${producto.notas ? `<p class="card-text"><em>Notas:</em> ${producto.notas}</p>` : ''}
+          <p class="card-text"><strong>Cantidad:</strong> ${producto.cantidad}</p>
+          <p class="card-text"><strong>Precio total:</strong> $${producto.precioTotal.toFixed(2)}</p>
+          ${producto.salsa ? `<p class="card-text"><strong>Salsa:</strong> ${producto.salsa}</p>` : ''}
+          ${producto.proteina ? `<p class="card-text"><strong>Proteína:</strong> ${producto.proteina}</p>` : ''}
+          ${producto.base ? `<p class="card-text"><strong>Base:</strong> ${producto.base}</p>` : ''}
+          ${producto.notas ? `<p class="card-text"><em><strong>Notas:</strong></em> ${producto.notas}</p>` : ''}
         </div>
       </div>
     `;
@@ -34,7 +34,7 @@ function renderizarCheckout() {
   document.getElementById('checkoutTotal').textContent = `$${total.toFixed(2)}`;
 }
 
-// ✨ Validación del formulario en tiempo real
+// Validación del formulario en tiempo real
 function inicializarValidaciones() {
   const form = document.getElementById('checkoutForm');
   form.addEventListener('input', e => {
@@ -61,7 +61,7 @@ function inicializarValidaciones() {
   });
 }
 
-// 🧾 Finalizar compra: genera ID, guarda pedido, limpia carrito
+// Finalizar compra: genera ID, guarda pedido, limpia carrito
 function finalizarCompra() {
   const carrito = JSON.parse(localStorage.getItem('carrito')) || [];
   if (carrito.length === 0) return;
@@ -97,11 +97,11 @@ function finalizarCompra() {
   mostrarToast(`✅ Pedido ${pedidoId} generado exitosamente`, "success");
 
   setTimeout(() => {
-    window.location.href = "/pages/confirmacion.html"; // puedes usar una página de éxito
+    window.location.href = "/pages/perfil-usuario.html"; 
   }, 2500);
 }
 
-// 🔔 Toast visual modular
+// Toast visual modular
 function mostrarToast(mensaje, tipo = "info") {
   const toast = document.createElement("div");
   toast.className = `toast align-items-center text-bg-${tipo} border-0`;
@@ -119,13 +119,14 @@ function mostrarToast(mensaje, tipo = "info") {
   const container = document.querySelector(".toast-container-dinamica");
   container.appendChild(toast);
 
+  toast.classList.add("show"); 
   const bsToast = new bootstrap.Toast(toast, { delay: 3000 });
   bsToast.show();
 
   toast.addEventListener("hidden.bs.toast", () => toast.remove());
 }
 
-// 🧩 Inicialización
+// Inicialización
 document.addEventListener('DOMContentLoaded', () => {
   renderizarCheckout();
   inicializarValidaciones();

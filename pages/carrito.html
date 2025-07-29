@@ -16,7 +16,7 @@
 
     <main>
   <div class="container py-4">
-    <h1 class="mb-4 text-center">🛍️ Tu carrito</h1>
+    <h1 class="mb-4 text-center" id="carrito-title">Tu carrito</h1>
 
     <!-- Lista de productos -->
     <div id="carritoProductos" class="row gy-4">
@@ -25,11 +25,11 @@
 
     <!-- Resumen -->
     <div class="mt-5">
-      <h3>Total a pagar: <span id="totalCarrito">$0.00</span></h3>
-      <div class="d-flex gap-2 mt-3">
-        <button id="btnVaciarCarrito" class="btn btn-outline-danger">Vaciar carrito</button>
-        <button id="btnContinuarCompra" class="btn btn-success">Continuar compra</button>
-      </div>
+      <h3><strong>Total a pagar:</strong> <span id="totalCarrito">$0.00</span></h3>
+      <div class="botones-finales resumen-carrito">
+  <button id="btnVaciarCarrito">Vaciar carrito</button>
+  <button id="btnContinuarCompra">Continuar compra</button>
+</div>
     </div>
   </div>
 
@@ -50,8 +50,12 @@
       </div>
     </div>
   </div>
-</div>
+</div> 
 
+<!--Toast carrito vacío antes de continuar compra-->
+<div class="toast-container position-fixed bottom-0 end-0 p-3 toast-container-dinamica" style="z-index: 1100;">
+  <!-- Aquí se insertan los toasts dinámicos -->
+</div>
   </main>
 
   <footer id="footer"></footer>

@@ -1,5 +1,6 @@
 import { actualizarContadorCarrito } from './utils-carrito.js';
-// 🛍️ Renderizar los productos del carrito
+import { mostrarMensaje } from './modal-personalizacion.js';
+// Renderizar los productos del carrito
 function renderizarCarrito() {
   const carrito = JSON.parse(localStorage.getItem('carrito')) || [];
   const contenedor = document.getElementById('carritoProductos');
@@ -16,20 +17,25 @@ function renderizarCarrito() {
     col.className = 'col-md-6 col-lg-4';
     col.innerHTML = `
       <div class="card card-producto">
-        <img src="${item.imagen}" class="card-img-top" alt="${item.nombre}">
+       <div class="card-img-wrapper">
+  <img src="${item.imagen}" class="card-img" alt="${item.nombre}">
+</div>
         <div class="card-body">
           <h5 class="card-title">${item.nombre}</h5>
-          <p class="card-text">Cantidad: ${item.cantidad}</p>
-          <p class="card-text">Precio total: $${item.precioTotal.toFixed(2)}</p>
-          ${item.salsa ? `<p class="card-text">Salsa: ${item.salsa}</p>` : ''}
-          ${item.proteina ? `<p class="card-text">Proteína: ${item.proteina}</p>` : ''}
-          ${item.base ? `<p class="card-text">Base: ${item.base}</p>` : ''}
-          ${item.notas ? `<p class="card-text"><em>Notas:</em> ${item.notas}</p>` : ''}
-          <div class="d-flex justify-content-between mt-3">
-            <button class="btn btn-outline-secondary btn-sm" data-action="restar" data-index="${index}">−</button>
-            <button class="btn btn-outline-secondary btn-sm" data-action="sumar" data-index="${index}">+</button>
-            <button class="btn btn-outline-danger btn-sm" data-action="eliminar" data-index="${index}">🗑️</button>
-          </div>
+          <p class="card-text"><strong>Cantidad:</strong> ${item.cantidad}</p>
+          <p class="card-text"><strong>Precio total:</strong> $${item.precioTotal.toFixed(2)}</p>
+          ${item.salsa ? `<p class="card-text"><strong>Salsa:</strong> ${item.salsa}</p>` : ''}
+          ${item.proteina ? `<p class="card-text"><strong>Proteína:</strong> ${item.proteina}</p>` : ''}
+          ${item.base ? `<p class="card-text"><strong>Base:</strong> ${item.base}</p>` : ''}
+          ${item.notas ? `<p class="card-text"><em><strong>Notas:</strong></em> ${item.notas}</p>` : ''}
+          <div class="botones-cantidad">
+  <button class="btn btn-outline-secondary btn-sm" data-action="restar" data-index="${index}">−</button>
+  <button class="btn btn-outline-secondary btn-sm" data-action="sumar" data-index="${index}">+</button>
+  <button class="btn btn-outline-danger btn-sm" data-action="eliminar" data-index="${index}">
+  <i class="fas fa-trash-alt"></i>
+</button>
+</div>
+
         </div>
       </div>
     `;
@@ -39,14 +45,14 @@ function renderizarCarrito() {
   calcularTotal();
 }
 
-// 💰 Calcular el total del carrito
+// Calcular el total del carrito
 function calcularTotal() {
   const carrito = JSON.parse(localStorage.getItem('carrito')) || [];
   const total = carrito.reduce((acc, prod) => acc + prod.precioTotal, 0);
   document.getElementById('totalCarrito').textContent = `$${total.toFixed(2)}`;
 }
 
-// 🔄 Actualizar cantidad de un producto
+// Actualizar cantidad de un producto
 function actualizarCantidad(index, operacion) {
   const carrito = JSON.parse(localStorage.getItem('carrito')) || [];
   const producto = carrito[index];
@@ -58,8 +64,12 @@ function actualizarCantidad(index, operacion) {
     producto.cantidad -= 1;
   }
 
-  const precioUnitario = producto.precioUnitario || (producto.precioTotal / producto.cantidad);
-  producto.precioTotal = precioUnitario * producto.cantidad;
+  if (!producto.precioUnitario) {
+  producto.precioUnitario = producto.precioTotal / producto.cantidad;
+}
+
+const precioUnitario = producto.precioUnitario;
+producto.precioTotal = precioUnitario * producto.cantidad;
 
   carrito[index] = producto;
   localStorage.setItem('carrito', JSON.stringify(carrito));
@@ -67,7 +77,7 @@ function actualizarCantidad(index, operacion) {
   renderizarCarrito();
 }
 
-// 🗑️ Eliminar un producto
+// Eliminar un producto
 function eliminarProducto(index) {
   const carrito = JSON.parse(localStorage.getItem('carrito')) || [];
   carrito.splice(index, 1);
@@ -76,14 +86,14 @@ function eliminarProducto(index) {
   renderizarCarrito();
 }
 
-// 🚮 Vaciar todo el carrito
+// Vaciar todo el carrito
 function vaciarCarrito() {
   localStorage.removeItem('carrito');
   renderizarCarrito();
-  actualizarContadorCarrito(); // ← actualiza el badge tras limpiar el carrito
+  actualizarContadorCarrito(); 
 }
 
-// 🚀 Inicializar eventos
+// nicializar eventos
 document.addEventListener('DOMContentLoaded', () => {
   renderizarCarrito();
 
@@ -103,16 +113,22 @@ document.addEventListener('DOMContentLoaded', () => {
     }
   });
 
-  // Continuar compra (simulación o redirección)
- // 🟢 Continuar compra con validación de sesión
+  
+ //Continuar compra con validación de sesión
 document.getElementById('btnContinuarCompra').addEventListener('click', () => {
   const clienteLogueado = localStorage.getItem('clienteLogueado') === "true";
+  const carrito = JSON.parse(localStorage.getItem('carrito')) || [];
+
+  if (carrito.length === 0) {
+    mostrarMensaje('Tu carrito está vacío. Agrega un producto antes de continuar 🛒', 'danger');
+    return;
+  }
 
   if (!clienteLogueado) {
     const modalSesion = new bootstrap.Modal(document.getElementById('modalSesion'));
     modalSesion.show();
   } else {
-    window.location.href = "/pages/checkout.html"; // ← ruta final
+    window.location.href = "/pages/checkout.html";
   }
 });
 });

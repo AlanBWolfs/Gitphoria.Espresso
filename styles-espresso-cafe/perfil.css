@@ -1,0 +1,106 @@
+
+.title-perfil{
+  font-family: "Avigea";
+  color: #133936;
+  font-size: 5.4rem;
+}
+
+
+/* Card de perfil */
+.card {
+  border-radius: 1rem;
+  border: none;
+  box-shadow: 0 6px 15px rgba(19, 57, 54, 0.15);
+  background-color: #fdfdfd;
+  font-family: "Poppins", sans-serif;
+  padding: 6rem;
+  margin-top: 6rem;
+}
+
+/* Título de sección */
+.card-title {
+  font-family: "Poppins";
+  font-size: 2.8rem;
+  color: #133936;
+  margin-bottom: 2rem;
+  text-align: center;
+}
+
+/* Detalles del usuario */
+.card-body p {
+  font-size: 1.6rem;
+  color: #333333;
+  margin-bottom: 1.2rem;
+}
+
+.card-body span {
+  font-weight: bold;
+  color: #a2845e;
+}
+
+/* Botón cerrar sesión */
+.btn-danger {
+  background-color: #c55a5a;
+  border: none;
+  font-size: 1.4rem;
+  font-weight: bold;
+  font-family: "Poppins";
+  border-radius: 2rem;
+  padding: 0.8rem 2rem;
+  transition: background-color 0.3s ease;
+}
+
+.btn-danger:hover {
+  background-color: #a33f3f;
+}
+
+/* Botón editar perfil */
+.btn-outline-primary {
+  background-color: #133936;
+  border: 1px solid #133936;
+  color: aliceblue;
+  font-weight: 600;
+  font-family: "Poppins";
+  border-radius: 2rem;
+  padding: 0.8rem 2rem;
+  transition: all 0.3s ease;
+}
+
+.btn-outline-primary:hover {
+  background-color: #a2845e;
+  color: #ffffff;
+  border: 2px solid #a2845e;
+  transform: translateY(-2px);
+}
+
+.btn-perfil-estandar {
+  padding: 0.8rem 2rem;
+  font-size: 1.4rem;
+  border-radius: 2rem;
+  font-family: "Poppins";
+  font-weight: bold;
+  width: 100%;
+  max-width: 18rem;
+  display: block;
+  margin: 1rem auto 0; 
+}
+
+
+
+/* Responsive */
+@media (max-width: 768px) {
+  .card-title {
+    font-size: 2.4rem;
+  }
+
+  .card-body p {
+    font-size: 1.4rem;
+    text-align: center;
+  }
+
+  .btn-danger,
+  .btn-outline-primary {
+    width: 100%;
+    margin-top: 1rem;
+  }
+}

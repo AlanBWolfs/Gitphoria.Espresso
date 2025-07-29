@@ -1,0 +1,224 @@
+/* Card visual para productos en checkout */
+.card {
+  background-color: #133936;
+  border-radius: 1rem;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.08);
+  transition: transform 0.2s ease;
+  min-height: 450px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+.card:hover {
+  transform: scale(1.01);
+}
+
+/* Imagen del producto */
+.card-img-top {
+  max-height: 220px;
+  object-fit: contain;
+  border: 3px solid #1f4f47;
+  background-color: #fff;
+  border-radius: 15px;
+  margin: 10px;
+  padding: 5px;
+}
+
+/* Contenido de la tarjeta */
+.card-body {
+  padding: 1.6rem;
+  flex-grow: 1;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+/* Título y texto del producto */
+.card-title {
+  font-size: 1.8rem;
+  font-weight: bold;
+  margin-bottom: 1rem;
+  color: aliceblue;
+}
+
+.card-text {
+  font-size: 1.4rem;
+  margin-bottom: 0.5rem;
+  color: aliceblue;
+}
+
+/* Encabezados principales del checkout */
+main h1 {
+  font-family: "Avigea", serif;
+  color: #133936;
+  text-align: center;
+  margin-bottom: 2rem;
+  font-size: 2.8rem;
+}
+
+.checkout-title{
+  font-size: 5.4rem;
+}
+
+main h2 {
+  font-family: "Poppins", serif;
+  color: #133936;
+  text-align: center;
+  margin-bottom: 2rem;
+  font-size: 2.8rem;
+  font-weight: 600;
+}
+
+main h4 {
+  font-family: "Poppins", sans-serif;
+  font-size: 3rem;
+  color: #998f76;
+  text-align: center;
+  margin-top: 2rem;
+}
+
+/* Texto del tiempo estimado */
+main p.text-muted {
+  text-align: center;
+  font-size: 1.4rem;
+  color: #998f76;
+  font-family: "Poppins", sans-serif;
+  margin-bottom: 2rem;
+}
+
+/* Campos del formulario */
+form label {
+  font-weight: 600;
+  font-size: 1.4rem;
+  color: #133936;
+  font-family: "Poppins", sans-serif;
+}
+
+form input {
+  height: 4rem;
+  font-size: 1.5rem;
+  padding: 1rem 1.2rem;
+  border-radius: 0.8rem;
+  border: 1px solid #ccc;
+  font-family: "Poppins", sans-serif;
+  
+}
+
+form input:focus {
+  border-color: #133936;
+  box-shadow: 0 0 0 0.2rem rgba(19, 57, 54, 0.25);
+}
+
+/* Feedback visual */
+.is-valid {
+  border-color: #198754;
+}
+.is-invalid {
+  border-color: #dc3545;
+}
+
+/* Mensaje de error */
+.invalid-feedback {
+  font-size: 1.2rem;
+  font-family: "Poppins", sans-serif;
+  color: #dc3545;
+}
+
+/* Botón de finalizar compra */
+button[type="submit"] {
+  display: block;
+  margin: 2rem auto;
+  font-size: 1.8rem;
+  padding: 1.2rem 3rem;
+  border-radius: 3rem;
+  background-color: #133936;
+  color: white;
+  font-weight: 600;
+  font-family: "Poppins", sans-serif;
+  border: none;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+button[type="submit"]:hover {
+  background-color: #998f76;
+}
+
+/* Corrección imágenes fuera de card */
+.card-img-top {
+  display: block;
+  margin: 10px auto;
+  padding: 5px;
+  max-height: 220px;
+  max-width: 90%;
+  object-fit: contain;
+  background-color: #ffffff;
+  border: 3px solid #1f4f47;
+  border-radius: 15px;
+  box-sizing: border-box;
+}
+
+/* Estilos generales para todos los toasts */
+.toast-container-dinamica .toast {
+  box-shadow: 0 0.5rem 1rem rgba(0, 0, 0, 0.15);
+  border-radius: 0.75rem;
+  font-family: "Poppins", sans-serif !important;
+  font-size: 1.4rem !important;
+  min-width: 280px;
+  max-width: 420px;
+  backdrop-filter: blur(4px);
+  padding: 1rem 1.6rem;
+  animation: fadeInUp 0.4s ease-out;
+  letter-spacing: 0.3px;
+  border: none !important;
+}
+
+/* Estilo visual para toast de éxito */
+.toast.text-bg-success {
+  background: linear-gradient(135deg, #198754, #28a745) !important;
+  color: #ffffff !important;
+}
+
+/* Toast de error */
+.toast.text-bg-danger {
+  background: linear-gradient(135deg, #dc3545, #c82333) !important;
+  color: #ffffff !important;
+}
+
+/* Toast informativo */
+.toast.text-bg-info {
+  background: linear-gradient(135deg, #0dcaf0, #31d2f2) !important;
+  color: #000000 !important;
+}
+
+/* Animación de entrada */
+@keyframes fadeInUp {
+  from {
+    transform: translateY(30px);
+    opacity: 0;
+  }
+  to {
+    transform: translateY(0);
+    opacity: 1;
+  }
+}
+
+/* Botón de cierre personalizado */
+.toast .btn-close {
+  filter: brightness(0.9);
+  opacity: 0.8;
+}
+
+/* Responsivo mobile */
+@media (max-width: 768px) {
+  .card {
+    font-size: 1.4rem;
+  }
+  .card-title {
+    font-size: 1.6rem;
+  }
+  .card-text {
+    font-size: 1.3rem;
+  }
+}

@@ -76,7 +76,7 @@ export function rellenarOpciones(nombreBuscado) {
           opcionesContainer.appendChild(grupo);
         }
 
-        return; // Solo cargamos una vez
+        return; 
       }
     }
   }
@@ -85,21 +85,22 @@ export function rellenarOpciones(nombreBuscado) {
 // Configurar suma y resta sin duplicar eventos
 export function inicializarPersonalizacion() {
   const btnSumar = document.getElementById('btnSumar');
-  btnSumar.replaceWith(btnSumar.cloneNode(true));
-  document.getElementById('btnSumar').addEventListener('click', () => {
-    const input = document.getElementById('cantidadProducto');
-    input.value = parseInt(input.value) + 1;
-  });
+  if (btnSumar) {
+    btnSumar.replaceWith(btnSumar.cloneNode(true));
+    document.getElementById('btnSumar').addEventListener('click', () => {
+      const input = document.getElementById('cantidadProducto');
+      input.value = parseInt(input.value) + 1;
+    });
+  }
 
   const btnRestar = document.getElementById('btnRestar');
-  btnRestar.replaceWith(btnRestar.cloneNode(true));
-  document.getElementById('btnRestar').addEventListener('click', () => {
-    const input = document.getElementById('cantidadProducto');
-    input.value = Math.max(1, parseInt(input.value) - 1);
-
-   
-  });
-  
+  if (btnRestar) {
+    btnRestar.replaceWith(btnRestar.cloneNode(true));
+    document.getElementById('btnRestar').addEventListener('click', () => {
+      const input = document.getElementById('cantidadProducto');
+      input.value = Math.max(1, parseInt(input.value) - 1);
+    });
+  }
 }
 
 // Solo se usa en el submit para limpiar backdrop y desbloquear scroll
@@ -134,53 +135,59 @@ function limpiezaPostModal() {
   }, 100);
 }
 // Submit: agrega producto al carrito y cierra el modal
-document.getElementById('formPersonalizar').addEventListener('submit', e => {
-  e.preventDefault();
+const formPersonalizar = document.getElementById('formPersonalizar');
 
-  const modalEl = document.getElementById('modalPersonalizacion');
-  const modalInstance = bootstrap.Modal.getOrCreateInstance(modalEl);
-  modalInstance.hide(); // 👈 esto es suficiente
+if (formPersonalizar) {
+  formPersonalizar.addEventListener('submit', e => {
+    e.preventDefault();
 
- limpiezaPostModal();
+    const modalEl = document.getElementById('modalPersonalizacion');
+    const modalInstance = bootstrap.Modal.getOrCreateInstance(modalEl);
+    modalInstance.hide();
+    limpiezaPostModal();
 
-  const nombre = modalEl.dataset.nombre;
-  const precioBase = parseFloat(modalEl.dataset.precio);
-  const imagen = modalEl.dataset.imagen;
-  const cantidad = parseInt(document.getElementById('cantidadProducto').value);
-  const notas = document.getElementById('notasCliente').value;
+    const nombre = modalEl.dataset.nombre;
+    const precioBase = parseFloat(modalEl.dataset.precio);
+    const imagen = modalEl.dataset.imagen;
+    const cantidad = parseInt(document.getElementById('cantidadProducto').value);
+    const notas = document.getElementById('notasCliente').value;
 
-  const salsa = document.querySelector('input[name="salsa"]:checked')?.value;
-  const proteinaEl = document.querySelector('input[name="proteina"]:checked');
-  const proteina = proteinaEl?.value;
-  const precioProteina = proteinaEl ? parseFloat(proteinaEl.dataset?.precio) : 0;
-  const base = document.querySelector('input[name="base"]:checked')?.value;
+    const salsa = document.querySelector('input[name="salsa"]:checked')?.value;
+    const proteinaEl = document.querySelector('input[name="proteina"]:checked');
+    const proteina = proteinaEl?.value;
+    const precioProteina = proteinaEl ? parseFloat(proteinaEl.dataset?.precio) : 0;
+    const base = document.querySelector('input[name="base"]:checked')?.value;
 
-  const precioFinal = (precioBase + precioProteina) * cantidad;
+    const precioUnitarioFinal = precioBase + precioProteina;
+const precioFinal = precioUnitarioFinal * cantidad;
 
-  const productoPersonalizado = {
-    nombre,
-    imagen,
-    cantidad,
-    precioUnitario: precioBase,
-    precioTotal: precioFinal,
-    salsa,
-    proteina,
-    base,
-    notas
-  };
+const productoPersonalizado = {
+  nombre,
+  imagen,
+  cantidad,
+  precioUnitario: precioUnitarioFinal, 
+  precioTotal: precioFinal,
+  salsa,
+  proteina,
+  base,
+  notas
+};
 
-  const carrito = JSON.parse(localStorage.getItem('carrito')) || [];
-  carrito.push(productoPersonalizado);
-  localStorage.setItem('carrito', JSON.stringify(carrito));
+    const carrito = JSON.parse(localStorage.getItem('carrito')) || [];
+    carrito.push(productoPersonalizado);
+    localStorage.setItem('carrito', JSON.stringify(carrito));
 
-  e.target.reset();
-  mostrarMensaje(`"${nombre}" agregado al carrito ✅`, "success"); // función modular opcional
-actualizarContadorCarrito(); // ← nuevo, explicado abajo
-});
+    e.target.reset();
+    mostrarMensaje(`"${nombre}" agregado al carrito ✅`, "success");
+    actualizarContadorCarrito();
+  });
+}
 
 
-document.getElementById('modalPersonalizacion')
-  .addEventListener('hidden.bs.modal', () => {
+const modalPersonalizacion = document.getElementById('modalPersonalizacion');
+
+if (modalPersonalizacion) {
+  modalPersonalizacion.addEventListener('hidden.bs.modal', () => {
     setTimeout(() => {
       document.querySelector('.modal-backdrop')?.remove();
       document.body.classList.remove('modal-open');
@@ -189,6 +196,8 @@ document.getElementById('modalPersonalizacion')
       document.documentElement.style.removeProperty('overflow');
     }, 100);
   });
+}
+
 
 export function mostrarMensaje(texto, tipo = "success") {
   const toast = document.createElement("div");

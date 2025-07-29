@@ -5,13 +5,21 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Checkout - Finalizar pedido</title>
   <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet" />
+  <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css"
+      integrity="sha512-Evv84Mr4kqVGRNSgIGL/F/aIDqQb7xQ2vcrdIwxfjThSH8CSR7PBEakCr51Ck+w+/U6swU2Im1vVX0SVk9ABhg=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
   <link rel="stylesheet" href="/styles.css">
+  <link rel="stylesheet" href="/styles-espresso-cafe/checkout.css">
 </head>
 <body>
   <div id="navbar"></div>
 
   <main class="container py-5">
-    <h1 class="text-center mb-4">🧾 Resumen de tu pedido</h1>
+    <h1 class="text-center mb-4 checkout-title">Resumen de tu pedido</h1>
 
     <!-- Productos del carrito -->
     <div id="checkoutProductos" class="row gy-4 mb-4">
@@ -20,12 +28,12 @@
 
     <!-- Total y tiempo de preparación -->
     <div class="mb-5">
-      <h4>Total: <span id="checkoutTotal">$0.00</span></h4>
-      <p class="text-muted">⏱️ Tiempo estimado de preparación: 50 minutos</p>
+      <h4><strong>Total:</strong> <span id="checkoutTotal">$0.00</span></h4>
+      <p class="text-muted">Tiempo estimado de preparación: 50 minutos</p>
     </div>
 
     <!-- Formulario de datos del cliente -->
-    <h2 class="mb-3">🧍 Datos del cliente</h2>
+    <h2 class="mb-3">Datos del cliente</h2>
     <form id="checkoutForm" novalidate>
       <div class="row">
         <div class="col-md-6 mb-3">
@@ -51,7 +59,7 @@
       </div>
 
       <!-- Datos de pago simulados -->
-      <h2 class="mt-4 mb-3">💳 Información de pago</h2>
+      <h2 class="mt-4 mb-3">Información de pago</h2>
       <div class="row">
         <div class="col-md-6 mb-3">
           <label for="tarjeta" class="form-label">Número de tarjeta</label>
@@ -73,6 +81,7 @@
       <button type="submit" class="btn btn-primary mt-4">Finalizar compra</button>
     </form>
   </main>
+
 
   <footer id="footer" class="mt-5"></footer>
 

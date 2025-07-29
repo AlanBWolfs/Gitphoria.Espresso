@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.7/dist/css/bootstrap.min.css" rel="stylesheet">
+  <link rel="stylesheet" href="/styles.css">
+   <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css"
+      integrity="sha512-Evv84Mr4kqVGRNSgIGL/F/aIDqQb7xQ2vcrdIwxfjThSH8CSR7PBEakCr51Ck+w+/U6swU2Im1vVX0SVk9ABhg=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
+  <title>Menu Admin</title>
+</head>
+<body>
+
+  <main>
+ <!-- BLOQUE SOLO PARA ADMINISTRADOR -->
+      <div class="container my-5">
+        <h3 class="text-danger">Panel del Administrador</h3>
+        <p>Accesos rápidos para editar o eliminar productos:</p>
+        <div class="d-grid gap-2">
+          <a
+            href="menu2.html?tipo=alimentos&categoria=Desayunos&admin=true"
+            class="btn btn-warning"
+          >
+            Desayunos (Admin)
+          </a>
+          <a
+            href="menu2.html?tipo=alimentos&categoria=Especiales&admin=true"
+            class="btn btn-warning"
+          >
+            Especiales (Admin)
+          </a>
+          <a
+            href="menu2.html?tipo=bebidas&categoria=Calientes&admin=true"
+            class="btn btn-warning"
+          >
+            Bebidas Calientes (Admin)
+          </a>
+          <a
+            href="menu2.html?tipo=bebidas&categoria=Frias&admin=true"
+            class="btn btn-warning"
+          >
+            Bebidas Frías (Admin)
+          </a>
+          <a
+            href="menu2.html?tipo=bebidas&categoria=Especiales&admin=true"
+            class="btn btn-warning"
+          >
+            Bebidas Especiales (Admin)
+          </a>
+        </div>
+      </div>
+</main>
+
+
+
+
+
+
+<script
+      src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.6/dist/js/bootstrap.bundle.min.js"
+      integrity="sha384-j1CDi7MgGQ12Z7Qab0qlWQ/Qqz24Gc6BM0thvEMVjHnfYGF0rmFCozFSxQBxwHKO"
+      crossorigin="anonymous"
+    ></script>
+  <script type="module" src="/js/main.js"></script>
+  <script type="module" src="/js/menu-ui2.js"></script>
+  <script src="/js/modal-personalizacion.js"></script>
+  <script src="/Administrador/js-admin/admin-acceso.js"></script>
+  <script type="module" src="/Administrador/js-admin/admin-manager.js"></script>
+</body>
+</html>

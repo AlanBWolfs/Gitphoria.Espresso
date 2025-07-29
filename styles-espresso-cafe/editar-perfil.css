@@ -1,0 +1,119 @@
+/* === CONTENEDOR PRINCIPAL === */
+main.container {
+  max-width: 720px;
+}
+
+/* === TÍTULO PRINCIPAL === */
+h2 {
+  font-family: "Avigea";
+  font-size: 5.4rem;
+  color: #133936;
+  text-align: center;
+  margin-bottom: 3rem;
+}
+
+/* === FORMULARIO === */
+form#editProfileForm {
+  background-color: #fdfdfd;
+  border: 1px solid #e3dcd2;
+  box-shadow: 0 0 10px rgba(89, 63, 44, 0.1);
+  padding: 3rem 2.5rem;
+  border-radius: 1rem;
+}
+
+/* === ETIQUETAS Y CAMPOS === */
+form label {
+  font-family: "Poppins";
+  font-size: 1.6rem;
+  font-weight: 600;
+  color: #5c4938;
+  margin-bottom: 0.6rem;
+}
+
+form input[type="text"],
+form input[type="email"],
+form input[type="password"],
+form input[type="tel"],
+form input[type="number"] {
+  font-size: 1.8rem !important;
+  padding: 1.4rem 1.2rem !important;
+  border-radius: 3rem !important;
+  line-height: 1.6 !important;
+  font-family: "Poppins", sans-serif !important;
+}
+
+form input::placeholder {
+  font-size: 1.6rem !important;
+  color: #999 !important;
+  font-style: italic;
+}
+
+form input:focus {
+  border-color: #cba472;
+  box-shadow: 0 0 5px rgba(203, 164, 114, 0.5);
+}
+
+/* === FEEDBACK DE VALIDACIÓN === */
+.invalid-feedback {
+  font-size: 1.3rem;
+  font-family: "Poppins";
+  color: #dc3545;
+  margin-top: 0.5rem;
+}
+
+/* === BOTONES === */
+button.btn-primary {
+  background-color: #133936;
+  border-color: #133936;
+  font-family: "Poppins";
+  font-size: 1.6rem;
+  font-weight: 600;
+  padding: 1rem;
+  border-radius: 2.5rem;
+  transition: background-color 0.3s ease;
+}
+
+button.btn-primary:hover {
+  background-color: #b48e5f;
+  border-color: #b48e5f;
+}
+
+a.btn-secondary {
+  background-color: transparent;
+  border: 2px solid #cba472;
+  color: #cba472;
+  font-size: 1.6rem;
+  font-family: "Poppins";
+  font-weight: 500;
+  padding: 1rem;
+  border-radius: 2.5rem;
+  text-align: center;
+  transition: all 0.3s ease;
+  display: block;
+  margin-top: 1rem;
+}
+
+a.btn-secondary:hover {
+  background-color: #fdf4e9;
+  border-color: #b48e5f;
+  color: #b48e5f;
+}
+
+/* === RESPONSIVO === */
+@media (max-width: 768px) {
+  h2 {
+    font-size: 4rem;
+  }
+
+  form#editProfileForm {
+    padding: 2rem;
+  }
+
+  form label,
+  form input,
+  .invalid-feedback,
+  button.btn-primary,
+  a.btn-secondary {
+    font-size: 1.4rem;
+  }
+}

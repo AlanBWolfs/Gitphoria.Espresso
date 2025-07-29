@@ -69,7 +69,7 @@
 .carousel-caption-fixed {
   z-index: 5;
   color: white;
-  background-color: rgba(0, 0, 0, 0.5); /* Fondo semitransparente para mayor contraste */
+  background-color: rgba(0, 0, 0, 0.5);
   padding: 1rem 2rem;
   border-radius: 10px;
   font-family: 'Poppins', sans-serif;
@@ -82,12 +82,16 @@
   color: aliceblue;
   font-weight: 600;
   font-family: "Poppins";
+   text-shadow: 2px 2px 6px rgba(0, 0, 0, 0.7);
+
 }
 
 .text-carousel2{
   color: aliceblue;
   font-weight: 600;
   font-family: "Poppins";
+   text-shadow: 2px 2px 6px rgba(0, 0, 0, 0.7);
+
 }
 
 .button-ordena-ahora {

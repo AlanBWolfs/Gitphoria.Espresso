@@ -1,52 +1,382 @@
-/* Animaciones sutiles para entrada */
-@keyframes fadeIn {
+/*Título y total del carrito */
+#carrito-title {
+  font-size: 5rem;
+  letter-spacing: 0.4rem;
+  font-family: "Avigea";
+  color: #133936;
+  font-weight: 600;
+  text-align: center;
+}
+
+h3,
+#totalCarrito {
+  font-size: 2.4rem;
+  font-family: "Poppins", sans-serif;
+  color: #998f76;
+  font-weight: 600;
+  text-align: center;
+}
+
+/* Mensaje cuando el carrito está vacío */
+#carritoProductos p.text-center {
+  font-size: 2rem;
+  font-weight: 600;
+  color: #a2845e;
+  margin: 4rem auto;
+  text-align: center;
+  font-family: "Poppins", sans-serif;
+}
+
+/* Igualar altura visual de columnas */
+#carritoProductos > .col-md-6,
+#carritoProductos > .col-lg-4 {
+  display: flex;
+}
+#carritoProductos > .col-md-6 .card-producto,
+#carritoProductos > .col-lg-4 .card-producto {
+  flex: 1;
+}
+
+/* Card de producto generada dinámicamente */
+.card-producto {
+  background-color: #133936;
+  border-radius: 1rem;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.08);
+  width: 100%;
+  font-size: 1.6rem;
+  overflow: hidden;
+  transition: transform 0.2s ease;
+  min-height: 450px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+.card-producto:hover {
+  transform: scale(1.01);
+}
+
+.card-producto .card-img-wrapper {
+  border: 3px solid #1f4f47;
+  background-color: #ffffff;
+  border-radius: 15px;
+  margin: 10px;
+  padding: 5px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 220px;
+}
+
+.card-producto .card-img {
+  max-height: 100%;
+  max-width: 100%;
+  object-fit: contain;
+  border-radius: 10px;
+  transition: transform 0.3s ease;
+}
+
+.card-producto .card-body {
+  padding: 1.6rem;
+  flex-grow: 1;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+.card-producto .card-title {
+  font-size: 1.8rem;
+  font-weight: bold;
+  margin-bottom: 1rem;
+  color: aliceblue;
+}
+
+.card-producto .card-text {
+  font-size: 1.4rem;
+  margin-bottom: 0.5rem;
+  color: aliceblue;
+}
+
+/* Controles internos (sumar/restar/eliminar) */
+.botones-cantidad {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 0.6rem;
+  margin-top: 1.2rem;
+}
+
+.botones-cantidad .btn-sm {
+  font-size: 1.5rem;
+  padding: 0.4rem 0.8rem;
+  min-width: 38px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.card-producto .card-body .d-flex {
+  justify-content: center;
+  gap: 0.8rem;
+  margin-top: 1.8rem;
+}
+
+/* Botones pequeños bien visibles */
+.card-producto button.btn-sm {
+  font-size: 1.6rem;
+  padding: 0.6rem 1.2rem;
+  border-radius: 0.6rem;
+}
+
+/* Estilo específico por tipo */
+.card-producto .btn-outline-secondary {
+  border: 1px solid #998f76;
+  background-color: #f1e9dc;
+  color: #998f76;
+}
+.card-producto .btn-outline-secondary:hover {
+  border: 1px solid aliceblue;
+  background-color: #998f76;
+  color: aliceblue;
+}
+
+.card-producto .btn-outline-danger {
+  background-color: #dc3545;
+  color: white;
+  border: none;
+}
+.card-producto .btn-outline-danger:hover {
+  background-color: #ce0f22;
+}
+
+
+.btn i.fa-trash-alt {
+  font-size: 1.2rem;
+  margin-right: 4px;
+}
+
+/* Sección resumen */
+.resumen-carrito {
+  margin-top: 4rem;
+  text-align: center;
+}
+.resumen-carrito h3 {
+  font-size: 2.2rem;
+  margin-bottom: 1rem;
+}
+
+/* Botones finales */
+.botones-finales {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  gap: 1.6rem;
+  margin-top: 3rem;
+}
+
+.botones-finales button {
+  font-size: 1.9rem;
+  padding: 1.2rem 3.5rem;
+  border-radius: 3rem;
+  font-weight: 600;
+  min-width: 220px;
+  font-family: "Poppins", sans-serif;
+  text-align: center;
+  border: none;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+#btnVaciarCarrito {
+  background-color: #dc3545;
+  color: white;
+}
+#btnVaciarCarrito:hover {
+  background-color: #70040f;
+}
+#btnContinuarCompra {
+  background-color: #133936;
+  color: white;
+}
+#btnContinuarCompra:hover {
+  border: #998f76;
+  background-color: #998f76;
+}
+
+/* Modal iniciar sesión */
+#modalSesion .modal-content {
+  background-color: #ffffff;
+  border-radius: 1rem;
+  padding: 2rem;
+  font-family: "Poppins", sans-serif;
+  box-shadow: 0 8px 20px rgba(0,0,0,0.15);
+}
+
+/* Encabezado visual claro */
+#modalSesion .modal-header {
+  background-color: #fdf8ec;
+  border-bottom: none;
+  border-top-left-radius: 1rem;
+  border-top-right-radius: 1rem;
+}
+#modalSesion .modal-title {
+  font-size: 2rem;
+  font-weight: 600;
+  color: #133936;
+  font-family: "Avigea", serif;
+}
+
+/* Texto del cuerpo */
+#modalSesion .modal-body {
+  font-size: 1.6rem;
+  color: #333;
+  text-align: center;
+  padding: 1.5rem 2rem;
+}
+
+/* Botones de acción */
+#modalSesion .modal-footer {
+  border-top: none;
+  display: flex;
+  justify-content: center;
+  gap: 1rem;
+  padding-top: 1.5rem;
+}
+#modalSesion .modal-footer .btn-primary {
+  background-color: #133936;
+  color: white;
+  font-size: 1.6rem;
+  padding: 0.8rem 2.4rem;
+  border: none;
+  border-radius: 2rem;
+  font-weight: 600;
+  transition: background-color 0.3s ease;
+}
+#modalSesion .modal-footer .btn-primary:hover {
+  background-color: #998f76;
+}
+
+#modalSesion .modal-footer .btn-secondary {
+  background-color: #dc3545;
+  color: white;
+  font-size: 1.6rem;
+  padding: 0.8rem 2.4rem;
+  border: none;
+  border-radius: 2rem;
+  font-weight: 600;
+  transition: background-color 0.3s ease;
+}
+#modalSesion .modal-footer .btn-secondary:hover {
+  background-color: #b02a37;
+}
+
+/* Toast dinámico centrado y estilizado */
+.toast-container-dinamica {
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  z-index: 1100;
+  max-width: 600px;
+  width: 90%;
+  padding: 1rem;
+  pointer-events: none; /* Permite clics detrás del toast */
+}
+
+/* Estilo general para toasts */
+.toast {
+  opacity: 0;
+  animation: fadeInToast 0.5s ease forwards;
+  border-radius: 0.8rem;
+  font-size: 1.2rem;
+  font-weight: 500;
+  letter-spacing: 0.3px;
+  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.1);
+  padding: 1rem 1.5rem;
+  pointer-events: auto; /* Clic en botones */
+}
+
+/* Fondo y texto por tipo */
+.toast.text-bg-success {
+  background-color: #d1f7d6 !important;
+  color: #1d512f !important;
+}
+
+.toast.text-bg-warning {
+  background-color: #fff3cd !important;
+  color: #856404 !important;
+}
+
+.toast.text-bg-info {
+  background-color: #d0e8ff !important;
+  color: #004085 !important;
+}
+
+.toast.text-bg-danger {
+  background-color: #f8d7da !important;
+  color: #721c24 !important;
+}
+
+/* Botón de cierre */
+.btn-close-white {
+  filter: brightness(0.3);
+}
+
+/* Animación de entrada */
+@keyframes fadeInToast {
   from {
     opacity: 0;
-    transform: scale(0.95);
+    transform: translate(-50%, -40%);
   }
   to {
     opacity: 1;
-    transform: scale(1);
+    transform: translate(-50%, -50%);
   }
 }
 
-.card-producto {
-  animation: fadeIn 0.3s ease-in-out;
+/* Responsivo mobile */
+@media (max-width: 768px) {
+  .card-producto {
+    font-size: 1.4rem;
+  }
+  .card-producto .card-title {
+    font-size: 1.6rem;
+  }
+  .card-producto .card-text {
+    font-size: 1.3rem;
+  }
+  .card-producto button.btn-sm {
+    font-size: 1.4rem;
+    padding: 0.5rem 1rem;
+  }
+  .botones-finales {
+    gap: 1.4rem;
+  }
 }
 
-/* Estilo del card */
-.card {
-  box-shadow: 0 0 12px rgba(0,0,0,0.08);
-  border-radius: 8px;
-  overflow: hidden;
-  transition: transform 0.2s ease;
+/* Unificación de botones sumar / restar / eliminar */
+.botones-cantidad button.btn-sm {
+  width: 38px;
+  height: 38px;
+  padding: 0;
+  border-radius: 0.6rem;
+  font-size: 1.5rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
 
-.card:hover {
-  transform: scale(1.02);
+
+.botones-cantidad .btn-outline-danger i.fa-trash-alt {
+  font-size: 1.4rem;
+  margin: 0;
+  line-height: 1;
 }
 
-.card-img-top {
-  max-height: 200px;
-  object-fit: cover;
-}
-
-.card-body h5 {
-  font-size: 1.2rem;
-  font-weight: 600;
-}
-
-.card-body p {
-  margin-bottom: 0.5rem;
-}
-
-/* Estilo del total y acciones */
-#totalCarrito {
-  font-weight: bold;
-  color: #198754; /* verde Bootstrap */
-}
-
-.btn-outline-danger,
-.btn-success {
-  min-width: 150px;
+.botones-cantidad .btn-outline-danger i {
+  margin: 0 !important;
+  font-size: 1.5rem !important;
+  transform: none !important;
+  cursor: default !important;
+  pointer-events: none;
 }

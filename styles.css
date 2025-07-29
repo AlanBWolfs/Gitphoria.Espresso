@@ -108,6 +108,70 @@ img {
   box-shadow: 0 3px 6px rgba(0, 0, 0, 0.25);
 }
 
+/* Botón de perfil del usuario logueado */
+.btn-profile {
+  background-color: transparent;
+  color: #ffffff;
+  border: 3px solid #a2845e;
+  padding: 8px 24px;
+  border-radius: 5rem;
+  font-family: "Poppins", sans-serif;
+  font-weight: 800;
+  letter-spacing: 0.5px;
+  transition: all 0.3s ease;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+  cursor: pointer;
+  font-size: 1.6rem;
+  margin-right: 2rem; 
+}
+
+.btn-profile:hover {
+  border: 2.5px solid #ffffff;
+  background-color: #998f76;
+  color: #ffffff;
+  transform: translateY(-2px);
+  box-shadow: 0 6px 12px rgba(0, 0, 0, 0.2);
+}
+
+.btn-profile:active {
+  transform: scale(0.97);
+  box-shadow: 0 3px 6px rgba(0, 0, 0, 0.25);
+}
+
+/* Botón de perfil del usuario logueado */
+.btn-profile {
+  background-color: transparent;
+  color: #ffffff;
+  border: 3px solid #a2845e;
+  padding: 8px 24px;
+  border-radius: 5rem;
+  font-family: "Poppins", sans-serif;
+  font-weight: 800;
+  letter-spacing: 0.5px;
+  transition: all 0.3s ease;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+  cursor: pointer;
+  font-size: 1.6rem;
+  margin-right: 2rem;
+  display: flex;
+  align-items: center;
+  gap: 0.6rem;
+}
+
+.btn-profile:hover {
+  border: 2.5px solid #ffffff;
+  background-color: #998f76;
+  color: #ffffff;
+  transform: translateY(-2px);
+  box-shadow: 0 6px 12px rgba(0, 0, 0, 0.2);
+}
+
+.btn-profile:active {
+  transform: scale(0.97);
+  box-shadow: 0 3px 6px rgba(0, 0, 0, 0.25);
+}
+
+
 .navbar-toggler {
   border-color: #ffffff;
   margin-right: 20px;
@@ -123,7 +187,7 @@ img {
   font-family: "Avigea";
   color: #133936;
   font-weight: bold;
-  font-size: 4.6rem;
+  font-size: 5.4rem;
   text-align: center;
   letter-spacing: 0.2rem;
   margin: 3rem 0 5rem;
@@ -165,6 +229,18 @@ i:hover {
 
 a {
   text-decoration: none;
+}
+
+/* 🛡️ Proteger el ícono de perfil dentro del botón personalizado */
+.btn-profile i {
+  color: #ffffff !important;
+  transition: none;
+}
+
+.btn-profile i:hover {
+  color: #ffffff !important;
+  transform: none;
+  cursor: default;
 }
 
 /*!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!! Footer */
@@ -216,6 +292,9 @@ a {
 
 /*!!!!!!!!!!!!!!!!!!!! Media Queries para móviles */
 @media (max-width: 768px) {
+  .btn-profile .profile-label {
+    display: none;
+  }
   .main-title {
     font-size: 3rem;
     text-align: center;
