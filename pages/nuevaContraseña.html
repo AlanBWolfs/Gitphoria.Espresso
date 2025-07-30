@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="es">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Establecer Nueva Contraseña</title>
+
+    <!-- Bootstrap + FontAwesome -->
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.7/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+      integrity="sha384-LN+7fdVzj6u52u30Kp6M/trliBMCMKTyK833zpbD+pXdCLuTusPj697FH4R/5mcr"
+      crossorigin="anonymous"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css"
+      integrity="sha512-Evv84Mr4kqVGRNSgIGL/F/aIDqQb7xQ2vcrdIwxfjThSH8CSR7PBEakCr51Ck+w+/U6swU2Im1vVX0SVk9ABhg=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
+
+    <link rel="stylesheet" href="/styles.css" />
+    <link rel="stylesheet" href="/styles-espresso-cafe/password.css" />
+  </head>
+  <body>
+    <div id="navbar"></div>
+
+    <main>
+      <div id="login-container">
+        <div id="login-items">
+          <div class="justify-content-evenly">
+            <div class="col-12">
+              <div class="form-container justify-content-evenly">
+                <form id="new-password-form">
+                  <div class="mb-3">
+                    <h1 class="p-login">Establece tu nueva contraseña</h1>
+
+                    <label for="newPassword" class="form-label"
+                      >Nueva contraseña</label
+                    >
+                    <input
+                      type="password"
+                      class="form-control"
+                      id="newPassword"
+                      placeholder="********"
+                      required
+                    />
+
+                    <label for="confirmPassword" class="form-label"
+                      >Confirmar contraseña</label
+                    >
+                    <input
+                      type="password"
+                      class="form-control"
+                      id="confirmPassword"
+                      placeholder="********"
+                      required
+                    />
+                  </div>
+
+                  <div
+                    class="invalid-feedback d-block"
+                    id="resetPasswordError"
+                    style="display: none"
+                  ></div>
+
+                  <button type="submit" class="btn login-button">
+                    Guardar contraseña
+                  </button>
+                  <p class="p-login mt-3">
+                    ¿Ya tienes cuenta?
+                    <a href="/pages/login.html" class="a-login">Inicia sesión</a>
+                  </p>
+                </form>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </main>
+
+    <div id="footer"></div>
+
+    
+    <script
+      src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.7/dist/js/bootstrap.min.js"
+      integrity="sha384-7qAoOXltbVP82dhxHAUje59V5r2YsVfBafyUDxEdApLPmcdhBPg1DKg1ERo0BZlK"
+      crossorigin="anonymous"
+    ></script>
+    <script type="module" src="/js/main.js"></script>
+    <script src="/js/nuevaContraseña.js"></script>
+  </body>
+</html>
