@@ -221,4 +221,55 @@ button[type="submit"]:hover {
   .card-text {
     font-size: 1.3rem;
   }
+  main.container {
+    padding: 2rem 1rem;
+  }
+
+  h1.checkout-title {
+    font-size: 3.2rem;
+  }
+
+  main h2 {
+    font-size: 2rem;
+  }
+
+
+  form input,
+  button[type="submit"] {
+    font-size: 1.4rem;
+    padding: 0.8rem 1.4rem;
+  }
+
+  #checkoutProductos .card {
+    width: 100%;
+    margin-bottom: 2rem;
+  }
+
+
+}
+
+@media (max-width: 768px) {
+  #checkoutForm .row > div {
+    flex: 0 0 100%;
+    max-width: 100%;
+  }
+}
+
+@media (min-width: 769px) and (max-width: 1024px) {
+  .card-title {
+    font-size: 1.7rem;
+  }
+
+  .card-text {
+    font-size: 1.4rem;
+  }
+
+  form input {
+    font-size: 1.4rem;
+  }
+
+  button[type="submit"] {
+    font-size: 1.6rem;
+    padding: 1rem 2.4rem;
+  }
 }

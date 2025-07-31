@@ -6,6 +6,7 @@
   color: #133936;
   font-weight: 600;
   text-align: center;
+  margin-top: 4rem;
 }
 
 h3,
@@ -352,7 +353,16 @@ h3,
   .botones-finales {
     gap: 1.4rem;
   }
+
+
 }
+
+@media (max-width: 1024px){
+  .carrito-container{
+    margin-top: 8rem;
+  }
+}
+
 
 /* Unificación de botones sumar / restar / eliminar */
 .botones-cantidad button.btn-sm {
@@ -379,4 +389,86 @@ h3,
   transform: none !important;
   cursor: default !important;
   pointer-events: none;
+}
+
+@media (min-width: 768px) and (max-width: 1024px) {
+  .toast {
+    font-size: 1.6rem !important;
+    max-width: 90% !important;
+    padding: 1.6rem 2.2rem !important;
+    margin: 0 auto !important;
+    border-radius: 1rem !important;
+  }
+
+  .toast-body {
+    font-size: 1.5rem !important;
+  }
+
+  .toast-header {
+    font-size: 1.4rem !important;
+  }
+}
+@media (max-width: 768px) {
+  #modalConfirmarVaciar .modal-dialog {
+    max-width: 95%;
+    margin: 1rem auto;
+  }
+
+  #modalConfirmarVaciar .modal-content {
+    font-size: 1.6rem;
+    padding: 2rem;
+    border-radius: 1.2rem;
+  }
+
+  #modalConfirmarVaciar .modal-body {
+    font-size: 1.5rem;
+  }
+
+  #modalConfirmarVaciar .modal-footer .btn {
+    font-size: 1.5rem;
+    padding: 0.8rem 2rem;
+  }
+}
+
+
+@media (min-width: 769px) and (max-width: 1024px) {
+  #modalConfirmarVaciar .modal-dialog {
+    max-width: 600px;
+  }
+
+  #modalConfirmarVaciar .modal-content {
+    font-size: 1.8rem;
+    padding: 2.4rem;
+    border-radius: 1.4rem;
+  }
+
+  #modalConfirmarVaciar .modal-body {
+    font-size: 1.7rem;
+  }
+
+  #modalConfirmarVaciar .modal-footer .btn {
+    font-size: 1.6rem;
+    padding: 0.9rem 2.4rem;
+  }
+}
+
+@media (min-width: 1025px) {
+  #modalConfirmarVaciar .modal-dialog {
+    max-width: 700px;
+  }
+
+  #modalConfirmarVaciar .modal-content {
+    font-size: 1.9rem;
+    padding: 2.6rem;
+    border-radius: 1.6rem;
+  }
+
+  #modalConfirmarVaciar .modal-body {
+    font-size: 1.8rem;
+  }
+
+  #modalConfirmarVaciar .modal-footer .btn {
+    font-size: 1.7rem;
+    padding: 1rem 2.8rem;
+  }
 }

@@ -33,7 +33,8 @@ document.addEventListener("DOMContentLoaded", () => {
     const passwordRegex = /^(?=.*[A-Z])(?=.*\d).{6,}$/;
     if (newPassword && !passwordRegex.test(newPassword)) {
       passwordInput.classList.add("is-invalid");
-      passwordFeedback.textContent = "La contraseña debe tener al menos 6 caracteres, una mayúscula y un número.";
+      passwordFeedback.textContent =
+        "La contraseña debe tener al menos 6 caracteres, una mayúscula y un número.";
       valid = false;
     }
 
@@ -50,7 +51,32 @@ document.addEventListener("DOMContentLoaded", () => {
     localStorage.setItem("clienteNombre", updatedUser.nombre);
     localStorage.setItem("clienteCorreo", updatedUser.email);
 
-    alert("✅ Perfil actualizado correctamente.");
-    window.location.href = "/pages/perfil-usuario.html";
+    mostrarToast("✅ Perfil actualizado correctamente.", "success");
+
+    setTimeout(() => {
+      window.location.href = "/pages/perfil-usuario.html";
+    }, 1800);
   });
+
+  
+  function mostrarToast(mensaje, tipo = "info") {
+    const container = document.querySelector(".toast-actualizacion-container");
+
+    const toast = document.createElement("div");
+    toast.className = `toast align-items-center text-bg-${tipo} show`;
+    toast.setAttribute("role", "alert");
+    toast.setAttribute("aria-live", "assertive");
+    toast.setAttribute("aria-atomic", "true");
+
+    toast.innerHTML = `
+      <div class="d-flex">
+        <div class="toast-body">${mensaje}</div>
+        <button type="button" class="btn-close btn-close-white me-2 m-auto" data-bs-dismiss="toast" aria-label="Cerrar"></button>
+      </div>
+    `;
+
+    container.appendChild(toast);
+
+    setTimeout(() => toast.remove(), 4000);
+  }
 });

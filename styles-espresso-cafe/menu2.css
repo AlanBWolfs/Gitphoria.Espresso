@@ -22,7 +22,7 @@ h2 {
     text-align: center;
     margin: 3rem 0 1.5rem;
     font-family: "Avigea", serif;
-    font-size: 2.5rem;
+    font-size: 4rem;
     color: #133936;
 }
 
@@ -116,7 +116,7 @@ p {
 
 .card-title {
     text-align: center;
-    font-size: 1.6rem;
+    font-size: 1.8rem;
     margin: 10px 0 5px;
     font-family: "Avigea", serif;
     letter-spacing: 0.5px;
@@ -125,7 +125,7 @@ p {
 
 .card-description {
     text-align: center;
-    font-size: 0.95rem;
+    font-size: 1.5rem;
     color: #dddddd;
     margin-bottom: 10px;
     line-height: 1.4;
@@ -134,7 +134,7 @@ p {
 
 .card-price {
     text-align: center;
-    font-size: 1.2rem;
+    font-size: 1.3rem;
     margin: 5px 0;
     font-weight: 600;
     color: #a2845e;
@@ -156,8 +156,8 @@ p {
 }
 
 .card-buttons button {
-    font-size: 0.85rem;
-    padding: 6px 12px;
+    font-size: 1.2rem;
+    padding: 10px 16px;
     border-radius: 30px;
     border: none;
     cursor: pointer;
@@ -199,15 +199,49 @@ p {
 }
 
 /* ======= Responsive ======= */
-@media (max-width: 768px) {
-    .subcategoria {
-        grid-template-columns: 1fr;
-    }
-    .card {
-        max-width: 90%;
-    }
-}
+   @media (min-width: 600px) and (max-width: 850px) {
+  .subcategoria {
+    grid-template-columns: repeat(2, 1fr); /* Dos tarjetas por fila */
+    gap: 2rem;
+    padding: 0 1rem;
+  }
 
+  .card {
+    max-width: 100%;
+    font-size: 1.5rem;
+    border-radius: 18px;
+  }
+
+  .card-title {
+    font-size: 1.8rem;
+    margin: 1rem 0 0.5rem;
+  }
+
+  .card-description {
+    font-size: 1.5rem;
+    line-height: 1.5;
+    margin-bottom: 1.2rem;
+  }
+
+  .card-price {
+    font-size: 1.3rem;
+    margin-bottom: 0.8rem;
+  }
+
+  .card-buttons button {
+    font-size: 1rem;
+    padding: 6px 14px;
+  }
+
+  .card-img-wrapper {
+    height: 200px;
+    padding: 6px;
+  }
+
+  .card-img {
+    border-radius: 12px;
+  }
+}
 /* Modal de personalización de productos */
 body.modal-open {
   padding-right: 0 !important;
@@ -335,3 +369,7 @@ body.modal-open {
     padding: 0.6rem 1.2rem;
   }
 }
+
+
+
+

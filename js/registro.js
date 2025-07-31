@@ -31,10 +31,11 @@ document.addEventListener("DOMContentLoaded", () => {
       emailInput.classList.add("is-invalid");
       valid = false;
     }
+
     const passwordValue = passwordInput.value.trim();
     const confirmValue = confirmPasswordInput.value.trim();
 
-    // Validar contraseña: mínimo 6 caracteres, una mayúscula y un número
+    // Validar contraseña
     const regexPassword = /^(?=.*[A-Z])(?=.*\d).{6,}$/;
     if (!regexPassword.test(passwordValue)) {
       passwordInput.classList.add("is-invalid");
@@ -61,7 +62,32 @@ document.addEventListener("DOMContentLoaded", () => {
     };
 
     localStorage.setItem("userData", JSON.stringify(userData));
-    alert("Registro exitoso. ¡Ya puedes iniciar sesión!");
-    window.location.href = "/pages/login.html";
+    mostrarToast("Registro exitoso. ¡Ya puedes iniciar sesión!", "success");
+
+    setTimeout(() => {
+      window.location.href = "/pages/login.html";
+    }, 1800);
   });
+
+  
+  function mostrarToast(mensaje, tipo = "info") {
+    const toastContainer = document.querySelector(".toast-registro-container");
+
+    const toast = document.createElement("div");
+    toast.className = `toast align-items-center text-bg-${tipo} show`;
+    toast.setAttribute("role", "alert");
+    toast.setAttribute("aria-live", "assertive");
+    toast.setAttribute("aria-atomic", "true");
+
+    toast.innerHTML = `
+      <div class="d-flex">
+        <div class="toast-body">${mensaje}</div>
+        <button type="button" class="btn-close btn-close-white me-2 m-auto" data-bs-dismiss="toast" aria-label="Cerrar"></button>
+      </div>
+    `;
+
+    toastContainer.appendChild(toast);
+
+    setTimeout(() => toast.remove(), 4000);
+  }
 });
