@@ -117,3 +117,46 @@ a.btn-secondary:hover {
     font-size: 1.4rem;
   }
 }
+
+.toast-actualizacion-container .toast {
+  font-family: "Poppins", sans-serif;
+  font-size: 1.4rem;
+  min-width: 280px;
+  max-width: 420px;
+  padding: 1rem 1.6rem;
+  border-radius: 0.8rem;
+  box-shadow: 0 0.8rem 2rem rgba(0, 0, 0, 0.15);
+  backdrop-filter: blur(6px);
+  animation: fadeInUp 0.4s ease-out;
+  border: none !important;
+}
+
+.toast.text-bg-success {
+  background: linear-gradient(135deg, #198754, #28a745) !important;
+  color: #fff !important;
+}
+
+@keyframes fadeInUp {
+  from {
+    transform: translateY(30px);
+    opacity: 0;
+  }
+  to {
+    transform: translateY(0);
+    opacity: 1;
+  }
+}
+
+@media (max-width: 768px) {
+  .toast-actualizacion-container .toast {
+    font-size: 1.2rem;
+    max-width: 90vw;
+  }
+}
+
+@media (min-width: 769px) and (max-width: 1024px) {
+  .toast-actualizacion-container .toast {
+    font-size: 1.3rem;
+    max-width: 420px;
+  }
+}

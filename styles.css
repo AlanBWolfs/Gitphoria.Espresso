@@ -355,3 +355,16 @@ a {
   }
 }
 
+@media (max-width: 768px) {
+  .navbar-collapse .btn-profile {
+    margin: 1rem auto;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+
+  .navbar-collapse li.nav-item {
+    display: flex;
+    justify-content: center;
+  }
+}

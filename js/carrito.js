@@ -107,11 +107,15 @@ document.addEventListener('DOMContentLoaded', () => {
   });
 
   // Vaciar carrito
-  document.getElementById('btnVaciarCarrito').addEventListener('click', () => {
-    if (confirm('¿Seguro que deseas vaciar el carrito?')) {
-      vaciarCarrito();
-    }
-  });
+ document.getElementById('btnVaciarCarrito').addEventListener('click', () => {
+  const modalConfirm = new bootstrap.Modal(document.getElementById('modalConfirmarVaciar'));
+  modalConfirm.show();
+
+  document.getElementById('confirmarVaciar').onclick = () => {
+    vaciarCarrito();
+    modalConfirm.hide();
+  };
+});
 
   
  //Continuar compra con validación de sesión
