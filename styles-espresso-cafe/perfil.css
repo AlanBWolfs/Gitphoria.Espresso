@@ -89,6 +89,11 @@
 
 /* Responsive */
 @media (max-width: 768px) {
+  .card {
+    padding: 2rem;
+    margin-top: 3rem;
+  }
+
   .card-title {
     font-size: 2.4rem;
   }
@@ -96,6 +101,8 @@
   .card-body p {
     font-size: 1.4rem;
     text-align: center;
+    padding: 0 1rem;
+
   }
 
   .btn-danger,
@@ -103,4 +110,25 @@
     width: 100%;
     margin-top: 1rem;
   }
+}
+
+@media (min-width: 769px) and (max-width: 1024px) {
+  .card {
+    padding: 4rem;
+    margin-top: 4rem;
+  }
+
+  .btn-perfil-estandar {
+    font-size: 1.6rem;
+    padding: 1rem 2.4rem;
+  }
+
+}
+
+.title-perfil {
+  font-size: clamp(2.8rem, 6vw, 5.4rem);
+}
+
+.card-title {
+  font-size: clamp(2rem, 5vw, 2.8rem);
 }

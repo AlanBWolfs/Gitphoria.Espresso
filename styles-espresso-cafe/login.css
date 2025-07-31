@@ -722,3 +722,47 @@ align-content: center;
 font-size: 1.2rem;
 }
 }
+
+.toast-login-container .toast {
+  box-shadow: 0 0.5rem 1rem rgba(0, 0, 0, 0.2);
+  border-radius: 0.75rem;
+  font-family: "Poppins", sans-serif;
+  font-size: 1.4rem;
+  min-width: 280px;
+  max-width: 400px;
+  padding: 1rem 1.6rem;
+  animation: fadeInUp 0.4s ease-out;
+  letter-spacing: 0.3px;
+  border: none !important;
+  backdrop-filter: blur(6px);
+}
+
+.toast.text-bg-success {
+  background: linear-gradient(135deg, #198754, #28a745) !important;
+  color: #ffffff !important;
+}
+
+@keyframes fadeInUp {
+  from {
+    transform: translateY(30px);
+    opacity: 0;
+  }
+  to {
+    transform: translateY(0);
+    opacity: 1;
+  }
+}
+
+@media (max-width: 768px) {
+  .toast-login-container .toast {
+    font-size: 1.2rem;
+    max-width: 90%;
+  }
+}
+
+@media (min-width: 769px) and (max-width: 1024px) {
+  .toast-login-container .toast {
+    font-size: 1.3rem;
+    max-width: 420px;
+  }
+}
