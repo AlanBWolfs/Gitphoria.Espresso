@@ -7,13 +7,13 @@ document.addEventListener("DOMContentLoaded", function () {
   form.addEventListener("submit", function (event) {
     event.preventDefault();
 
-    let valid = true;
-
-    // Reset estilos y mensajes
+    // Limpieza visual previa
     emailInput.classList.remove("is-invalid");
     passwordInput.classList.remove("is-invalid");
     loginError.style.display = "none";
     loginError.textContent = "";
+
+    let valid = true;
 
     // Validación de campos vacíos
     if (!emailInput.value) {
@@ -38,10 +38,22 @@ document.addEventListener("DOMContentLoaded", function () {
       emailInput.value === userData.email &&
       passwordInput.value === userData.password
     ) {
-      // Inicio de sesión exitoso
-      // window.location.href = "/pages/home.html";
+      // Sesión activa
+      localStorage.setItem("clienteLogueado", "true");
+      localStorage.setItem("clienteNombre", userData.nombre || "Usuario");
+      localStorage.setItem("clienteCorreo", userData.email);
+
+      // Separación de roles
+      const correoAdmin = "atencion.cafeespresso@gmail.com";
+      const rolAsignado = userData.email === correoAdmin ? "admin" : "cliente";
+      localStorage.setItem("rolUsuario", rolAsignado);
+
       loginError.style.display = "none";
-      alert("¡Inicio de sesión exitoso!");
+      mostrarToast("¡Inicio de sesión exitoso! ✅", "success");
+
+      setTimeout(() => {
+        window.location.href = "/index.html";
+      }, 1500);
     } else {
       loginError.textContent = "Correo o contraseña incorrectos.";
       loginError.style.display = "block";
@@ -49,4 +61,26 @@ document.addEventListener("DOMContentLoaded", function () {
       passwordInput.classList.add("is-invalid");
     }
   });
+
+ 
+  function mostrarToast(mensaje, tipo = "info") {
+    const toastContainer = document.querySelector(".toast-login-container");
+
+    const toast = document.createElement("div");
+    toast.className = `toast align-items-center text-bg-${tipo} show`;
+    toast.setAttribute("role", "alert");
+    toast.setAttribute("aria-live", "assertive");
+    toast.setAttribute("aria-atomic", "true");
+
+    toast.innerHTML = `
+      <div class="d-flex">
+        <div class="toast-body">${mensaje}</div>
+        <button type="button" class="btn-close btn-close-white me-2 m-auto" data-bs-dismiss="toast" aria-label="Cerrar"></button>
+      </div>
+    `;
+
+    toastContainer.appendChild(toast);
+
+    setTimeout(() => toast.remove(), 4000);
+  }
 });

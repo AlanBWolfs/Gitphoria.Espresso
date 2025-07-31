@@ -1,22 +1,25 @@
-@import url('https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,700;1,700&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+@import url("https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,700;1,700&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap");
 
 @font-face {
-    font-family: 'Avigea';
-    src: url(/assets/fonts/Avigea-6YGKo.otf) format('opentype');
+  font-family: "Avigea";
+  src: url(/assets/fonts/Avigea-6YGKo.otf) format("opentype");
 }
+
+/* Main styles for Gitphoria.Espresso - Updated with merge conflict resolution */
 
 html {
   font-size: 62.5%;
+  overflow-x: clip;
 }
 
 body {
-  background-color: #FFFFFF;
+   background-color: #ffffff;
+  overflow-x: clip;
 }
 
-main{
+main {
   min-height: 100vh;
 }
-
 
 img {
   max-width: 100%;
@@ -37,11 +40,10 @@ img {
   margin: 0;
   padding-left: 0;
   padding-right: 0;
-
 }
 
 .navbar .nav-link {
-  color: #FFFFFF;
+  color: #ffffff;
   font-size: 1.4rem;
   font-weight: bold;
   font-family: "Poppins";
@@ -50,39 +52,39 @@ img {
 }
 
 .navbar .nav-link:hover {
-  color: #A2845E;
-  transform: scale(1.10);
+  color: #a2845e;
+  transform: scale(1.1);
 }
 
 .cart-icon-container {
-  border: 2px solid #FFFFFF; 
-  border-radius: 50%;        
-  padding: 8px;              
+  border: 2px solid #ffffff;
+  border-radius: 50%;
+  padding: 8px;
   display: flex;
   align-items: center;
   justify-content: center;
-  transition: border-color 0.3s ease, background-color 0.3s ease, transform 0.3s ease;
-  width: 40px;              
-  height: 40px;             
+  transition: border-color 0.3s ease, background-color 0.3s ease,
+    transform 0.3s ease;
+  width: 40px;
+  height: 40px;
 }
 
 .cart-icon {
-  color: #FFFFFF;
+  color: #ffffff;
   width: 20px;
   height: 20px;
 }
 
 .cart-icon-container:hover {
-  border-color: #A2845E; 
+  border-color: #a2845e;
   background-color: rgba(255, 255, 255, 0.15); /*Efecto glass*/
-  transform: scale(1.15);     
+  transform: scale(1.15);
 }
-
 
 .btn-login {
   background-color: transparent;
-  color: #FFFFFF;
-  border: 3px solid #A2845E;
+  color: #ffffff;
+  border: 3px solid #a2845e;
   padding: 8px 22px;
   border-radius: 5rem;
   font-family: "Poppins";
@@ -95,9 +97,9 @@ img {
 }
 
 .btn-login:hover {
-  border: 2.5px solid #FFFFFF;
-  background-color: #998F76;
-  color: #FFFFFF;
+  border: 2.5px solid #ffffff;
+  background-color: #998f76;
+  color: #ffffff;
   transform: translateY(-2px);
   box-shadow: 0 6px 12px rgba(0, 0, 0, 0.2);
 }
@@ -106,8 +108,75 @@ img {
   box-shadow: 0 3px 6px rgba(0, 0, 0, 0.25);
 }
 
-.navbar-toggler{
-  border-color: #FFFFFF;
+/* Botón de perfil del usuario logueado */
+.btn-profile {
+  background-color: transparent;
+  color: #ffffff;
+  border: 3px solid #a2845e;
+  padding: 8px 24px;
+  border-radius: 5rem;
+  font-family: "Poppins", sans-serif;
+  font-weight: 800;
+  letter-spacing: 0.5px;
+  transition: all 0.3s ease;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+  cursor: pointer;
+  font-size: 1.6rem;
+  margin-right: 2rem; 
+}
+
+.btn-profile:hover {
+  border: 2.5px solid #ffffff;
+  background-color: #998f76;
+  color: #ffffff;
+  transform: translateY(-2px);
+  box-shadow: 0 6px 12px rgba(0, 0, 0, 0.2);
+}
+
+.btn-profile:active {
+  transform: scale(0.97);
+  box-shadow: 0 3px 6px rgba(0, 0, 0, 0.25);
+}
+
+/* Botón de perfil del usuario logueado */
+.btn-profile {
+  background-color: transparent;
+  color: #ffffff;
+  border: 3px solid #a2845e;
+  padding: 8px 24px;
+  border-radius: 5rem;
+  font-family: "Poppins", sans-serif;
+  font-weight: 800;
+  letter-spacing: 0.5px;
+  transition: all 0.3s ease;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+  cursor: pointer;
+  font-size: 1.6rem;
+  margin-right: 2rem;
+  display: flex;
+  align-items: center;
+  gap: 0.6rem;
+}
+
+.btn-profile:hover {
+  border: 2.5px solid #ffffff;
+  background-color: #998f76;
+  color: #ffffff;
+  transform: translateY(-2px);
+  box-shadow: 0 6px 12px rgba(0, 0, 0, 0.2);
+}
+
+.btn-profile:active {
+  transform: scale(0.97);
+  box-shadow: 0 3px 6px rgba(0, 0, 0, 0.25);
+}
+
+
+.navbar-toggler {
+  border-color: #ffffff;
+  margin-right: 20px;
+  margin-top: 10px;
+  margin-bottom: 10px;
 }
 .navbar-toggler-icon {
   background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' fill='%23A2845E' viewBox='0 0 30 30'%3E%3Cpath stroke='rgba(255,255,255,0.8)' stroke-width='2' d='M4 7h22M4 15h22M4 23h22'/%3E%3C/svg%3E");
@@ -118,19 +187,18 @@ img {
   font-family: "Avigea";
   color: #133936;
   font-weight: bold;
-  font-size: 4.6rem;
+  font-size: 5.4rem;
   text-align: center;
   letter-spacing: 0.2rem;
   margin: 3rem 0 5rem;
 }
-
 
 .golden-sub {
   font-family: "Avigea";
   font-weight: bold;
   font-size: 4rem;
   letter-spacing: 0.2rem;
-  color: #A2845E;
+  color: #a2845e;
 }
 
 .green-sub {
@@ -147,16 +215,14 @@ img {
   margin-top: 2.5rem;
 }
 
-
-
 i {
-  color: #FFFFFF;
+  color: #ffffff;
   font-size: 2.5rem;
   margin: 1rem;
 }
 
 i:hover {
-  color: #998F76;
+  color: #998f76;
   transform: scale(1.1);
   cursor: pointer;
 }
@@ -165,12 +231,24 @@ a {
   text-decoration: none;
 }
 
+/* 🛡️ Proteger el ícono de perfil dentro del botón personalizado */
+.btn-profile i {
+  color: #ffffff !important;
+  transition: none;
+}
+
+.btn-profile i:hover {
+  color: #ffffff !important;
+  transform: none;
+  cursor: default;
+}
+
 /*!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!! Footer */
 .general-footer {
   background-color: #133936;
   min-width: 100%;
   font-family: "Poppins";
-  color: #FFFFFF;
+  color: #ffffff;
   padding: 1rem 0;
   text-align: center;
   margin: 0;
@@ -192,13 +270,13 @@ a {
 }
 
 .footer-menu a {
-  color: #FFFFFF;
+  color: #ffffff;
   font-size: 1.4rem;
   font-weight: bold;
 }
 
 .footer-menu a:hover {
-  color: #998F76;
+  color: #998f76;
   text-decoration: underline;
 }
 
@@ -210,12 +288,13 @@ a {
   display: block;
 }
 
-
 /* Media Queries para móviles */
 
 /*!!!!!!!!!!!!!!!!!!!! Media Queries para móviles */
 @media (max-width: 768px) {
-
+  .btn-profile .profile-label {
+    display: none;
+  }
   .main-title {
     font-size: 3rem;
     text-align: center;
@@ -232,7 +311,6 @@ a {
     text-align: justify;
     padding: 0 1rem;
   }
-
 
   .logo-navbar {
     width: 4rem;
@@ -271,17 +349,22 @@ a {
     gap: 0.5rem;
   }
 
-
-
-
   section,
   .container {
     margin-bottom: 4rem;
   }
-
-
 }
 
+@media (max-width: 768px) {
+  .navbar-collapse .btn-profile {
+    margin: 1rem auto;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
 
-
-
+  .navbar-collapse li.nav-item {
+    display: flex;
+    justify-content: center;
+  }
+}

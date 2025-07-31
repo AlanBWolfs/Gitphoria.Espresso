@@ -17,8 +17,8 @@
       <div class="collapse navbar-collapse" id="navbarNav">
         <ul class="navbar-nav ms-auto align-items-center">
           <li class="nav-item">
-            <a class="nav-link" href="/pages/menu.html">Menú</a>
-          </li>
+  <span id="menu-dinamico" class="nav-link" role="link" tabindex="0">Menú</span>
+</li>
           <li class="nav-item">
             <a class="nav-link" href="/pages/acercaDe.html">Nosotros</a>
           </li>
@@ -28,17 +28,20 @@
           <div class="d-flex align-items-center">
             <li class="nav-item">
               <a class="nav-link" href="/pages/carrito.html">
-                <div class="cart-icon-container">
-                  <svg xmlns="http://www.w3.org/2000/svg" fill="currentColor" class="cart-icon" viewBox="0 0 16 16">
+                <div class="cart-icon-container position-relative">
+  <svg xmlns="http://www.w3.org/2000/svg" fill="currentColor" class="cart-icon" viewBox="0 0 16 16">
                     <path
                       d="M0 1.5A.5.5 0 0 1 .5 1H2a.5.5 0 0 1 .485.379L2.89 3H14.5a.5.5 0 0 1 .491.592l-1.5 8A.5.5 0 0 1 13 12H4a.5.5 0 0 1-.491-.408L2.01 3.607 1.61 2H.5a.5.5 0 0 1-.5-.5M5 12a2 2 0 1 0 0 4 2 2 0 0 0 0-4m7 0a2 2 0 1 0 0 4 2 2 0 0 0 0-4m-7 1a1 1 0 1 1 0 2 1 1 0 0 1 0-2m7 0a1 1 0 1 1 0 2 1 1 0 0 1 0-2" />
                   </svg>
+                  <span id="cart-count" class="position-absolute top-0 start-100 translate-middle badge rounded-pill bg-danger">
+    0
+  </span>
                 </div>
               </a>
             </li>
           </div>
           <li class="nav-item">
-            <a class="nav-link" href="/pages/login.html"><button type="button" class="btn-login">Iniciar sesión</button></a>
+            <a class="nav-link" href="/pages/login.html"><button type="button" class="btn-login" id="btnLogin">Iniciar sesión</button></a>
           </li>
         </ul>
       </div>

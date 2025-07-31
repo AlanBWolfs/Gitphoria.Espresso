@@ -13,11 +13,14 @@
     <div id="navbar"></div>
 
 <main>
+  <div id="admin-tools" class="container my-3 d-none">
+  <button id="btnAgregarProducto" class="btn btn-success">
+    ➕ Agregar nuevo producto
+  </button>
+</div>
     <div id="menu-container" class="container my-5"></div>
 
-    </main>
-    
-    <div id="footer"></div>
+   
     <!-- Modal Editar Producto -->
     <div class="modal fade" id="modalEditar" tabindex="-1" aria-labelledby="modalEditarLabel" aria-hidden="true">
         <div class="modal-dialog">
@@ -54,8 +57,64 @@
             </div>
         </div>
     </div>
+    <!-- Modal de Personalización de Producto -->
+<div class="modal fade" id="modalPersonalizacion" tabindex="-1" aria-labelledby="modalPersonalizacionLabel" aria-hidden="true">
+  <div class="modal-dialog">
+    <form class="modal-content" id="formPersonalizar">
+      <div class="modal-header">
+        <h5 class="modal-title" id="modalPersonalizacionLabel">Personaliza tu producto</h5>
+        <!-- Cierre totalmente manejado por Bootstrap -->
+        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Cerrar"></button>
+      </div>
+      <div class="modal-body">
+        <!-- Imagen del producto -->
+        <div class="text-center mb-3">
+          <img id="modalImagen" src="" class="img-fluid" alt="Imagen del producto" style="max-height: 200px;">
+        </div>
+
+        <!-- Nombre y precio -->
+        <h5 id="modalNombre" class="text-center"></h5>
+        <p class="text-center fw-bold" id="modalPrecio"></p>
+
+        <!-- Opciones dinámicas (salsas, proteínas, base, etc.) -->
+        <div id="opcionesContainer"></div>
+
+        <!-- Notas del cliente -->
+        <div class="mb-3">
+          <label for="notasCliente" class="form-label">Notas del cliente (opcional)</label>
+          <textarea id="notasCliente" class="form-control" rows="2" placeholder="Sin cebolla, bien cocido, etc..."></textarea>
+        </div>
+      </div>
+
+      <!-- Cantidad -->
+      <div class="mb-3 text-center">
+        <label class="form-label d-block">Cantidad</label>
+        <div class="d-flex justify-content-center align-items-center">
+          <button type="button" class="btn btn-outline-secondary" id="btnRestar">−</button>
+          <input type="number" id="cantidadProducto" class="form-control mx-2 text-center" value="1" min="1" style="width: 60px;">
+          <button type="button" class="btn btn-outline-secondary" id="btnSumar">+</button>
+        </div>
+      </div>
+
+      <div class="modal-footer">
+        <button type="submit" class="btn btn-success">Agregar al carrito</button>
+      </div>
+    </form>
+  </div>
+</div>
+
+<!-- Toast dinámico para mensajes -->
+<div class="toast-container position-fixed bottom-0 end-0 p-3 toast-container-dinamica" style="z-index: 1056;">
+</div>
+
+ </main>
+    
+    <div id="footer"></div>
 
    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.7/dist/js/bootstrap.min.js" integrity="sha384-7qAoOXltbVP82dhxHAUje59V5r2YsVfBafyUDxEdApLPmcdhBPg1DKg1ERo0BZlK" crossorigin="anonymous"></script>
     <script type="module" src="../js/main.js"></script>
+    <script type="module" src="/Administrador/js-admin/admin-manager.js"></script>
+    <script type="module" src="/js/modal-personalizacion.js"></script>
+    
 </body>
 </html>
