@@ -19,7 +19,7 @@ export const menuElementos ={
                     description: "2 huevos revueltos con jamón de pavo acompañados de frijoles fritos platanos y totoposte de la región",
                     price: 80.00,
                     horario: "7:30 AM - 1:30PM",
-                    image: "/assets/menuItems/huevos2.png"
+                    image: "/assets/menuItems/huevos-clasicos.png"
                 },
                 {
                     id:3,
@@ -27,7 +27,7 @@ export const menuElementos ={
                     description: "2 huevos revueltos con salchicha de res acompañados de frijoles fritos platanos y totoposte de la región",
                     price: 85.00,
                     horario: "7:30 AM - 1:30PM",
-                    image: "/assets/menuItems/huevos.png"
+                    image: "/assets/menuItems/huevos-beff.png"
                 },
                 {
                     id:4,
@@ -35,7 +35,7 @@ export const menuElementos ={
                     description: "2 huevos revueltos con tomate, cebolla y chile serrano acompañados de frijoles fritos platanos y totoposte de la región",
                     price: 80.00,
                     horario: "7:30 AM - 1:30PM",
-                    image: "/assets/menuItems/huevos.png"
+                    image: "/assets/menuItems/huevos-mexicana.png"
                 },
                 {
                     id:5,
@@ -43,7 +43,7 @@ export const menuElementos ={
                     description: "2 huevos revueltos con longaniza de la región  acompañados de frijoles fritos platanos y totoposte de la región",
                     price: 85.00,
                     horario: "7:30 AM - 1:30PM",
-                    image: "/assets/menuItems/huevos.png"
+                    image: "/assets/menuItems/huevos-jabali.png"
                 },
                 {
                     id:6,
@@ -51,7 +51,7 @@ export const menuElementos ={
                     description: "2 huevos revueltos con jamón de pavo acompañados de frijoles fritos platanos y totoposte de la región",
                     price: 85.00,
                     horario: "7:30 AM - 1:30PM",
-                    image: "/assets/menuItems/huevos.png"
+                    image: "/assets/menuItems/huevos-clasicos.png"
                 },
                 {
                     id:7,
@@ -59,7 +59,7 @@ export const menuElementos ={
                     description: "2 huevos estrellados sobre una cama de tortilla, queso y jamón, bañados con salsa a elegir (verde o roja) y chicharos, acompañados de frijoles fritos y platanos fritos.",
                     price: 100.00,
                     horario: "7:30 AM - 1:30PM",
-                    image: "/assets/menuItems/huevos.png",
+                    image: "/assets/menuItems/huevos-motuleños.png",
                     opciones:{
                         salsas: ["roja","verde"]
                     }
@@ -120,14 +120,14 @@ export const menuElementos ={
             Bagels:[
                 {
                    id:13,
-                    name: "Jamon Serrano",
+                    name: "Jamón Serrano",
                     description: "1 pieza de bagels de parmesano, montado en una cama de guacamole, queso crema, hojas verdes y aderezo de la casa.",
                     price: 85.00,
-                    image: "/assets/menuItems/dulces.png"
+                    image: "/assets/menuItems/jamon-serrano.png"
                 },
                 {
                    id:14,
-                    name: "Slamon ahumado",
+                    name: "Salmon ahumado",
                     description: "1 pieza de bagels de parmesano, montado en una cama de guacamole, queso crema, hojas verdes y aderezo de la casa.",
                     price: 95.00,
                     image: "/assets/menuItems/bagelsalmon.png"
@@ -144,7 +144,7 @@ export const menuElementos ={
                     name: "Clasico",
                     description: "1 pieza de bagels de parmesano, montado en una cama de guacamole, queso crema, hojas verdes y aderezo de la casa.",
                     price: 80.00,
-                    image: "/assets/menuItems/dulces.png"
+                    image: "/assets/menuItems/bagle-clasico.png"
                 },
                 
             ],
@@ -154,21 +154,21 @@ export const menuElementos ={
                     name: "Champiñon",
                     description: "Combinación de hotdog con nuestra salsa para pizza, cubierto de queso Monterrey Jack y aderezo de la casa",
                     price: 75.00,
-                    image: "/assets/menuItems/hotdogcham.png"
+                    image: "/assets/menuItems/dogo-champiñon.png"
                 },
                 {
                     id:18,
                     name: "Hawaiano",
                     description: "Combinación de hotdog con nuestra salsa para pizza, cubierto de queso Monterrey Jack y aderezo de la casa",
                     price: 75.00,
-                    image: "/assets/menuItems/hot.png"
+                    image: "/assets/menuItems/dogo-hawaiano.png"
                 },
                 {
                     id:19,
                     name: "Pepperoni",
                     description: "Combinación de hotdog con nuestra salsa para pizza, cubierto de queso Monterrey Jack y aderezo de la casa",
                     price: 75.00,
-                    image: "/assets/menuItems/hot.png"
+                    image: "/assets/menuItems/dogo-pepperoni.png"
                 },
             ],
             Ensalada:[
@@ -188,49 +188,49 @@ export const menuElementos ={
                     name:"Palomitas",
                     description:"Snack ligero y crujiente, ideal para compartir",
                     price:25,
-                    image:"/assets/menuItems/logo-verde.png"
+                    image:"/assets/menuItems/palomitas.png"
                 },
                 {
                     id:66,
                     name:"Agua",
                     description:"Líquido puro y refrescante para hidratación",
                     price:16,
-                    image:"/assets/menuItems/water.png"
+                    image:"/assets/menuItems/agua.png"
                 },
                 {
                     id:67,
                     name:"Amper, agua de coco",
                     description:"Bebida tropical con notas suaves y frescas",
                     price:37,
-                    image:"/assets/menuItems/water.png"
+                    image:"/assets/menuItems/agua-coco.png"
                 },
                 {
                     id:68,
                     name:"Cambio de leche",
                     description:"Modificación vegetal o sin lactosa de la leche",
                     price:12,
-                    image:"/assets/menuItems/logo-verde.png"
+                    image:"/assets/menuItems/cambio-leche.png"
                 },
                 {
                     id:69,
                     name:"Jugos",
                     description:"Jugo natural o procesado con sabor frutal",
                     price:18,
-                    image:"/assets/menuItems/frozen.png"
+                    image:"/assets/menuItems/jugos.png"
                 },
                 {
                     id:70,
                     name:"Powerade",
                     description:"Bebida isotónica para rehidratar y energizar",
                     price:30,
-                    image:"/assets/menuItems/frozenmango.png"
+                    image:"/assets/menuItems/powerade.png"
                 },
                 {
                     id:71,
                     name:"Refresco, agua mineral",
                     description:"Gaseosa o agua con gas para refrescar",
                     price:25,
-                    image:"/assets/menuItems/water.png"
+                    image:"/assets/menuItems/refresco-mineral.png"
                 },
                 {
                     id:72,
